@@ -9,5 +9,5 @@
 #ifndef Shoot_Your_Dream_APIConfig_h
 #define Shoot_Your_Dream_APIConfig_h
 
-
+static NSString * const AFAppDotNetAPIBaseURLString = @"https://api.app.net/";
 #endif

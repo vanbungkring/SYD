@@ -93,6 +93,8 @@
 		43AAD3281AFD048E0043ECFD /* Shoot Your Dream */ = {
 			isa = PBXGroup;
 			children = (
+				43AAD3581AFD29DE0043ECFD /* Manager */,
+				43AAD3571AFD29930043ECFD /* Controller */,
 				43AAD3531AFD1F840043ECFD /* StoryBoard */,
 				43AAD34F1AFD1EEF0043ECFD /* Common */,
 				43AAD32D1AFD048E0043ECFD /* AppDelegate.h */,
@@ -149,6 +151,20 @@
 				43AAD3551AFD1FB90043ECFD /* Login.storyboard */,
 			);
 			name = StoryBoard;
+			sourceTree = "<group>";
+		};
+		43AAD3571AFD29930043ECFD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		43AAD3581AFD29DE0043ECFD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		D9C5C2FB3B75A3FF33B0A146 /* Pods */ = {
@@ -436,6 +452,7 @@
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/PrefixHeader.pch";
 			};
 			name = Debug;
 		};
@@ -447,6 +464,7 @@
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/PrefixHeader.pch";
 			};
 			name = Release;
 		};
