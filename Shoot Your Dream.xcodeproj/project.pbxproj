@@ -14,6 +14,8 @@
 		43AAD3371AFD048E0043ECFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43AAD3361AFD048E0043ECFD /* Images.xcassets */; };
 		43AAD33A1AFD048E0043ECFD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43AAD3381AFD048E0043ECFD /* LaunchScreen.xib */; };
 		43AAD3461AFD048E0043ECFD /* Shoot_Your_DreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43AAD3451AFD048E0043ECFD /* Shoot_Your_DreamTests.m */; };
+		43AAD3561AFD1FB90043ECFD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AAD3551AFD1FB90043ECFD /* Login.storyboard */; };
+		C297CE53BF8D18AD3E58B7A6 /* libPods-Shoot Your Dream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D75F64AEE23F41AC8AD31934 /* libPods-Shoot Your Dream.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FC8E81B6C90CDF48F6ABB66 /* Pods-Shoot Your Dream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.debug.xcconfig"; sourceTree = "<group>"; };
 		43AAD3261AFD048E0043ECFD /* Shoot Your Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shoot Your Dream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AAD32A1AFD048E0043ECFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43AAD32B1AFD048E0043ECFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,12 @@
 		43AAD33F1AFD048E0043ECFD /* Shoot Your DreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shoot Your DreamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AAD3441AFD048E0043ECFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43AAD3451AFD048E0043ECFD /* Shoot_Your_DreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shoot_Your_DreamTests.m; sourceTree = "<group>"; };
+		43AAD3501AFD1EFC0043ECFD /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		43AAD3511AFD1F070043ECFD /* APIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
+		43AAD3521AFD1F220043ECFD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		43AAD3551AFD1FB90043ECFD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Login.storyboard; sourceTree = "<group>"; };
+		9262C0BFA9642B99EDBACFBA /* Pods-Shoot Your Dream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.release.xcconfig"; sourceTree = "<group>"; };
+		D75F64AEE23F41AC8AD31934 /* libPods-Shoot Your Dream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shoot Your Dream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C297CE53BF8D18AD3E58B7A6 /* libPods-Shoot Your Dream.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +76,8 @@
 				43AAD3281AFD048E0043ECFD /* Shoot Your Dream */,
 				43AAD3421AFD048E0043ECFD /* Shoot Your DreamTests */,
 				43AAD3271AFD048E0043ECFD /* Products */,
+				D9C5C2FB3B75A3FF33B0A146 /* Pods */,
+				E32AB7C0A54455657038F84F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,11 +93,12 @@
 		43AAD3281AFD048E0043ECFD /* Shoot Your Dream */ = {
 			isa = PBXGroup;
 			children = (
+				43AAD3531AFD1F840043ECFD /* StoryBoard */,
+				43AAD34F1AFD1EEF0043ECFD /* Common */,
 				43AAD32D1AFD048E0043ECFD /* AppDelegate.h */,
 				43AAD32E1AFD048E0043ECFD /* AppDelegate.m */,
 				43AAD3301AFD048E0043ECFD /* ViewController.h */,
 				43AAD3311AFD048E0043ECFD /* ViewController.m */,
-				43AAD3331AFD048E0043ECFD /* Main.storyboard */,
 				43AAD3361AFD048E0043ECFD /* Images.xcassets */,
 				43AAD3381AFD048E0043ECFD /* LaunchScreen.xib */,
 				43AAD3291AFD048E0043ECFD /* Supporting Files */,
@@ -98,6 +111,7 @@
 			children = (
 				43AAD32A1AFD048E0043ECFD /* Info.plist */,
 				43AAD32B1AFD048E0043ECFD /* main.m */,
+				43AAD3521AFD1F220043ECFD /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +133,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		43AAD34F1AFD1EEF0043ECFD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				43AAD3501AFD1EFC0043ECFD /* Config.h */,
+				43AAD3511AFD1F070043ECFD /* APIConfig.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		43AAD3531AFD1F840043ECFD /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				43AAD3331AFD048E0043ECFD /* Main.storyboard */,
+				43AAD3551AFD1FB90043ECFD /* Login.storyboard */,
+			);
+			name = StoryBoard;
+			sourceTree = "<group>";
+		};
+		D9C5C2FB3B75A3FF33B0A146 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FC8E81B6C90CDF48F6ABB66 /* Pods-Shoot Your Dream.debug.xcconfig */,
+				9262C0BFA9642B99EDBACFBA /* Pods-Shoot Your Dream.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E32AB7C0A54455657038F84F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D75F64AEE23F41AC8AD31934 /* libPods-Shoot Your Dream.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43AAD3491AFD048E0043ECFD /* Build configuration list for PBXNativeTarget "Shoot Your Dream" */;
 			buildPhases = (
+				5616583C8680295B5B2F3448 /* Check Pods Manifest.lock */,
 				43AAD3221AFD048E0043ECFD /* Sources */,
 				43AAD3231AFD048E0043ECFD /* Frameworks */,
 				43AAD3241AFD048E0043ECFD /* Resources */,
+				7E2717C8FA1F5A96F31C7CA5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43AAD3561AFD1FB90043ECFD /* Login.storyboard in Resources */,
 				43AAD3351AFD048E0043ECFD /* Main.storyboard in Resources */,
 				43AAD33A1AFD048E0043ECFD /* LaunchScreen.xib in Resources */,
 				43AAD3371AFD048E0043ECFD /* Images.xcassets in Resources */,
@@ -213,6 +265,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5616583C8680295B5B2F3448 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E2717C8FA1F5A96F31C7CA5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43AAD3221AFD048E0043ECFD /* Sources */ = {
@@ -345,6 +430,7 @@
 		};
 		43AAD34A1AFD048E0043ECFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FC8E81B6C90CDF48F6ABB66 /* Pods-Shoot Your Dream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
@@ -355,6 +441,7 @@
 		};
 		43AAD34B1AFD048E0043ECFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9262C0BFA9642B99EDBACFBA /* Pods-Shoot Your Dream.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
@@ -466,6 +553,7 @@
 				43AAD34B1AFD048E0043ECFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43AAD34C1AFD048E0043ECFD /* Build configuration list for PBXNativeTarget "Shoot Your DreamTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +562,7 @@
 				43AAD34E1AFD048E0043ECFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

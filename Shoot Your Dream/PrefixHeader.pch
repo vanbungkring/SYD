@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  Shoot Your Dream
+//
+//  Created by Arie Prasetyo on 5/8/15.
+//  Copyright (c) 2015 Arie Prasetyo. All rights reserved.
+//
+
+#ifndef Shoot_Your_Dream_PrefixHeader_pch
+#define Shoot_Your_Dream_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif

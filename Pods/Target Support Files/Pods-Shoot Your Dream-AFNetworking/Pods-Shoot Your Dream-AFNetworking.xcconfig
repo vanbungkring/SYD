@@ -1,0 +1,1 @@
+PODS_SHOOT_YOUR_DREAM_AFNETWORKING_OTHER_LDFLAGS = -framework "CoreGraphics" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"

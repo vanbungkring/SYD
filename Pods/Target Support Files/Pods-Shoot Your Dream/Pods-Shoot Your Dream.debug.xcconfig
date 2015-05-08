@@ -1,0 +1,9 @@
+CLANG_CXX_LANGUAGE_STANDARD = compiler-default
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/ISMethodSwizzling" "${PODS_ROOT}/Headers/Public/NJKWebViewProgress" "${PODS_ROOT}/Headers/Public/Realm" "${PODS_ROOT}/Headers/Public/Realm/realm" "${PODS_ROOT}/Headers/Public/SVBlurView" "${PODS_ROOT}/Headers/Public/SVPullToRefresh" "${PODS_ROOT}/Headers/Public/UIAlertView+Blocks" "${PODS_ROOT}/Headers/Public/UIWebView+Progress"
+LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/Realm/core"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/ISMethodSwizzling" -isystem "${PODS_ROOT}/Headers/Public/NJKWebViewProgress" -isystem "${PODS_ROOT}/Headers/Public/Realm" -isystem "${PODS_ROOT}/Headers/Public/Realm/realm" -isystem "${PODS_ROOT}/Headers/Public/SVBlurView" -isystem "${PODS_ROOT}/Headers/Public/SVPullToRefresh" -isystem "${PODS_ROOT}/Headers/Public/UIAlertView+Blocks" -isystem "${PODS_ROOT}/Headers/Public/UIWebView+Progress"
+OTHER_CPLUSPLUSFLAGS = -std=c++1y $(inherited) -std=c++1y $(inherited)
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-Shoot Your Dream-AFNetworking" -l"Pods-Shoot Your Dream-ISMethodSwizzling" -l"Pods-Shoot Your Dream-NJKWebViewProgress" -l"Pods-Shoot Your Dream-Realm" -l"Pods-Shoot Your Dream-SVBlurView" -l"Pods-Shoot Your Dream-SVPullToRefresh" -l"Pods-Shoot Your Dream-UIAlertView+Blocks" -l"Pods-Shoot Your Dream-UIWebView+Progress" -l"c++" -l"realm-ios" -framework "CoreGraphics" -framework "MobileCoreServices" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods
