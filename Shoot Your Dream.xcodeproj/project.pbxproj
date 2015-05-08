@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43AAD32C1AFD048E0043ECFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43AAD32B1AFD048E0043ECFD /* main.m */; };
+		43AAD32F1AFD048E0043ECFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43AAD32E1AFD048E0043ECFD /* AppDelegate.m */; };
+		43AAD3321AFD048E0043ECFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43AAD3311AFD048E0043ECFD /* ViewController.m */; };
+		43AAD3351AFD048E0043ECFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AAD3331AFD048E0043ECFD /* Main.storyboard */; };
+		43AAD3371AFD048E0043ECFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43AAD3361AFD048E0043ECFD /* Images.xcassets */; };
+		43AAD33A1AFD048E0043ECFD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43AAD3381AFD048E0043ECFD /* LaunchScreen.xib */; };
+		43AAD3461AFD048E0043ECFD /* Shoot_Your_DreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43AAD3451AFD048E0043ECFD /* Shoot_Your_DreamTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43AAD3401AFD048E0043ECFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43AAD31E1AFD048E0043ECFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43AAD3251AFD048E0043ECFD;
+			remoteInfo = "Shoot Your Dream";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43AAD3261AFD048E0043ECFD /* Shoot Your Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shoot Your Dream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43AAD32A1AFD048E0043ECFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43AAD32B1AFD048E0043ECFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		43AAD32D1AFD048E0043ECFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		43AAD32E1AFD048E0043ECFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		43AAD3301AFD048E0043ECFD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		43AAD3311AFD048E0043ECFD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		43AAD3341AFD048E0043ECFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43AAD3361AFD048E0043ECFD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		43AAD3391AFD048E0043ECFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		43AAD33F1AFD048E0043ECFD /* Shoot Your DreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shoot Your DreamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43AAD3441AFD048E0043ECFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43AAD3451AFD048E0043ECFD /* Shoot_Your_DreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shoot_Your_DreamTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43AAD3231AFD048E0043ECFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43AAD33C1AFD048E0043ECFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43AAD31D1AFD048E0043ECFD = {
+			isa = PBXGroup;
+			children = (
+				43AAD3281AFD048E0043ECFD /* Shoot Your Dream */,
+				43AAD3421AFD048E0043ECFD /* Shoot Your DreamTests */,
+				43AAD3271AFD048E0043ECFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43AAD3271AFD048E0043ECFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43AAD3261AFD048E0043ECFD /* Shoot Your Dream.app */,
+				43AAD33F1AFD048E0043ECFD /* Shoot Your DreamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43AAD3281AFD048E0043ECFD /* Shoot Your Dream */ = {
+			isa = PBXGroup;
+			children = (
+				43AAD32D1AFD048E0043ECFD /* AppDelegate.h */,
+				43AAD32E1AFD048E0043ECFD /* AppDelegate.m */,
+				43AAD3301AFD048E0043ECFD /* ViewController.h */,
+				43AAD3311AFD048E0043ECFD /* ViewController.m */,
+				43AAD3331AFD048E0043ECFD /* Main.storyboard */,
+				43AAD3361AFD048E0043ECFD /* Images.xcassets */,
+				43AAD3381AFD048E0043ECFD /* LaunchScreen.xib */,
+				43AAD3291AFD048E0043ECFD /* Supporting Files */,
+			);
+			path = "Shoot Your Dream";
+			sourceTree = "<group>";
+		};
+		43AAD3291AFD048E0043ECFD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43AAD32A1AFD048E0043ECFD /* Info.plist */,
+				43AAD32B1AFD048E0043ECFD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43AAD3421AFD048E0043ECFD /* Shoot Your DreamTests */ = {
+			isa = PBXGroup;
+			children = (
+				43AAD3451AFD048E0043ECFD /* Shoot_Your_DreamTests.m */,
+				43AAD3431AFD048E0043ECFD /* Supporting Files */,
+			);
+			path = "Shoot Your DreamTests";
+			sourceTree = "<group>";
+		};
+		43AAD3431AFD048E0043ECFD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43AAD3441AFD048E0043ECFD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43AAD3251AFD048E0043ECFD /* Shoot Your Dream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43AAD3491AFD048E0043ECFD /* Build configuration list for PBXNativeTarget "Shoot Your Dream" */;
+			buildPhases = (
+				43AAD3221AFD048E0043ECFD /* Sources */,
+				43AAD3231AFD048E0043ECFD /* Frameworks */,
+				43AAD3241AFD048E0043ECFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Shoot Your Dream";
+			productName = "Shoot Your Dream";
+			productReference = 43AAD3261AFD048E0043ECFD /* Shoot Your Dream.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43AAD33E1AFD048E0043ECFD /* Shoot Your DreamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43AAD34C1AFD048E0043ECFD /* Build configuration list for PBXNativeTarget "Shoot Your DreamTests" */;
+			buildPhases = (
+				43AAD33B1AFD048E0043ECFD /* Sources */,
+				43AAD33C1AFD048E0043ECFD /* Frameworks */,
+				43AAD33D1AFD048E0043ECFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43AAD3411AFD048E0043ECFD /* PBXTargetDependency */,
+			);
+			name = "Shoot Your DreamTests";
+			productName = "Shoot Your DreamTests";
+			productReference = 43AAD33F1AFD048E0043ECFD /* Shoot Your DreamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43AAD31E1AFD048E0043ECFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Arie Prasetyo";
+				TargetAttributes = {
+					43AAD3251AFD048E0043ECFD = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					43AAD33E1AFD048E0043ECFD = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 43AAD3251AFD048E0043ECFD;
+					};
+				};
+			};
+			buildConfigurationList = 43AAD3211AFD048E0043ECFD /* Build configuration list for PBXProject "Shoot Your Dream" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43AAD31D1AFD048E0043ECFD;
+			productRefGroup = 43AAD3271AFD048E0043ECFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43AAD3251AFD048E0043ECFD /* Shoot Your Dream */,
+				43AAD33E1AFD048E0043ECFD /* Shoot Your DreamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43AAD3241AFD048E0043ECFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43AAD3351AFD048E0043ECFD /* Main.storyboard in Resources */,
+				43AAD33A1AFD048E0043ECFD /* LaunchScreen.xib in Resources */,
+				43AAD3371AFD048E0043ECFD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43AAD33D1AFD048E0043ECFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43AAD3221AFD048E0043ECFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43AAD3321AFD048E0043ECFD /* ViewController.m in Sources */,
+				43AAD32F1AFD048E0043ECFD /* AppDelegate.m in Sources */,
+				43AAD32C1AFD048E0043ECFD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43AAD33B1AFD048E0043ECFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43AAD3461AFD048E0043ECFD /* Shoot_Your_DreamTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43AAD3411AFD048E0043ECFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43AAD3251AFD048E0043ECFD /* Shoot Your Dream */;
+			targetProxy = 43AAD3401AFD048E0043ECFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43AAD3331AFD048E0043ECFD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43AAD3341AFD048E0043ECFD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43AAD3381AFD048E0043ECFD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43AAD3391AFD048E0043ECFD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43AAD3471AFD048E0043ECFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		43AAD3481AFD048E0043ECFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43AAD34A1AFD048E0043ECFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		43AAD34B1AFD048E0043ECFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		43AAD34D1AFD048E0043ECFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Shoot Your DreamTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shoot Your Dream.app/Shoot Your Dream";
+			};
+			name = Debug;
+		};
+		43AAD34E1AFD048E0043ECFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Shoot Your DreamTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shoot Your Dream.app/Shoot Your Dream";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43AAD3211AFD048E0043ECFD /* Build configuration list for PBXProject "Shoot Your Dream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43AAD3471AFD048E0043ECFD /* Debug */,
+				43AAD3481AFD048E0043ECFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43AAD3491AFD048E0043ECFD /* Build configuration list for PBXNativeTarget "Shoot Your Dream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43AAD34A1AFD048E0043ECFD /* Debug */,
+				43AAD34B1AFD048E0043ECFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		43AAD34C1AFD048E0043ECFD /* Build configuration list for PBXNativeTarget "Shoot Your DreamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43AAD34D1AFD048E0043ECFD /* Debug */,
+				43AAD34E1AFD048E0043ECFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43AAD31E1AFD048E0043ECFD /* Project object */;
+}
