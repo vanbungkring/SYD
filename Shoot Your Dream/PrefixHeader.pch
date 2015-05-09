@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 Arie Prasetyo. All rights reserved.
 //
 
-#import <Availability.h>
-#ifndef __IPHONE_5_0
-#warning "This project uses features only available in iOS SDK 5.0 and later."
-#endif
-
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#import "Config.h"
-#import "Common.h"
-#import "APIConfig.h"
-#import <Foundation/Foundation.h>
-#endif
+//#import <Availability.h>
+//#ifndef __IPHONE_5_0
+//#warning "This project uses features only available in iOS SDK 5.0 and later."
+//#endif
+//
+//#ifdef __OBJC__
+//#import <UIKit/UIKit.h>
+//#import "Config.h"
+//#import "Common.h"
+//#import "APIConfig.h"
+//#import <Foundation/Foundation.h>
+//#endif
