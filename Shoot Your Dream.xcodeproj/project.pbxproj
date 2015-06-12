@@ -14,6 +14,8 @@
 		43006BAD1B2B12B7008CEBA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43006BAC1B2B12B7008CEBA8 /* Images.xcassets */; };
 		43006BB01B2B12B7008CEBA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43006BAE1B2B12B7008CEBA8 /* LaunchScreen.xib */; };
 		43006BBC1B2B12B7008CEBA8 /* Shoot_Your_DreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BBB1B2B12B7008CEBA8 /* Shoot_Your_DreamTests.m */; };
+		43006BCB1B2B1A01008CEBA8 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43006BCA1B2B1A01008CEBA8 /* Auth.storyboard */; };
+		CF879D68DDFDF069F0E824B7 /* libPods-Shoot Your Dream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB234502E95C365963EFBB0 /* libPods-Shoot Your Dream.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FB234502E95C365963EFBB0 /* libPods-Shoot Your Dream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shoot Your Dream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43006B9C1B2B12B7008CEBA8 /* Shoot Your Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shoot Your Dream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43006BA01B2B12B7008CEBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43006BA11B2B12B7008CEBA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,9 @@
 		43006BB51B2B12B7008CEBA8 /* Shoot Your DreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shoot Your DreamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43006BBA1B2B12B7008CEBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43006BBB1B2B12B7008CEBA8 /* Shoot_Your_DreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shoot_Your_DreamTests.m; sourceTree = "<group>"; };
+		43006BCA1B2B1A01008CEBA8 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		CE8374D4BB520160303A8AC4 /* Pods-Shoot Your Dream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.release.xcconfig"; sourceTree = "<group>"; };
+		E4CF548E9E05F90C817ADA07 /* Pods-Shoot Your Dream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF879D68DDFDF069F0E824B7 /* libPods-Shoot Your Dream.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +67,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31F0323CA514A33553756154 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4CF548E9E05F90C817ADA07 /* Pods-Shoot Your Dream.debug.xcconfig */,
+				CE8374D4BB520160303A8AC4 /* Pods-Shoot Your Dream.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		43006B931B2B12B7008CEBA8 = {
 			isa = PBXGroup;
 			children = (
 				43006B9E1B2B12B7008CEBA8 /* Shoot Your Dream */,
 				43006BB81B2B12B7008CEBA8 /* Shoot Your DreamTests */,
 				43006B9D1B2B12B7008CEBA8 /* Products */,
+				31F0323CA514A33553756154 /* Pods */,
+				45763105ED17DDED80785DF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,11 +99,13 @@
 		43006B9E1B2B12B7008CEBA8 /* Shoot Your Dream */ = {
 			isa = PBXGroup;
 			children = (
+				43006BC91B2B19D6008CEBA8 /* Categories */,
+				43006BC81B2B19D1008CEBA8 /* Helper */,
+				43006BC71B2B19C4008CEBA8 /* Model */,
+				43006BC61B2B19BA008CEBA8 /* ViewController */,
+				43006BC51B2B19AD008CEBA8 /* Storyboard */,
 				43006BA31B2B12B7008CEBA8 /* AppDelegate.h */,
 				43006BA41B2B12B7008CEBA8 /* AppDelegate.m */,
-				43006BA61B2B12B7008CEBA8 /* ViewController.h */,
-				43006BA71B2B12B7008CEBA8 /* ViewController.m */,
-				43006BA91B2B12B7008CEBA8 /* Main.storyboard */,
 				43006BAC1B2B12B7008CEBA8 /* Images.xcassets */,
 				43006BAE1B2B12B7008CEBA8 /* LaunchScreen.xib */,
 				43006B9F1B2B12B7008CEBA8 /* Supporting Files */,
@@ -119,6 +139,53 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		43006BC51B2B19AD008CEBA8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				43006BA91B2B12B7008CEBA8 /* Main.storyboard */,
+				43006BCA1B2B1A01008CEBA8 /* Auth.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		43006BC61B2B19BA008CEBA8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				43006BA61B2B12B7008CEBA8 /* ViewController.h */,
+				43006BA71B2B12B7008CEBA8 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		43006BC71B2B19C4008CEBA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		43006BC81B2B19D1008CEBA8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		43006BC91B2B19D6008CEBA8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		45763105ED17DDED80785DF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FB234502E95C365963EFBB0 /* libPods-Shoot Your Dream.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43006BBF1B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "Shoot Your Dream" */;
 			buildPhases = (
+				3BD7376DD03ABB91D548145D /* Check Pods Manifest.lock */,
 				43006B981B2B12B7008CEBA8 /* Sources */,
 				43006B991B2B12B7008CEBA8 /* Frameworks */,
 				43006B9A1B2B12B7008CEBA8 /* Resources */,
+				12E4685C3629DE230120B4AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43006BCB1B2B1A01008CEBA8 /* Auth.storyboard in Resources */,
 				43006BAB1B2B12B7008CEBA8 /* Main.storyboard in Resources */,
 				43006BB01B2B12B7008CEBA8 /* LaunchScreen.xib in Resources */,
 				43006BAD1B2B12B7008CEBA8 /* Images.xcassets in Resources */,
@@ -213,6 +283,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12E4685C3629DE230120B4AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BD7376DD03ABB91D548145D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43006B981B2B12B7008CEBA8 /* Sources */ = {
@@ -345,6 +448,7 @@
 		};
 		43006BC01B2B12B7008CEBA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4CF548E9E05F90C817ADA07 /* Pods-Shoot Your Dream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
@@ -355,6 +459,7 @@
 		};
 		43006BC11B2B12B7008CEBA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE8374D4BB520160303A8AC4 /* Pods-Shoot Your Dream.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
@@ -416,6 +521,7 @@
 				43006BC11B2B12B7008CEBA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43006BC21B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "Shoot Your DreamTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +530,7 @@
 				43006BC41B2B12B7008CEBA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
