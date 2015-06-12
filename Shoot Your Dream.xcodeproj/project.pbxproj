@@ -15,6 +15,13 @@
 		43006BB01B2B12B7008CEBA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43006BAE1B2B12B7008CEBA8 /* LaunchScreen.xib */; };
 		43006BBC1B2B12B7008CEBA8 /* Shoot_Your_DreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BBB1B2B12B7008CEBA8 /* Shoot_Your_DreamTests.m */; };
 		43006BCB1B2B1A01008CEBA8 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43006BCA1B2B1A01008CEBA8 /* Auth.storyboard */; };
+		43006BD21B2B2C42008CEBA8 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BD11B2B2C42008CEBA8 /* Common.m */; };
+		43006BD61B2B2C4D008CEBA8 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BD51B2B2C4D008CEBA8 /* ConnectionManager.m */; };
+		43006BDC1B2B2CA0008CEBA8 /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BDB1B2B2CA0008CEBA8 /* ModelManager.m */; };
+		43006BE51B2B2CB5008CEBA8 /* RoundedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BDE1B2B2CB5008CEBA8 /* RoundedImage.m */; };
+		43006BE61B2B2CB5008CEBA8 /* RoundedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BE01B2B2CB5008CEBA8 /* RoundedLabel.m */; };
+		43006BE71B2B2CB5008CEBA8 /* RoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BE21B2B2CB5008CEBA8 /* RoundedView.m */; };
+		43006BE81B2B2CB5008CEBA8 /* VanKeyboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BE41B2B2CB5008CEBA8 /* VanKeyboardHelper.m */; };
 		CF879D68DDFDF069F0E824B7 /* libPods-Shoot Your Dream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB234502E95C365963EFBB0 /* libPods-Shoot Your Dream.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +51,22 @@
 		43006BBA1B2B12B7008CEBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43006BBB1B2B12B7008CEBA8 /* Shoot_Your_DreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shoot_Your_DreamTests.m; sourceTree = "<group>"; };
 		43006BCA1B2B1A01008CEBA8 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		43006BD01B2B2C42008CEBA8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		43006BD11B2B2C42008CEBA8 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		43006BD31B2B2C4D008CEBA8 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		43006BD41B2B2C4D008CEBA8 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
+		43006BD51B2B2C4D008CEBA8 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionManager.m; sourceTree = "<group>"; };
+		43006BDA1B2B2CA0008CEBA8 /* ModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManager.h; sourceTree = "<group>"; };
+		43006BDB1B2B2CA0008CEBA8 /* ModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelManager.m; sourceTree = "<group>"; };
+		43006BDD1B2B2CB5008CEBA8 /* RoundedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedImage.h; sourceTree = "<group>"; };
+		43006BDE1B2B2CB5008CEBA8 /* RoundedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedImage.m; sourceTree = "<group>"; };
+		43006BDF1B2B2CB5008CEBA8 /* RoundedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedLabel.h; sourceTree = "<group>"; };
+		43006BE01B2B2CB5008CEBA8 /* RoundedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedLabel.m; sourceTree = "<group>"; };
+		43006BE11B2B2CB5008CEBA8 /* RoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedView.h; sourceTree = "<group>"; };
+		43006BE21B2B2CB5008CEBA8 /* RoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedView.m; sourceTree = "<group>"; };
+		43006BE31B2B2CB5008CEBA8 /* VanKeyboardHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VanKeyboardHelper.h; sourceTree = "<group>"; };
+		43006BE41B2B2CB5008CEBA8 /* VanKeyboardHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VanKeyboardHelper.m; sourceTree = "<group>"; };
+		43006BE91B2B2CDD008CEBA8 /* ApiConfigs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiConfigs.h; sourceTree = "<group>"; };
 		CE8374D4BB520160303A8AC4 /* Pods-Shoot Your Dream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.release.xcconfig"; sourceTree = "<group>"; };
 		E4CF548E9E05F90C817ADA07 /* Pods-Shoot Your Dream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +122,7 @@
 		43006B9E1B2B12B7008CEBA8 /* Shoot Your Dream */ = {
 			isa = PBXGroup;
 			children = (
+				43006BCC1B2B2B66008CEBA8 /* Manager */,
 				43006BC91B2B19D6008CEBA8 /* Categories */,
 				43006BC81B2B19D1008CEBA8 /* Helper */,
 				43006BC71B2B19C4008CEBA8 /* Model */,
@@ -167,6 +191,22 @@
 		43006BC81B2B19D1008CEBA8 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				43006BE91B2B2CDD008CEBA8 /* ApiConfigs.h */,
+				43006BDD1B2B2CB5008CEBA8 /* RoundedImage.h */,
+				43006BDE1B2B2CB5008CEBA8 /* RoundedImage.m */,
+				43006BDF1B2B2CB5008CEBA8 /* RoundedLabel.h */,
+				43006BE01B2B2CB5008CEBA8 /* RoundedLabel.m */,
+				43006BE11B2B2CB5008CEBA8 /* RoundedView.h */,
+				43006BE21B2B2CB5008CEBA8 /* RoundedView.m */,
+				43006BE31B2B2CB5008CEBA8 /* VanKeyboardHelper.h */,
+				43006BE41B2B2CB5008CEBA8 /* VanKeyboardHelper.m */,
+				43006BDA1B2B2CA0008CEBA8 /* ModelManager.h */,
+				43006BDB1B2B2CA0008CEBA8 /* ModelManager.m */,
+				43006BD31B2B2C4D008CEBA8 /* Config.h */,
+				43006BD41B2B2C4D008CEBA8 /* ConnectionManager.h */,
+				43006BD51B2B2C4D008CEBA8 /* ConnectionManager.m */,
+				43006BD01B2B2C42008CEBA8 /* Common.h */,
+				43006BD11B2B2C42008CEBA8 /* Common.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -176,6 +216,13 @@
 			children = (
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		43006BCC1B2B2B66008CEBA8 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		45763105ED17DDED80785DF0 /* Frameworks */ = {
@@ -323,7 +370,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				43006BA81B2B12B7008CEBA8 /* ViewController.m in Sources */,
+				43006BD21B2B2C42008CEBA8 /* Common.m in Sources */,
+				43006BD61B2B2C4D008CEBA8 /* ConnectionManager.m in Sources */,
 				43006BA51B2B12B7008CEBA8 /* AppDelegate.m in Sources */,
+				43006BE51B2B2CB5008CEBA8 /* RoundedImage.m in Sources */,
+				43006BE81B2B2CB5008CEBA8 /* VanKeyboardHelper.m in Sources */,
+				43006BE61B2B2CB5008CEBA8 /* RoundedLabel.m in Sources */,
+				43006BDC1B2B2CA0008CEBA8 /* ModelManager.m in Sources */,
+				43006BE71B2B2CB5008CEBA8 /* RoundedView.m in Sources */,
 				43006BA21B2B12B7008CEBA8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
