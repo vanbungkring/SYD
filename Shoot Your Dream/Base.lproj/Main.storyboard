@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="3fA-Qm-YIc">
             <objects>
-                <navigationController id="jvk-3h-9dV" sceneMemberID="viewController">
+                <navigationController id="jvk-3h-9dV" customClass="MainNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Ta-bJ-o8F">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="1475" y="-225"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Base Tabbas Controller-->
         <scene sceneID="VWW-fB-FW9">
             <objects>
-                <tabBarController id="cqF-Mc-eLh" sceneMemberID="viewController">
+                <tabBarController id="cqF-Mc-eLh" customClass="BaseTabbasController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="wMX-5p-LvU"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JBM-dH-sTT">
