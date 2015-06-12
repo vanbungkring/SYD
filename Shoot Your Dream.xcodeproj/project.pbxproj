@@ -147,6 +147,7 @@
 		43006B9E1B2B12B7008CEBA8 /* Shoot Your Dream */ = {
 			isa = PBXGroup;
 			children = (
+				43006C021B2B3B17008CEBA8 /* View */,
 				43006BCC1B2B2B66008CEBA8 /* Manager */,
 				43006BC91B2B19D6008CEBA8 /* Categories */,
 				43006BC81B2B19D1008CEBA8 /* Helper */,
@@ -251,6 +252,21 @@
 			children = (
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		43006C021B2B3B17008CEBA8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43006C031B2B3B1D008CEBA8 /* Subclass */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		43006C031B2B3B1D008CEBA8 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Subclass;
 			sourceTree = "<group>";
 		};
 		45763105ED17DDED80785DF0 /* Frameworks */ = {
