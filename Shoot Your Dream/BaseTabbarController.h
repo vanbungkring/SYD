@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BaseTabbasController.h
 //  Shoot Your Dream
 //
 //  Created by Arie Prasetyo on 6/12/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BaseTabbarControlller : UITabBarController
 
 @end
-

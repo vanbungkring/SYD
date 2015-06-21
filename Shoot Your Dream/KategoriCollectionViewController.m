@@ -1,0 +1,83 @@
+//
+//  KategoriCollectionViewController.m
+//  Shoot Your Dream
+//
+//  Created by Arie Prasetyo on 6/22/15.
+//  Copyright (c) 2015 Arie Prasetyo. All rights reserved.
+//
+
+#import "KategoriCollectionViewController.h"
+
+@interface KategoriCollectionViewController ()
+@property (nonatomic,strong)NSArray *category;
+@end
+
+@implementation KategoriCollectionViewController
+
+static NSString * const reuseIdentifier = @"Cell";
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.category = @[@{@"img":@"handphone-off",@"title":@"Handphone"},
+                      @{@"img":@"electronic-off",@"title":@"Elektronik"},
+                      @{@"img":@"furniture-off",@"title":@"Furniture"},
+                      @{@"img":@"fashion-off",@"title":@"Fashion"},
+                      @{@"img":@"homeappliance-off",@"title":@"Appliance"},
+                      @{@"img":@"hobby-off",@"title":@"Hobby"}];
+    // Uncomment the following line to preserve selection between presentations
+    // self.clearsSelectionOnViewWillAppear = NO;
+    // Register cell classes
+    
+    [self.collectionView reloadData];
+    self.collectionView.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.00f];
+    // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
+
+#pragma mark <UICollectionViewDataSource>
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.category.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
+    UILabel *categoryLabel = (UILabel *)[cell viewWithTag:101];
+    recipeImageView.image = [UIImage imageNamed:[[self.category  objectAtIndex:indexPath.row] valueForKeyPath:@"img"]];
+    categoryLabel.text =[[self.category  objectAtIndex:indexPath.row] valueForKeyPath:@"title"];
+    // Configure the cell
+    
+    return cell;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
+    UILabel *categoryLabel = (UILabel *)[cell viewWithTag:101];
+    categoryLabel.textColor =[UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.00f];
+    NSString *img =[[[self.category  objectAtIndex:indexPath.row] valueForKeyPath:@"img"] stringByReplacingOccurrencesOfString:@"-off" withString:@""];
+    
+    recipeImageView.image = [UIImage imageNamed:img];
+    
+}
+@end
