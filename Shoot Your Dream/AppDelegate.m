@@ -50,7 +50,7 @@
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
                                                          forBarMetrics:UIBarMetricsDefault];
     
-    UIImage *originalBackButtonImage = [UIImage imageNamed:@"backbutton"];
+    UIImage *originalBackButtonImage = [UIImage imageNamed:@"back"];
     CGSize backButtonSize = CGSizeMake(25, 25);
     UIGraphicsBeginImageContextWithOptions(backButtonSize, NO, 0.0);
     [originalBackButtonImage drawInRect:CGRectMake(0, 0, backButtonSize.width, backButtonSize.height)];

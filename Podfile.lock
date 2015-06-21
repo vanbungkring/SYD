@@ -22,6 +22,7 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - DLRadioButton (1.1.1)
   - Onboard (2.1.5)
   - Realm (0.93.1):
     - Realm/Headers (= 0.93.1)
@@ -33,6 +34,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
   - AFNetworking+ImageActivityIndicator (~> 1.0)
+  - DLRadioButton
   - Onboard
   - Realm (~> 0.93)
   - SDWebImage
@@ -40,6 +42,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   AFNetworking+ImageActivityIndicator: 471ddeb0e4d1083a05afa64672280a5e96bf9d0b
+  DLRadioButton: 1aad82f913b621432d51f8d5f4139265c39d202d
   Onboard: c58adaef5a377b0c45b4754c5cbe17d4627898c7
   Realm: 694b93846a0772c904f9e0cc3559d1bc856d931e
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29

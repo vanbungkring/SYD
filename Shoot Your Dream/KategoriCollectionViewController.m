@@ -7,7 +7,7 @@
 //
 
 #import "KategoriCollectionViewController.h"
-
+#import "CatDetailCollectionViewController.h"
 @interface KategoriCollectionViewController ()
 @property (nonatomic,strong)NSArray *category;
 @end
@@ -71,13 +71,10 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
-    UILabel *categoryLabel = (UILabel *)[cell viewWithTag:101];
-    categoryLabel.textColor =[UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.00f];
-    NSString *img =[[[self.category  objectAtIndex:indexPath.row] valueForKeyPath:@"img"] stringByReplacingOccurrencesOfString:@"-off" withString:@""];
-    
-    recipeImageView.image = [UIImage imageNamed:img];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"KategoryDetail" bundle:nil];
+    CatDetailCollectionViewController *detail = [sb instantiateViewControllerWithIdentifier:@"KategoryDetail"];
+    detail.title =[[self.category  objectAtIndex:indexPath.row] valueForKeyPath:@"title"];
+    [self.navigationController pushViewController:detail animated:YES];
     
 }
 @end

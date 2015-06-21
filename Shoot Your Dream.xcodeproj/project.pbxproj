@@ -41,6 +41,10 @@
 		438F0A841B3706AF00FD0864 /* MyAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A831B3706AF00FD0864 /* MyAccountTableViewController.m */; };
 		438F0A881B37323600FD0864 /* HomeIdeasCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A871B37323600FD0864 /* HomeIdeasCollectionViewController.m */; };
 		438F0A901B3735C800FD0864 /* KategoriCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A8F1B3735C800FD0864 /* KategoriCollectionViewController.m */; };
+		438F0A921B37518900FD0864 /* KategoryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F0A911B37518900FD0864 /* KategoryDetail.storyboard */; };
+		438F0A961B3753F500FD0864 /* CatDetailCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A951B3753F500FD0864 /* CatDetailCollectionViewController.m */; };
+		438F0A981B3758EE00FD0864 /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F0A971B3758EE00FD0864 /* Item.storyboard */; };
+		438F0A9D1B375BD200FD0864 /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A9C1B375BD200FD0864 /* ItemViewController.m */; };
 		CF879D68DDFDF069F0E824B7 /* libPods-Shoot Your Dream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB234502E95C365963EFBB0 /* libPods-Shoot Your Dream.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +107,12 @@
 		438F0A871B37323600FD0864 /* HomeIdeasCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeIdeasCollectionViewController.m; sourceTree = "<group>"; };
 		438F0A8E1B3735C800FD0864 /* KategoriCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KategoriCollectionViewController.h; sourceTree = "<group>"; };
 		438F0A8F1B3735C800FD0864 /* KategoriCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KategoriCollectionViewController.m; sourceTree = "<group>"; };
+		438F0A911B37518900FD0864 /* KategoryDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KategoryDetail.storyboard; sourceTree = "<group>"; };
+		438F0A941B3753F500FD0864 /* CatDetailCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatDetailCollectionViewController.h; sourceTree = "<group>"; };
+		438F0A951B3753F500FD0864 /* CatDetailCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatDetailCollectionViewController.m; sourceTree = "<group>"; };
+		438F0A971B3758EE00FD0864 /* Item.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Item.storyboard; sourceTree = "<group>"; };
+		438F0A9B1B375BD200FD0864 /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
+		438F0A9C1B375BD200FD0864 /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
 		CE8374D4BB520160303A8AC4 /* Pods-Shoot Your Dream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.release.xcconfig"; sourceTree = "<group>"; };
 		E4CF548E9E05F90C817ADA07 /* Pods-Shoot Your Dream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +220,8 @@
 			children = (
 				43006BA91B2B12B7008CEBA8 /* Main.storyboard */,
 				43006BCA1B2B1A01008CEBA8 /* Auth.storyboard */,
+				438F0A911B37518900FD0864 /* KategoryDetail.storyboard */,
+				438F0A971B3758EE00FD0864 /* Item.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -217,6 +229,7 @@
 		43006BC61B2B19BA008CEBA8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				438F0A991B375BB400FD0864 /* Other */,
 				438F0A811B37069100FD0864 /* My Account */,
 				438F0A7D1B36FE4900FD0864 /* Shoot */,
 				438F0A7C1B36F94000FD0864 /* Kategory */,
@@ -309,6 +322,7 @@
 		438F0A7C1B36F94000FD0864 /* Kategory */ = {
 			isa = PBXGroup;
 			children = (
+				438F0A931B3753DA00FD0864 /* Detail */,
 				438F0A8E1B3735C800FD0864 /* KategoriCollectionViewController.h */,
 				438F0A8F1B3735C800FD0864 /* KategoriCollectionViewController.m */,
 			);
@@ -340,6 +354,32 @@
 				438F0A871B37323600FD0864 /* HomeIdeasCollectionViewController.m */,
 			);
 			name = HomeIdeasController;
+			sourceTree = "<group>";
+		};
+		438F0A931B3753DA00FD0864 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				438F0A941B3753F500FD0864 /* CatDetailCollectionViewController.h */,
+				438F0A951B3753F500FD0864 /* CatDetailCollectionViewController.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		438F0A991B375BB400FD0864 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				438F0A9A1B375BBA00FD0864 /* Item */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		438F0A9A1B375BBA00FD0864 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				438F0A9B1B375BD200FD0864 /* ItemViewController.h */,
+				438F0A9C1B375BD200FD0864 /* ItemViewController.m */,
+			);
+			name = Item;
 			sourceTree = "<group>";
 		};
 		45763105ED17DDED80785DF0 /* Frameworks */ = {
@@ -437,6 +477,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43006BCB1B2B1A01008CEBA8 /* Auth.storyboard in Resources */,
+				438F0A981B3758EE00FD0864 /* Item.storyboard in Resources */,
+				438F0A921B37518900FD0864 /* KategoryDetail.storyboard in Resources */,
 				43006BAB1B2B12B7008CEBA8 /* Main.storyboard in Resources */,
 				43006BB01B2B12B7008CEBA8 /* LaunchScreen.xib in Resources */,
 				43006BAD1B2B12B7008CEBA8 /* Images.xcassets in Resources */,
@@ -491,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43006BA51B2B12B7008CEBA8 /* AppDelegate.m in Sources */,
+				438F0A9D1B375BD200FD0864 /* ItemViewController.m in Sources */,
 				43006BF31B2B2E58008CEBA8 /* ApiConfigs.h in Sources */,
 				438F0A841B3706AF00FD0864 /* MyAccountTableViewController.m in Sources */,
 				43006BF41B2B2E58008CEBA8 /* RoundedImage.h in Sources */,
@@ -502,6 +545,7 @@
 				43006BE71B2B2CB5008CEBA8 /* RoundedView.m in Sources */,
 				43006BF71B2B2E58008CEBA8 /* VanKeyboardHelper.h in Sources */,
 				43006BE81B2B2CB5008CEBA8 /* VanKeyboardHelper.m in Sources */,
+				438F0A961B3753F500FD0864 /* CatDetailCollectionViewController.m in Sources */,
 				438F0A711B36DE9800FD0864 /* HomeTableViewController.m in Sources */,
 				43006BF81B2B2E58008CEBA8 /* ModelManager.h in Sources */,
 				43006BDC1B2B2CA0008CEBA8 /* ModelManager.m in Sources */,

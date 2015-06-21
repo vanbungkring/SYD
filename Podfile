@@ -6,6 +6,7 @@ target 'Shoot Your Dream' do
     pod 'AFNetworking+ImageActivityIndicator', '~> 1.0'
     pod 'Realm', '~> 0.93'
     pod 'Onboard'
+    pod 'DLRadioButton'
     pod 'SDWebImage'
 end
 
