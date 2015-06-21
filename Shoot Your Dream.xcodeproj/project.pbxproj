@@ -35,7 +35,12 @@
 		43006BFA1B2B2E58008CEBA8 /* ConnectionManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 43006BD41B2B2C4D008CEBA8 /* ConnectionManager.h */; };
 		43006BFB1B2B2E58008CEBA8 /* Common.h in Sources */ = {isa = PBXBuildFile; fileRef = 43006BD01B2B2C42008CEBA8 /* Common.h */; };
 		43006BFE1B2B3031008CEBA8 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BFD1B2B3031008CEBA8 /* MainNavigationController.m */; };
-		43006C011B2B39F6008CEBA8 /* BaseTabbasController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006C001B2B39F6008CEBA8 /* BaseTabbasController.m */; };
+		43006C011B2B39F6008CEBA8 /* BaseTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006C001B2B39F6008CEBA8 /* BaseTabbarController.m */; };
+		438F0A711B36DE9800FD0864 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A701B36DE9800FD0864 /* HomeTableViewController.m */; };
+		438F0A801B36FE6200FD0864 /* ShootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A7F1B36FE6200FD0864 /* ShootViewController.m */; };
+		438F0A841B3706AF00FD0864 /* MyAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A831B3706AF00FD0864 /* MyAccountTableViewController.m */; };
+		438F0A881B37323600FD0864 /* HomeIdeasCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A871B37323600FD0864 /* HomeIdeasCollectionViewController.m */; };
+		438F0A901B3735C800FD0864 /* KategoriCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A8F1B3735C800FD0864 /* KategoriCollectionViewController.m */; };
 		CF879D68DDFDF069F0E824B7 /* libPods-Shoot Your Dream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB234502E95C365963EFBB0 /* libPods-Shoot Your Dream.a */; };
 /* End PBXBuildFile section */
 
@@ -86,8 +91,18 @@
 		43006BF21B2B2E15008CEBA8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		43006BFC1B2B3031008CEBA8 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		43006BFD1B2B3031008CEBA8 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
-		43006BFF1B2B39F6008CEBA8 /* BaseTabbasController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabbasController.h; sourceTree = "<group>"; };
-		43006C001B2B39F6008CEBA8 /* BaseTabbasController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabbasController.m; sourceTree = "<group>"; };
+		43006BFF1B2B39F6008CEBA8 /* BaseTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabbarController.h; sourceTree = "<group>"; };
+		43006C001B2B39F6008CEBA8 /* BaseTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabbarController.m; sourceTree = "<group>"; };
+		438F0A6F1B36DE9800FD0864 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		438F0A701B36DE9800FD0864 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		438F0A7E1B36FE6200FD0864 /* ShootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShootViewController.h; sourceTree = "<group>"; };
+		438F0A7F1B36FE6200FD0864 /* ShootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShootViewController.m; sourceTree = "<group>"; };
+		438F0A821B3706AF00FD0864 /* MyAccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountTableViewController.h; sourceTree = "<group>"; };
+		438F0A831B3706AF00FD0864 /* MyAccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountTableViewController.m; sourceTree = "<group>"; };
+		438F0A861B37323600FD0864 /* HomeIdeasCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeIdeasCollectionViewController.h; sourceTree = "<group>"; };
+		438F0A871B37323600FD0864 /* HomeIdeasCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeIdeasCollectionViewController.m; sourceTree = "<group>"; };
+		438F0A8E1B3735C800FD0864 /* KategoriCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KategoriCollectionViewController.h; sourceTree = "<group>"; };
+		438F0A8F1B3735C800FD0864 /* KategoriCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KategoriCollectionViewController.m; sourceTree = "<group>"; };
 		CE8374D4BB520160303A8AC4 /* Pods-Shoot Your Dream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.release.xcconfig"; sourceTree = "<group>"; };
 		E4CF548E9E05F90C817ADA07 /* Pods-Shoot Your Dream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,10 +217,14 @@
 		43006BC61B2B19BA008CEBA8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				438F0A811B37069100FD0864 /* My Account */,
+				438F0A7D1B36FE4900FD0864 /* Shoot */,
+				438F0A7C1B36F94000FD0864 /* Kategory */,
+				438F0A6E1B36DE2900FD0864 /* Home */,
 				43006BFC1B2B3031008CEBA8 /* MainNavigationController.h */,
 				43006BFD1B2B3031008CEBA8 /* MainNavigationController.m */,
-				43006BFF1B2B39F6008CEBA8 /* BaseTabbasController.h */,
-				43006C001B2B39F6008CEBA8 /* BaseTabbasController.m */,
+				43006BFF1B2B39F6008CEBA8 /* BaseTabbarController.h */,
+				43006C001B2B39F6008CEBA8 /* BaseTabbarController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -229,11 +248,7 @@
 				43006BE21B2B2CB5008CEBA8 /* RoundedView.m */,
 				43006BE31B2B2CB5008CEBA8 /* VanKeyboardHelper.h */,
 				43006BE41B2B2CB5008CEBA8 /* VanKeyboardHelper.m */,
-				43006BDA1B2B2CA0008CEBA8 /* ModelManager.h */,
-				43006BDB1B2B2CA0008CEBA8 /* ModelManager.m */,
 				43006BD31B2B2C4D008CEBA8 /* Config.h */,
-				43006BD41B2B2C4D008CEBA8 /* ConnectionManager.h */,
-				43006BD51B2B2C4D008CEBA8 /* ConnectionManager.m */,
 				43006BD01B2B2C42008CEBA8 /* Common.h */,
 				43006BD11B2B2C42008CEBA8 /* Common.m */,
 			);
@@ -250,6 +265,10 @@
 		43006BCC1B2B2B66008CEBA8 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				43006BDA1B2B2CA0008CEBA8 /* ModelManager.h */,
+				43006BDB1B2B2CA0008CEBA8 /* ModelManager.m */,
+				43006BD41B2B2C4D008CEBA8 /* ConnectionManager.h */,
+				43006BD51B2B2C4D008CEBA8 /* ConnectionManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -257,6 +276,7 @@
 		43006C021B2B3B17008CEBA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				438F0A721B36E07300FD0864 /* HomeCell */,
 				43006C031B2B3B1D008CEBA8 /* Subclass */,
 			);
 			name = View;
@@ -267,6 +287,59 @@
 			children = (
 			);
 			name = Subclass;
+			sourceTree = "<group>";
+		};
+		438F0A6E1B36DE2900FD0864 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				438F0A851B3731F900FD0864 /* HomeIdeasController */,
+				438F0A6F1B36DE9800FD0864 /* HomeTableViewController.h */,
+				438F0A701B36DE9800FD0864 /* HomeTableViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		438F0A721B36E07300FD0864 /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = HomeCell;
+			sourceTree = "<group>";
+		};
+		438F0A7C1B36F94000FD0864 /* Kategory */ = {
+			isa = PBXGroup;
+			children = (
+				438F0A8E1B3735C800FD0864 /* KategoriCollectionViewController.h */,
+				438F0A8F1B3735C800FD0864 /* KategoriCollectionViewController.m */,
+			);
+			name = Kategory;
+			sourceTree = "<group>";
+		};
+		438F0A7D1B36FE4900FD0864 /* Shoot */ = {
+			isa = PBXGroup;
+			children = (
+				438F0A7E1B36FE6200FD0864 /* ShootViewController.h */,
+				438F0A7F1B36FE6200FD0864 /* ShootViewController.m */,
+			);
+			name = Shoot;
+			sourceTree = "<group>";
+		};
+		438F0A811B37069100FD0864 /* My Account */ = {
+			isa = PBXGroup;
+			children = (
+				438F0A821B3706AF00FD0864 /* MyAccountTableViewController.h */,
+				438F0A831B3706AF00FD0864 /* MyAccountTableViewController.m */,
+			);
+			name = "My Account";
+			sourceTree = "<group>";
+		};
+		438F0A851B3731F900FD0864 /* HomeIdeasController */ = {
+			isa = PBXGroup;
+			children = (
+				438F0A861B37323600FD0864 /* HomeIdeasCollectionViewController.h */,
+				438F0A871B37323600FD0864 /* HomeIdeasCollectionViewController.m */,
+			);
+			name = HomeIdeasController;
 			sourceTree = "<group>";
 		};
 		45763105ED17DDED80785DF0 /* Frameworks */ = {
@@ -419,7 +492,9 @@
 			files = (
 				43006BA51B2B12B7008CEBA8 /* AppDelegate.m in Sources */,
 				43006BF31B2B2E58008CEBA8 /* ApiConfigs.h in Sources */,
+				438F0A841B3706AF00FD0864 /* MyAccountTableViewController.m in Sources */,
 				43006BF41B2B2E58008CEBA8 /* RoundedImage.h in Sources */,
+				438F0A901B3735C800FD0864 /* KategoriCollectionViewController.m in Sources */,
 				43006BE51B2B2CB5008CEBA8 /* RoundedImage.m in Sources */,
 				43006BF51B2B2E58008CEBA8 /* RoundedLabel.h in Sources */,
 				43006BE61B2B2CB5008CEBA8 /* RoundedLabel.m in Sources */,
@@ -427,13 +502,16 @@
 				43006BE71B2B2CB5008CEBA8 /* RoundedView.m in Sources */,
 				43006BF71B2B2E58008CEBA8 /* VanKeyboardHelper.h in Sources */,
 				43006BE81B2B2CB5008CEBA8 /* VanKeyboardHelper.m in Sources */,
+				438F0A711B36DE9800FD0864 /* HomeTableViewController.m in Sources */,
 				43006BF81B2B2E58008CEBA8 /* ModelManager.h in Sources */,
 				43006BDC1B2B2CA0008CEBA8 /* ModelManager.m in Sources */,
 				43006BF91B2B2E58008CEBA8 /* Config.h in Sources */,
-				43006C011B2B39F6008CEBA8 /* BaseTabbasController.m in Sources */,
+				43006C011B2B39F6008CEBA8 /* BaseTabbarController.m in Sources */,
+				438F0A881B37323600FD0864 /* HomeIdeasCollectionViewController.m in Sources */,
 				43006BFE1B2B3031008CEBA8 /* MainNavigationController.m in Sources */,
 				43006BFA1B2B2E58008CEBA8 /* ConnectionManager.h in Sources */,
 				43006BD61B2B2C4D008CEBA8 /* ConnectionManager.m in Sources */,
+				438F0A801B36FE6200FD0864 /* ShootViewController.m in Sources */,
 				43006BFB1B2B2E58008CEBA8 /* Common.h in Sources */,
 				43006BD21B2B2C42008CEBA8 /* Common.m in Sources */,
 				43006BA21B2B12B7008CEBA8 /* main.m in Sources */,

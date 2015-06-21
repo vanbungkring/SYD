@@ -6,17 +6,21 @@
 //  Copyright (c) 2015 Arie Prasetyo. All rights reserved.
 //
 
-#import "BaseTabbasController.h"
+#import "BaseTabbarController.h"
 
-@interface BaseTabbasController ()
+@interface BaseTabbarControlller ()
 
 @end
 
-@implementation BaseTabbasController
+@implementation BaseTabbarControlller
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     // Do any additional setup after loading the view.
+}
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    self.title = item.title ;
 }
 
 - (void)didReceiveMemoryWarning {
