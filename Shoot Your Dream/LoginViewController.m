@@ -8,7 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RoundedButton.h"
-
+#import "ForgotPasswordViewController.h"
 #import "RoundedView.h"
 //#import "ForgotPasswordViewController.h"
 @interface LoginViewController ()<UITextFieldDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -59,44 +59,44 @@
 - (IBAction)loginTapped:(id)sender {
     
     if (self.accountScreenType == LoginScreen) {
-        NSLog(@"login");
         [self loginWithUsername:self.emailTexttfield.text password:self.passwordTextField.text];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
     else {
         [self.dictionaryRegister setObject:self.passwordTextField.text forKey:@"password"];
         [self.dictionaryRegister setObject:self.fullName.text forKey:@"full_name"];
         [self.dictionaryRegister setObject:self.emailTexttfield.text forKey:@"email"];
         [self.dictionaryRegister setObject:self.images forKey:@"school_id"];
-//        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-//        [APIRequestManager registerWithParams:self.dictionaryRegister data:^(NSArray *json, NSError *error) {
-//            if(!error) {
-//                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-//            }
-//            else {
-//                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-//                
-//            }
-//        }];
+        //        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        //        [APIRequestManager registerWithParams:self.dictionaryRegister data:^(NSArray *json, NSError *error) {
+        //            if(!error) {
+        //                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        //            }
+        //            else {
+        //                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        //
+        //            }
+        //        }];
     }
     
 }
 
 
 -(void)loginWithUsername:(NSString *)userName password:(NSString *)password {
-//    [APIRequestManager loginWithParams:@{@"email":userName,
-//                                         @"password":password} data:^(NSArray *json, NSError *error) {
-//                                             if(!error){
-//                                                 NSLog(@"dismiss");
-//                                                 [APIRequestManager getUserProfile:@{@"token":[UserLocaModel getUserProfile].token} data:^(NSArray *json, NSError *error) {
-//                                                     if(!error){
-//                                                         [self dismissViewControllerAnimated:YES completion:^{
-//                                                             
-//                                                         }];
-//                                                     }
-//                                                 }] ;
-//                                             }
-//                                             
-//                                         }];
+    //    [APIRequestManager loginWithParams:@{@"email":userName,
+    //                                         @"password":password} data:^(NSArray *json, NSError *error) {
+    //                                             if(!error){
+    //                                                 NSLog(@"dismiss");
+    //                                                 [APIRequestManager getUserProfile:@{@"token":[UserLocaModel getUserProfile].token} data:^(NSArray *json, NSError *error) {
+    //                                                     if(!error){
+    //                                                         [self dismissViewControllerAnimated:YES completion:^{
+    //
+    //                                                         }];
+    //                                                     }
+    //                                                 }] ;
+    //                                             }
+    //
+    //                                         }];
 }
 - (IBAction)registerAccount:(id)sender {
     if (self.accountScreenType == LoginScreen) {
@@ -241,19 +241,19 @@
 //                                                                        @"facebook_id":[NSString stringWithFormat:@"%d",[[results objectForKey:@"id"]integerValue]],
 //                                                                        @"email":[results objectForKey:@"email"],
 //                                                                        @"facebook_token":[FBSDKAccessToken currentAccessToken].tokenString
-//                                                                        
+//
 //                                                                        } data:^(NSArray *json, NSError *error) {
 //                                                                            if(!error) {
 //                                                                                [self dismissViewControllerAnimated:YES completion:^{
 //                                                                                    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 //                                                                                }];
-//                                                                                
+//
 //                                                                            }
 //                                                                            else {
 //                                                                                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 //                                                                                NSLog(@"Error->%@",error);
 //                                                                            }
-//                                                                            
+//
 //                                                                        }];
 //                             }
 //                             else {
@@ -261,7 +261,7 @@
 //                                 self.fullName.text = [NSString stringWithFormat:@"%@ %@",[results objectForKey:@"first_name"],[results objectForKey:@"last_name"]];
 //                                 [self.dictionaryRegister setObject:[NSString stringWithFormat:@"%d",[[results objectForKey:@"id"]integerValue]] forKey:@"facebook_id"];
 //                                 [self.dictionaryRegister setObject:[FBSDKAccessToken currentAccessToken].tokenString forKey:@"facebook_token"];
-//                                 
+//
 //                                 NSLog(@"result--.%@",results);
 //                                 [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 //                             }
@@ -343,12 +343,12 @@
 }
 
 
-//- (IBAction)forgotPassword:(id)sender {
-//    
-//    UIStoryboard *sb  = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-//    ForgotPasswordViewController *fp =[sb instantiateViewControllerWithIdentifier:@"ForgotPasswordViewController"];
-//    [self presentViewController:fp animated:YES completion:nil];
-//}
+- (IBAction)forgotPassword:(id)sender {
+    
+    UIStoryboard *sb  = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    ForgotPasswordViewController *fp =[sb instantiateViewControllerWithIdentifier:@"ForgotPasswordViewController"];
+    [self presentViewController:fp animated:YES completion:nil];
+}
 
 /*
  #pragma mark - Navigation

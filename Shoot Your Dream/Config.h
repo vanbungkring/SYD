@@ -9,7 +9,7 @@
 
 //Font
 
-static NSString * const FONT_NAME_DEFAULT = @"AvenirNext-Medium";
+static NSString * const FONT_NAME_DEFAULT = @"HelveticaNeue";
 static NSString * const FONT_NAME_MEDIUM = @"HelveticaNeue-Medium";
 static NSString * const FONT_NAME_BOLD = @"HelveticaNeue-Bold";
 static NSString * const FONT_NAME_THIN = @"HelveticaNeue-Thin";
