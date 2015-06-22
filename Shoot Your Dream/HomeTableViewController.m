@@ -8,6 +8,7 @@
 
 #import "HomeTableViewController.h"
 #import "HomeIdeasCollectionViewController.h"
+#import "LoginViewController.h"
 #import <UIImageView+AFNetworking_UIActivityIndicatorView.h>
 @interface HomeTableViewController ()
 
@@ -50,6 +51,16 @@
                        ];
     self.ideasCollectionView.backgroundColor =[UIColor clearColor];
     [self.tableView reloadData];
+    [self openLogin];
+}
+
+-(void)openLogin {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    
+    LoginViewController *loginWindow = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    
+    [self.tabBarController presentViewController:loginWindow animated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
