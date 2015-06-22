@@ -67,8 +67,6 @@
                     </collectionView>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Kategori" image="category-off" id="YiA-hq-1mp"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipz-7c-HhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

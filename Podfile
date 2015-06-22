@@ -8,6 +8,11 @@ target 'Shoot Your Dream' do
     pod 'Onboard'
     pod 'DLRadioButton'
     pod 'SDWebImage'
+    
+    source 'https://github.com/CocoaPods/Specs.git'
+    use_frameworks!
+    
+    pod 'TTRangeSlider'
 end
 
 target 'Shoot Your DreamTests' do

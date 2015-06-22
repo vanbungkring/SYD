@@ -24,12 +24,13 @@ PODS:
     - AFNetworking/NSURLSession
   - DLRadioButton (1.1.1)
   - Onboard (2.1.5)
-  - Realm (0.93.1):
-    - Realm/Headers (= 0.93.1)
-  - Realm/Headers (0.93.1)
+  - Realm (0.93.2):
+    - Realm/Headers (= 0.93.2)
+  - Realm/Headers (0.93.2)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
+  - TTRangeSlider (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
@@ -38,13 +39,15 @@ DEPENDENCIES:
   - Onboard
   - Realm (~> 0.93)
   - SDWebImage
+  - TTRangeSlider
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   AFNetworking+ImageActivityIndicator: 471ddeb0e4d1083a05afa64672280a5e96bf9d0b
   DLRadioButton: 1aad82f913b621432d51f8d5f4139265c39d202d
   Onboard: c58adaef5a377b0c45b4754c5cbe17d4627898c7
-  Realm: 694b93846a0772c904f9e0cc3559d1bc856d931e
+  Realm: 2fdd0ae74f730e190384e0338d8a0d3654df8220
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  TTRangeSlider: e41d992cc0047da48884ad507f968db5ab08441b
 
 COCOAPODS: 0.37.2

@@ -37,9 +37,8 @@
                                                    forState:UIControlStateNormal];
     
     //    //  Navigation bar configuration
-    //    [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:1.000f green:0.549f blue:0.000f alpha:1.00f]];
-    //    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:1.000f green:0.549f blue:0.000f alpha:1.00f]];
-    //    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:1.000f green:0.549f blue:0.000f alpha:1.00f]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:1.000f green:0.549f blue:0.000f alpha:1.00f]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:1.000f green:0.549f blue:0.000f alpha:1.00f]];
     [[UINavigationBar appearance] setTitleTextAttributes:titleFontAttributes];
     
     //  Navigation bar button item configuration
