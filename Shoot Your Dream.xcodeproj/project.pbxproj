@@ -49,6 +49,12 @@
 		438F0AA31B37BF6600FD0864 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0AA21B37BF6600FD0864 /* LoginViewController.m */; };
 		438F0AA61B37BFA600FD0864 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0AA51B37BFA600FD0864 /* RoundedButton.m */; };
 		438F0AAA1B37CF0500FD0864 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0AA91B37CF0500FD0864 /* ForgotPasswordViewController.m */; };
+		43D4C6DA1B38657800A37D70 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4C6D91B38657800A37D70 /* FilterViewController.m */; };
+		43D4C6DD1B38662200A37D70 /* DLRadioButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D4C6DB1B38662200A37D70 /* DLRadioButton.framework */; };
+		43D4C6DE1B38662200A37D70 /* TTRangeSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D4C6DC1B38662200A37D70 /* TTRangeSlider.framework */; };
+		43D4C6E11B38698800A37D70 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4C6E01B38698800A37D70 /* BaseViewController.m */; };
+		43E474A71B387FC6006F44AC /* CartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E474A61B387FC6006F44AC /* CartTableViewController.m */; };
+		43E474A91B387FD7006F44AC /* CartView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E474A81B387FD7006F44AC /* CartView.storyboard */; };
 		B98C15320E6498546AD3AD29 /* Pods_Shoot_Your_Dream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CA95242F04F42377538CD1 /* Pods_Shoot_Your_Dream.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -123,6 +129,15 @@
 		438F0AA51B37BFA600FD0864 /* RoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedButton.m; sourceTree = "<group>"; };
 		438F0AA81B37CF0500FD0864 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		438F0AA91B37CF0500FD0864 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
+		43D4C6D81B38657800A37D70 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
+		43D4C6D91B38657800A37D70 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
+		43D4C6DB1B38662200A37D70 /* DLRadioButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DLRadioButton.framework; path = "Pods/../build/Debug-iphoneos/Pods-Shoot Your Dream/DLRadioButton.framework"; sourceTree = "<group>"; };
+		43D4C6DC1B38662200A37D70 /* TTRangeSlider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TTRangeSlider.framework; path = "Pods/../build/Debug-iphoneos/Pods-Shoot Your Dream/TTRangeSlider.framework"; sourceTree = "<group>"; };
+		43D4C6DF1B38698800A37D70 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		43D4C6E01B38698800A37D70 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		43E474A51B387FC6006F44AC /* CartTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartTableViewController.h; sourceTree = "<group>"; };
+		43E474A61B387FC6006F44AC /* CartTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTableViewController.m; sourceTree = "<group>"; };
+		43E474A81B387FD7006F44AC /* CartView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CartView.storyboard; sourceTree = "<group>"; };
 		B1CA95242F04F42377538CD1 /* Pods_Shoot_Your_Dream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shoot_Your_Dream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8374D4BB520160303A8AC4 /* Pods-Shoot Your Dream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.release.xcconfig"; sourceTree = "<group>"; };
 		E4CF548E9E05F90C817ADA07 /* Pods-Shoot Your Dream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +148,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D4C6DD1B38662200A37D70 /* DLRadioButton.framework in Frameworks */,
+				43D4C6DE1B38662200A37D70 /* TTRangeSlider.framework in Frameworks */,
 				43006BF11B2B2DBB008CEBA8 /* UIKit.framework in Frameworks */,
 				43006BED1B2B2D60008CEBA8 /* CoreFoundation.framework in Frameworks */,
 				43006BEE1B2B2D60008CEBA8 /* CoreImage.framework in Frameworks */,
@@ -234,6 +251,7 @@
 				43006BCA1B2B1A01008CEBA8 /* Auth.storyboard */,
 				438F0A911B37518900FD0864 /* KategoryDetail.storyboard */,
 				438F0A971B3758EE00FD0864 /* Item.storyboard */,
+				43E474A81B387FD7006F44AC /* CartView.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -250,6 +268,8 @@
 				43006BFD1B2B3031008CEBA8 /* MainNavigationController.m */,
 				43006BFF1B2B39F6008CEBA8 /* BaseTabbarController.h */,
 				43006C001B2B39F6008CEBA8 /* BaseTabbarController.m */,
+				43D4C6DF1B38698800A37D70 /* BaseViewController.h */,
+				43D4C6E01B38698800A37D70 /* BaseViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -382,6 +402,8 @@
 		438F0A991B375BB400FD0864 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				43E474A41B387F8E006F44AC /* Cart */,
+				43D4C6D71B38656700A37D70 /* Filter */,
 				438F0AA71B37CEEC00FD0864 /* Forgot Password */,
 				438F0AA01B37BF5300FD0864 /* Login */,
 				438F0A9A1B375BBA00FD0864 /* Item */,
@@ -416,9 +438,29 @@
 			name = "Forgot Password";
 			sourceTree = "<group>";
 		};
+		43D4C6D71B38656700A37D70 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				43D4C6D81B38657800A37D70 /* FilterViewController.h */,
+				43D4C6D91B38657800A37D70 /* FilterViewController.m */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
+		43E474A41B387F8E006F44AC /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				43E474A51B387FC6006F44AC /* CartTableViewController.h */,
+				43E474A61B387FC6006F44AC /* CartTableViewController.m */,
+			);
+			name = Cart;
+			sourceTree = "<group>";
+		};
 		45763105ED17DDED80785DF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43D4C6DB1B38662200A37D70 /* DLRadioButton.framework */,
+				43D4C6DC1B38662200A37D70 /* TTRangeSlider.framework */,
 				43006BF01B2B2DBB008CEBA8 /* UIKit.framework */,
 				43006BEA1B2B2D60008CEBA8 /* CoreFoundation.framework */,
 				43006BEB1B2B2D60008CEBA8 /* CoreImage.framework */,
@@ -518,6 +560,7 @@
 				43006BAB1B2B12B7008CEBA8 /* Main.storyboard in Resources */,
 				43006BB01B2B12B7008CEBA8 /* LaunchScreen.xib in Resources */,
 				43006BAD1B2B12B7008CEBA8 /* Images.xcassets in Resources */,
+				43E474A91B387FD7006F44AC /* CartView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +635,7 @@
 				43006BF41B2B2E58008CEBA8 /* RoundedImage.h in Sources */,
 				438F0A901B3735C800FD0864 /* KategoriCollectionViewController.m in Sources */,
 				43006BE51B2B2CB5008CEBA8 /* RoundedImage.m in Sources */,
+				43D4C6E11B38698800A37D70 /* BaseViewController.m in Sources */,
 				43006BF51B2B2E58008CEBA8 /* RoundedLabel.h in Sources */,
 				43006BE61B2B2CB5008CEBA8 /* RoundedLabel.m in Sources */,
 				43006BF61B2B2E58008CEBA8 /* RoundedView.h in Sources */,
@@ -605,8 +649,10 @@
 				43006BDC1B2B2CA0008CEBA8 /* ModelManager.m in Sources */,
 				43006BF91B2B2E58008CEBA8 /* Config.h in Sources */,
 				43006C011B2B39F6008CEBA8 /* BaseTabbarController.m in Sources */,
+				43D4C6DA1B38657800A37D70 /* FilterViewController.m in Sources */,
 				438F0A881B37323600FD0864 /* HomeIdeasCollectionViewController.m in Sources */,
 				43006BFE1B2B3031008CEBA8 /* MainNavigationController.m in Sources */,
+				43E474A71B387FC6006F44AC /* CartTableViewController.m in Sources */,
 				43006BFA1B2B2E58008CEBA8 /* ConnectionManager.h in Sources */,
 				43006BD61B2B2C4D008CEBA8 /* ConnectionManager.m in Sources */,
 				438F0A801B36FE6200FD0864 /* ShootViewController.m in Sources */,
@@ -739,6 +785,12 @@
 			baseConfigurationReference = E4CF548E9E05F90C817ADA07 /* Pods-Shoot Your Dream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Shoot",
+					Your,
+					Dream,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Shoot Your Dream/PrefixHeader.pch";
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
@@ -752,6 +804,12 @@
 			baseConfigurationReference = CE8374D4BB520160303A8AC4 /* Pods-Shoot Your Dream.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Shoot",
+					Your,
+					Dream,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Shoot Your Dream/PrefixHeader.pch";
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";

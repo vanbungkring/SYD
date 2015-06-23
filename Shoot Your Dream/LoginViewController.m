@@ -63,10 +63,10 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }
     else {
-        [self.dictionaryRegister setObject:self.passwordTextField.text forKey:@"password"];
-        [self.dictionaryRegister setObject:self.fullName.text forKey:@"full_name"];
-        [self.dictionaryRegister setObject:self.emailTexttfield.text forKey:@"email"];
-        [self.dictionaryRegister setObject:self.images forKey:@"school_id"];
+        //        [self.dictionaryRegister setObject:self.passwordTextField.text forKey:@"password"];
+        //        [self.dictionaryRegister setObject:self.fullName.text forKey:@"full_name"];
+        //        [self.dictionaryRegister setObject:self.emailTexttfield.text forKey:@"email"];
+        //        [self.dictionaryRegister setObject:self.images forKey:@"school_id"];
         //        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         //        [APIRequestManager registerWithParams:self.dictionaryRegister data:^(NSArray *json, NSError *error) {
         //            if(!error) {
@@ -110,7 +110,7 @@
                              else {
                                  [self setHiddenWithState:YES];
                              }
-                             self.facebookButton.transform = CGAffineTransformMakeTranslation(0, -10);
+                             
                              self.orView.transform = CGAffineTransformMakeTranslation(0, -10);
                              
                              [UIView transitionWithView:self.firstNameView
@@ -145,9 +145,9 @@
                          } completion:^(BOOL finished) {
                              [self.facebookButton setTitle:@"Register with Facebook"
                                                   forState:UIControlStateNormal];
-                             [self.actionButton setTitle:@"Verify Me"
+                             [self.actionButton setTitle:@"Register"
                                                 forState:UIControlStateNormal];
-                             [self.accountButton setTitle:@"Already Verified"
+                             [self.accountButton setTitle:@"Login"
                                                  forState:UIControlStateNormal];
                              
                              self.accountScreenType = SignUpScreen;
@@ -157,7 +157,7 @@
         [UIView animateWithDuration:0.5
                          animations:^{
                              [self setHiddenWithState:YES];
-                             self.facebookButton.transform = CGAffineTransformMakeTranslation(0, 0);
+                             
                              self.orView.transform = CGAffineTransformMakeTranslation(0, 0);
                              
                              [UIView transitionWithView:self.firstNameView
@@ -201,8 +201,7 @@
                                              }
                                              completion:nil];
                          } completion:^(BOOL finished) {
-                             [self.facebookButton setTitle:@"Log In with Facebook"
-                                                  forState:UIControlStateNormal];
+                             
                              [self.actionButton setTitle:@"Log In"
                                                 forState:UIControlStateNormal];
                              [self.accountButton setTitle:@"Need an account?"

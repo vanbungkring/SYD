@@ -20,8 +20,8 @@
 #import "ApiConfigs.h"
 //#import "UserLocaModel.h"
 //#import <AFNetworkActivityLogger.h>
-#import <AFNetworking.h>
-#import <UIImageView+AFNetworking.h>
+#import "AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 #import <Foundation/Foundation.h>
 #import "ConnectionManager.h"
 //#import "APIRequestManager.h"

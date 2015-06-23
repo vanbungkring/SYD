@@ -1,5 +1,5 @@
 //
-//  ItemViewController.h
+//  FilterViewController.h
 //  Shoot Your Dream
 //
 //  Created by Arie Prasetyo on 6/22/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-@interface ItemViewController : BaseViewController
+@interface FilterViewController : BaseViewController
 
 @end
