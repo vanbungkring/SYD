@@ -10,6 +10,8 @@
 #import "RoundedButton.h"
 #import "ForgotPasswordViewController.h"
 #import "RoundedView.h"
+#import "OnboardingContentViewController.h"
+#import "OnboardingViewController.h"
 //#import "ForgotPasswordViewController.h"
 @interface LoginViewController ()<UITextFieldDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIView *registerView;
@@ -32,7 +34,7 @@
 @property (strong,nonatomic) NSMutableDictionary *dictionaryRegister;
 @property (strong, nonatomic) IBOutlet UIImageView *checkMark;
 @end
-
+static NSString *kUserHasOnboardedKey = @"isEverOpened";
 @implementation LoginViewController
 
 - (void)viewDidLoad {
@@ -53,6 +55,85 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    BOOL isEver = [[NSUserDefaults standardUserDefaults]boolForKey:kUserHasOnboardedKey];
+    // determine if the user has onboarded yet or not
+    
+    
+    if (!isEver) {
+        [self presentViewController:[self generateThirdDemoVC] animated:YES completion:nil];
+    }
+    
+    
+}
+- (OnboardingViewController *)generateThirdDemoVC {
+    OnboardingContentViewController *firstPage = [[OnboardingContentViewController alloc] initWithTitle:@"Step 1" body:@"Ambil foto produk idaman Anda, melalui menu “SHOOT” pada apps, isi data diri beserta alamat lengkap anda dan ajukan aplikasinya." image:[UIImage imageNamed:@"step1"] buttonText:nil action:nil];
+    firstPage.iconHeight = 119;
+    firstPage.iconWidth = 116;
+    firstPage.topPadding = 190;
+    firstPage.bodyFontSize = 14;
+    firstPage.titleTextColor =  [Common colorWithHexString:@"28a3b2"];
+    firstPage.bodyTextColor = [Common colorWithHexString:@"7d7d7d"];
+    OnboardingContentViewController *secondPage = [[OnboardingContentViewController alloc] initWithTitle:@"Step 2" body:@"Tunggu respon dari staff “Shoot Your Dream” paling lambat 1x24 jam." image:[UIImage imageNamed:@"step2"] buttonText:nil action:nil];
+    secondPage.iconHeight = 120;
+    secondPage.iconWidth = 102;
+    secondPage.topPadding = 190;
+    secondPage.bodyFontSize = 14;
+    secondPage.titleTextColor =  [Common colorWithHexString:@"8dc63f"];
+    secondPage.bodyTextColor = [Common colorWithHexString:@"7d7d7d"];
+    
+    OnboardingContentViewController *thirdPage = [[OnboardingContentViewController alloc] initWithTitle:@"Step 3" body:@"Pilih lama cicilan yang Anda inginkan dari beberapa pilihan yang ditawarkan oleh Shoot Your Dream." image:[UIImage imageNamed:@"step3"] buttonText:@"Skip" action:nil];
+    
+    thirdPage.iconHeight = 80;
+    thirdPage.iconWidth = 195;
+    thirdPage.topPadding = 190;
+    thirdPage.bodyFontSize = 14;
+    thirdPage.titleTextColor =  [Common colorWithHexString:@"f99300"];
+    thirdPage.bodyTextColor = [Common colorWithHexString:@"7d7d7d"];
+    
+    
+    OnboardingContentViewController *fourthPage = [[OnboardingContentViewController alloc] initWithTitle:@"Step 4" body:@"Produk idaman akan langsung jadi milik Anda, mudah dan aman." image:[UIImage imageNamed:@"step4"] buttonText:@"Get Started!" action:nil];
+    
+    fourthPage.buttonTextColor = [Common colorWithHexString:@"00aeef"];
+    fourthPage.buttonFontSize = 14;
+    fourthPage.iconHeight = 110;
+    fourthPage.iconWidth = 119;
+    fourthPage.topPadding = 190;
+    fourthPage.bodyFontSize = 14;
+    fourthPage.titleTextColor =  [Common colorWithHexString:@"00aeef"];
+    fourthPage.bodyTextColor = [Common colorWithHexString:@"7d7d7d"];
+    
+    OnboardingViewController *onboardingVC = [[OnboardingViewController alloc] initWithBackgroundImage:[UIImage imageNamed:@"onboard"] contents:@[firstPage, secondPage, thirdPage, fourthPage]];
+    onboardingVC.pageControl.pageIndicatorTintColor = [Common colorWithHexString:@"f99300"];
+    onboardingVC.shouldMaskBackground = NO;
+    onboardingVC.shouldBlurBackground = NO;
+    onboardingVC.allowSkipping = YES;
+    onboardingVC.shouldFadeTransitions = YES;
+    onboardingVC.skipButton.titleLabel.textColor =[Common colorWithHexString:@"00aeef"];
+    [onboardingVC.skipButton setTitleColor:[Common colorWithHexString:@"f99300"] forState:UIControlStateNormal];
+    onboardingVC.skipHandler = ^{
+        [self handleOnboardingCompletion];
+    };
+    return onboardingVC;
+}
+
+- (void)setupNormalRootViewControllerAnimated:(BOOL)animated {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)handleOnboardingCompletion {
+    // set that we have completed onboarding so we only do it once... for demo
+    // purposes we don't want to have to set this every time so I'll just leave
+    // this here...
+    //    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserHasOnboardedKey];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserHasOnboardedKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    // animate the transition to the main application
+    [self setupNormalRootViewControllerAnimated:YES];
 }
 
 

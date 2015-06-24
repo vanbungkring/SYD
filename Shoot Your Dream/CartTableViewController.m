@@ -7,7 +7,7 @@
 //
 
 #import "CartTableViewController.h"
-
+#import "ListAddressTableViewController.h"
 @interface CartTableViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *cartTableView;
@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -105,5 +105,10 @@
  // Pass the selected object to the new view controller.
  }
  */
+- (IBAction)nextDidTapped:(id)sender {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CartView" bundle:nil];
+    ListAddressTableViewController *cartList = [sb instantiateViewControllerWithIdentifier:@"ListAddressTableViewController"];
+    [self.navigationController pushViewController:cartList animated:YES];
+}
 
 @end

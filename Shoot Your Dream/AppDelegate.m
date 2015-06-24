@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+#import "LoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -82,11 +83,8 @@
     [[UITabBar appearance] setShadowImage:nil];
     
     
-    
     return YES;
 }
-
-
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
