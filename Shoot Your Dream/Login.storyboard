@@ -58,7 +58,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Log In">
-                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="accountLogin:" destination="IK9-6h-Vcz" eventType="touchUpInside" id="R07-IQ-04Z"/>
@@ -120,7 +120,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Lzq-Fq-qOa"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wsup" translatesAutoresizingMaskIntoConstraints="NO" id="XYu-cg-I8x">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="syd-logo" translatesAutoresizingMaskIntoConstraints="NO" id="XYu-cg-I8x">
                                 <rect key="frame" x="69" y="118" width="183" height="83"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="183" id="JMc-Js-VnJ"/>
@@ -206,13 +206,13 @@
                                     <action selector="backToLogin:" destination="Rv0-7f-sUH" eventType="touchUpInside" id="cTE-bx-c17"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lupa Password ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEP-SZ-elA">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lupa Password ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEP-SZ-elA">
                                 <rect key="frame" x="20" y="167" width="280" height="28"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lqt-ht-ZOx" customClass="RoundedView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqt-ht-ZOx" customClass="RoundedView">
                                 <rect key="frame" x="51" y="265" width="218" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="45O-YN-B85">
@@ -222,10 +222,16 @@
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.83137254900000002" green="0.82352941180000006" blue="0.82352941180000006" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Za1-jV-naX"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTK-zk-JOW" customClass="RoundedButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTK-zk-JOW" customClass="RoundedButton">
                                 <rect key="frame" x="51" y="313" width="218" height="40"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vIR-uL-C9i"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Kirim">
                                     <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -234,18 +240,40 @@
                                     <action selector="submitForgotToServer:" destination="Rv0-7f-sUH" eventType="touchUpInside" id="NMa-Y2-t3m"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Silahkan Ketik alamat email Anda, Kami akan mengirimkan link pernggantian password melalui email" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7a-fk-RR2">
-                                <rect key="frame" x="31" y="198" width="258" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silahkan Ketik alamat email Anda, Kami akan mengirimkan link pernggantian password melalui email" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7a-fk-RR2">
+                                <rect key="frame" x="31" y="198" width="258" height="46"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="syd-logo" translatesAutoresizingMaskIntoConstraints="NO" id="uPN-Jr-5Uu">
+                                <rect key="frame" x="69" y="76" width="183" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="183" id="K39-V2-1jZ"/>
+                                    <constraint firstAttribute="height" constant="83" id="maU-by-PuQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="T7a-fk-RR2" firstAttribute="leading" secondItem="0we-Fa-NNw" secondAttribute="leadingMargin" constant="15" id="5JY-fU-uBQ"/>
+                            <constraint firstItem="EEP-SZ-elA" firstAttribute="top" secondItem="uPN-Jr-5Uu" secondAttribute="bottom" constant="8" id="BgQ-EF-ssd"/>
+                            <constraint firstItem="Lqt-ht-ZOx" firstAttribute="leading" secondItem="0we-Fa-NNw" secondAttribute="leadingMargin" constant="35" id="I6i-cZ-VfG"/>
                             <constraint firstItem="qRT-6n-kge" firstAttribute="leading" secondItem="0we-Fa-NNw" secondAttribute="leading" constant="90" id="LVL-rn-f9i"/>
+                            <constraint firstItem="EEP-SZ-elA" firstAttribute="leading" secondItem="0we-Fa-NNw" secondAttribute="leadingMargin" constant="4" id="Qq7-7S-GMk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lqt-ht-ZOx" secondAttribute="trailing" constant="35" id="S6b-Ki-pdl"/>
+                            <constraint firstItem="T7a-fk-RR2" firstAttribute="top" secondItem="EEP-SZ-elA" secondAttribute="bottom" constant="3" id="UBd-LZ-0F9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T7a-fk-RR2" secondAttribute="trailing" constant="15" id="UrL-qx-efB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yTK-zk-JOW" secondAttribute="trailing" constant="35" id="W7i-7A-PKj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uPN-Jr-5Uu" secondAttribute="trailing" constant="52" id="es6-ry-hTP"/>
+                            <constraint firstItem="yTK-zk-JOW" firstAttribute="leading" secondItem="0we-Fa-NNw" secondAttribute="leadingMargin" constant="35" id="fIb-NB-JI3"/>
+                            <constraint firstItem="uPN-Jr-5Uu" firstAttribute="leading" secondItem="0we-Fa-NNw" secondAttribute="leadingMargin" constant="53" id="gin-Hu-ZV1"/>
                             <constraint firstItem="ZSN-6r-XOh" firstAttribute="top" secondItem="qRT-6n-kge" secondAttribute="bottom" constant="20" id="izr-3K-pEp"/>
+                            <constraint firstItem="uPN-Jr-5Uu" firstAttribute="top" secondItem="JZY-0Z-1yV" secondAttribute="bottom" constant="56" id="rlz-T1-5Ho"/>
+                            <constraint firstItem="yTK-zk-JOW" firstAttribute="top" secondItem="Lqt-ht-ZOx" secondAttribute="bottom" constant="8" id="uQV-08-N5I"/>
+                            <constraint firstItem="Lqt-ht-ZOx" firstAttribute="top" secondItem="T7a-fk-RR2" secondAttribute="bottom" constant="21" id="vGB-0c-Q0w"/>
                             <constraint firstAttribute="trailing" secondItem="qRT-6n-kge" secondAttribute="trailing" constant="90" id="wX5-55-UsY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EEP-SZ-elA" secondAttribute="trailing" constant="4" id="zSq-P7-9fE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Uq-DC-l9w"/>
@@ -279,6 +307,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="wsup" width="724" height="321"/>
+        <image name="syd-logo" width="193" height="74"/>
     </resources>
 </document>

@@ -7,7 +7,7 @@
 //
 
 #import "HomeIdeasCollectionViewController.h"
-#import <UIImageView+AFNetworking_UIActivityIndicatorView.h>
+#import "UIImageView+AFNetworking_UIActivityIndicatorView.h"
 @interface HomeIdeasCollectionViewController ()
 @property (nonatomic,strong) NSArray *listPromo;
 @end

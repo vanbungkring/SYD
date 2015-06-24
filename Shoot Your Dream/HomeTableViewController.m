@@ -9,7 +9,7 @@
 #import "HomeTableViewController.h"
 #import "HomeIdeasCollectionViewController.h"
 #import "LoginViewController.h"
-#import <UIImageView+AFNetworking_UIActivityIndicatorView.h>
+#import "UIImageView+AFNetworking_UIActivityIndicatorView.h"
 @interface HomeTableViewController ()
 
 

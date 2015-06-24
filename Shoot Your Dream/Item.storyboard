@@ -16,100 +16,179 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6FI-E1-xOt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6FI-E1-xOt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xzy-AT-gnJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eb1-LH-H5s">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="522"/>
                                         <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ETa-iK-Mp5">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
-                                            </scrollView>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CD4-Wk-MD9">
-                                                <rect key="frame" x="141" y="176" width="39" height="37"/>
-                                                <color key="pageIndicatorTintColor" red="0.91764705879999997" green="0.61568627450000002" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="currentPageIndicatorTintColor" red="0.91764705879999997" green="0.61568627450000002" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </pageControl>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wK6-Bo-x9y">
-                                                <rect key="frame" x="0.0" y="212" width="320" height="0.0"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6t8-6u-R4F">
-                                                <rect key="frame" x="8" y="220" width="304" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Zc-4J-fV8">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="184"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="184" id="6HZ-b6-d8g"/>
+                                                    <constraint firstAttribute="height" constant="184" id="UT6-bp-5JG"/>
+                                                    <constraint firstAttribute="width" constant="320" id="nLx-9k-ee7"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iu5-nA-Omk">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YPV-8Z-wAK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sony Experia HandPhone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-WX-sfh">
+                                                <rect key="frame" x="8" y="192" width="304" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eWJ-7e-fLr">
-                                                <rect key="frame" x="80" y="249" width="160" height="27"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUT-wq-6Wo">
-                                                <rect key="frame" x="8" y="289" width="304" height="0.0"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Informasi Produk :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umj-Ls-P0a">
-                                                <rect key="frame" x="8" y="0.0" width="304" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opsi Cicilan Yang Tersedia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgy-Z2-L9G">
+                                                <rect key="frame" x="8" y="216" width="160" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informasi Produk" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gc-8r-jqH">
-                                                <rect key="frame" x="0.0" y="0.0" width="131" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 bulan - IDR 2.820.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rx-Ik-cFv">
+                                                <rect key="frame" x="20" y="235" width="160" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 bulan - IDR 2.820.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bD-w3-zLt">
+                                                <rect key="frame" x="20" y="256" width="160" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 bulan - IDR 2.820.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSI-c0-i8l">
+                                                <rect key="frame" x="20" y="277" width="160" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informasi Produk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmO-Xh-3Gh">
+                                                <rect key="frame" x="8" y="306" width="160" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yT-pS-Yzv">
+                                                <rect key="frame" x="8" y="322" width="304" height="102"/>
+                                                <string key="text">All logos and images are properties of their respective owners and or East Coast Vintage MX. East Coast Vintage is a division of Weaver Motorsports, Inc. All motorcycles for sale are pre-owned - we are not franchise holders for any of the above mentioned brands.</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="ETa-iK-Mp5" firstAttribute="trailing" secondItem="CD4-Wk-MD9" secondAttribute="trailing" constant="140" id="0ed-ud-Cd5"/>
-                                            <constraint firstItem="eWJ-7e-fLr" firstAttribute="leading" secondItem="xzy-AT-gnJ" secondAttribute="leading" constant="80" id="1Z0-Qw-F9u"/>
-                                            <constraint firstItem="wK6-Bo-x9y" firstAttribute="leading" secondItem="xzy-AT-gnJ" secondAttribute="leading" id="2RK-QL-1zE"/>
-                                            <constraint firstItem="ETa-iK-Mp5" firstAttribute="top" secondItem="xzy-AT-gnJ" secondAttribute="top" id="2ox-4y-29M"/>
-                                            <constraint firstItem="CD4-Wk-MD9" firstAttribute="top" secondItem="wK6-Bo-x9y" secondAttribute="top" constant="-36" id="4Yl-Bl-cPA"/>
-                                            <constraint firstAttribute="trailing" secondItem="6t8-6u-R4F" secondAttribute="trailing" constant="8" id="CPP-Eh-KbC"/>
-                                            <constraint firstItem="6t8-6u-R4F" firstAttribute="top" secondItem="wK6-Bo-x9y" secondAttribute="bottom" constant="8" id="EVD-yN-byl"/>
-                                            <constraint firstItem="Umj-Ls-P0a" firstAttribute="leading" secondItem="xzy-AT-gnJ" secondAttribute="leading" constant="8" id="I4T-Ao-83r"/>
-                                            <constraint firstItem="ETa-iK-Mp5" firstAttribute="leading" secondItem="xzy-AT-gnJ" secondAttribute="leading" id="KV4-qz-FTT"/>
-                                            <constraint firstItem="ETa-iK-Mp5" firstAttribute="top" secondItem="CD4-Wk-MD9" secondAttribute="top" constant="-176" id="R9H-MM-0Ni"/>
-                                            <constraint firstItem="pUT-wq-6Wo" firstAttribute="top" secondItem="eWJ-7e-fLr" secondAttribute="bottom" constant="13" id="RV9-AP-ZEf"/>
-                                            <constraint firstAttribute="trailing" secondItem="eWJ-7e-fLr" secondAttribute="trailing" constant="80" id="WSi-xf-UsO"/>
-                                            <constraint firstItem="eWJ-7e-fLr" firstAttribute="top" secondItem="pUT-wq-6Wo" secondAttribute="top" constant="-40" id="ZDm-St-uc5"/>
-                                            <constraint firstAttribute="trailing" secondItem="pUT-wq-6Wo" secondAttribute="trailing" constant="8" id="ZlG-aq-jld"/>
-                                            <constraint firstItem="6t8-6u-R4F" firstAttribute="leading" secondItem="xzy-AT-gnJ" secondAttribute="leading" constant="8" id="c3P-1e-6Fd"/>
-                                            <constraint firstItem="ETa-iK-Mp5" firstAttribute="leading" secondItem="CD4-Wk-MD9" secondAttribute="leading" constant="-141" id="eKw-GP-wnR"/>
-                                            <constraint firstItem="pUT-wq-6Wo" firstAttribute="leading" secondItem="xzy-AT-gnJ" secondAttribute="leading" constant="8" id="fPF-d7-xkL"/>
-                                            <constraint firstAttribute="trailing" secondItem="Umj-Ls-P0a" secondAttribute="trailing" constant="8" id="jb1-Rf-bJq"/>
-                                            <constraint firstItem="eWJ-7e-fLr" firstAttribute="top" secondItem="6t8-6u-R4F" secondAttribute="bottom" constant="8" id="kdN-sT-PcH"/>
-                                            <constraint firstAttribute="trailing" secondItem="wK6-Bo-x9y" secondAttribute="trailing" id="kkG-kd-gN9"/>
-                                            <constraint firstItem="eWJ-7e-fLr" firstAttribute="top" secondItem="6t8-6u-R4F" secondAttribute="top" constant="29" id="nvI-d0-rHr"/>
-                                            <constraint firstItem="wK6-Bo-x9y" firstAttribute="top" secondItem="CD4-Wk-MD9" secondAttribute="bottom" constant="-1" id="qND-ol-7Ea"/>
-                                            <constraint firstAttribute="trailing" secondItem="ETa-iK-Mp5" secondAttribute="trailing" id="zdo-pt-bOt"/>
-                                        </constraints>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="xzy-AT-gnJ" firstAttribute="top" secondItem="6FI-E1-xOt" secondAttribute="top" id="9tK-N8-9Yc"/>
-                                    <constraint firstAttribute="trailing" secondItem="xzy-AT-gnJ" secondAttribute="trailing" id="oh1-vM-qcM"/>
-                                    <constraint firstItem="xzy-AT-gnJ" firstAttribute="leading" secondItem="6FI-E1-xOt" secondAttribute="leading" id="tlb-nr-vl9"/>
-                                </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-Gv-oZl">
+                                <rect key="frame" x="0.0" y="522" width="320" height="46"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rt-Ld-C5n" customClass="RoundedButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Cicil Sekarang">
+                                            <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="EeD-I3-VZP" kind="push" id="QWs-rm-g9h"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6FI-E1-xOt" firstAttribute="leading" secondItem="U66-7G-oYl" secondAttribute="leading" id="3lN-qa-48c"/>
-                            <constraint firstAttribute="trailing" secondItem="6FI-E1-xOt" secondAttribute="trailing" id="M51-MN-iCa"/>
-                            <constraint firstItem="50o-Nk-pkD" firstAttribute="top" secondItem="6FI-E1-xOt" secondAttribute="bottom" id="bHg-iR-xrO"/>
-                            <constraint firstItem="6FI-E1-xOt" firstAttribute="top" secondItem="U66-7G-oYl" secondAttribute="top" id="jXD-70-kYW"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DDj-5r-NjX"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CjX-1v-dZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="420"/>
+            <point key="canvasLocation" x="350" y="458"/>
+        </scene>
+        <!--Opsi Cicilan-->
+        <scene sceneID="jX7-7u-DqB">
+            <objects>
+                <tableViewController id="EeD-I3-VZP" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cMO-WA-S91">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="J6t-vX-MO7">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ecw-jw-clw">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ecw-jw-clw" id="WAe-8f-72m">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 bulan - IDR 2.820.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="len-yI-lH9">
+                                                    <rect key="frame" x="8" y="11" width="160" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3fJ-f9-Ed0">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3fJ-f9-Ed0" id="EAQ-os-c5z">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 bulan - IDR 2.820.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgg-LD-2mx">
+                                                    <rect key="frame" x="8" y="11" width="160" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1FL-zq-bm0">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1FL-zq-bm0" id="y5e-7T-2gr">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 bulan - IDR 2.820.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01R-eg-tnL">
+                                                    <rect key="frame" x="8" y="11" width="160" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="EeD-I3-VZP" id="qTW-aj-yJr"/>
+                            <outlet property="delegate" destination="EeD-I3-VZP" id="emb-WH-cE7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Opsi Cicilan" id="Lfk-5O-EsB"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ng-ed-c3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="474"/>
         </scene>
     </scenes>
 </document>

@@ -67,8 +67,6 @@
                     </collectionView>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Kategori" image="category-off" id="YiA-hq-1mp"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipz-7c-HhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -366,7 +364,13 @@
         <scene sceneID="VWW-fB-FW9">
             <objects>
                 <tabBarController id="cqF-Mc-eLh" customClass="BaseTabbarControlller" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Home" id="wMX-5p-LvU"/>
+                    <navigationItem key="navigationItem" title="Home" id="wMX-5p-LvU">
+                        <barButtonItem key="rightBarButtonItem" image="cart" id="fML-de-zZt">
+                            <connections>
+                                <action selector="openCart:" destination="cqF-Mc-eLh" id="QOd-Qy-qDQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JBM-dH-sTT">
@@ -388,6 +392,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cart" width="30" height="30"/>
         <image name="category-off" width="30" height="30"/>
         <image name="handphone" width="120" height="120"/>
         <image name="profile-off" width="30" height="30"/>
