@@ -8,7 +8,7 @@ target 'Shoot Your Dream' do
     pod 'Onboard'
     pod 'DLRadioButton'
     pod 'SDWebImage'
-    
+    pod 'TouchXML', '~> 0.1'
     source 'https://github.com/CocoaPods/Specs.git'
     use_frameworks!
     

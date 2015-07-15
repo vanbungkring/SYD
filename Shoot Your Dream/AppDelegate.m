@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 
 #import "LoginViewController.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 @interface AppDelegate ()
 
 @end
@@ -18,16 +21,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Fabric with:@[CrashlyticsKit]];
     
     //  Default font configuration
-    UIFont *defaultFontType = [UIFont fontWithName:FONT_NAME_DEFAULT
+    UIFont *defaultFontType = [UIFont fontWithName:FONT_NAME_THIN
                                               size:FONT_SIZE_DEFAULT];
     
     NSDictionary *defaultFontAttributes = [NSDictionary dictionaryWithObject:defaultFontType
                                                                       forKey:NSFontAttributeName];
     
     //  Title font configuration
-    UIFont *titleFontType = [UIFont fontWithName:FONT_NAME_DEFAULT
+    UIFont *titleFontType = [UIFont fontWithName:FONT_NAME_MEDIUM
                                             size:18];
     
     NSDictionary *titleFontAttributes = [NSDictionary dictionaryWithObjects:@[titleFontType, [UIColor colorWithRed:0.933f green:0.498f blue:0.149f alpha:1.00f]]
@@ -61,8 +65,9 @@
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage
                                                       forState:UIControlStateNormal
                                                     barMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
     
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTranslucent: NO];
     
     ///set default
     UIColor *backgroundColor = [UIColor colorWithRed:0.878f green:0.878f blue:0.878f alpha:1.00f];
@@ -70,18 +75,28 @@
     // set the bar background color
     
     [[UITabBar appearance] setBackgroundImage:[Common imageFromColor:backgroundColor forSize:CGSizeMake(320, 49) withCornerRadius:0]];
-    // set the text color for selected state
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.933f green:0.498f blue:0.149f alpha:1.00f], UITextAttributeTextColor, nil] forState:UIControlStateSelected];
     
+    // set the text color for selected state
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                       [UIFont fontWithName:FONT_NAME_THIN size:10], NSFontAttributeName,
+                                                       [UIColor colorWithRed:0.933f green:0.498f blue:0.149f alpha:1.00f], NSForegroundColorAttributeName,
+                                                       nil]
+                                             forState:UIControlStateSelected];
     // set the text color for unselected state
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.318f green:0.318f blue:0.318f alpha:1.00f], UITextAttributeTextColor, nil] forState:UIControlStateNormal];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                       [UIFont fontWithName:FONT_NAME_THIN size:10], NSFontAttributeName,
+                                                       [UIColor colorWithRed:0.318f green:0.318f blue:0.318f alpha:1.00f], NSForegroundColorAttributeName,
+                                                       nil]
+                                             forState:UIControlStateNormal];
     
     
     // set the selected icon color
     [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWithRed:0.933f green:0.498f blue:0.149f alpha:1.00f]];
     // remove the shadow
     [[UITabBar appearance] setShadowImage:nil];
-    
+    [[UILabel appearance] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
+    [[UILabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
     
     return YES;
 }

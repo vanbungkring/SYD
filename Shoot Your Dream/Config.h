@@ -9,9 +9,8 @@
 
 //Font
 
-static NSString * const FONT_NAME_DEFAULT = @"HelveticaNeue";
-static NSString * const FONT_NAME_MEDIUM = @"HelveticaNeue-Medium";
-static NSString * const FONT_NAME_BOLD = @"HelveticaNeue-Bold";
-static NSString * const FONT_NAME_THIN = @"HelveticaNeue-Thin";
-static NSString * const FONT_NAME_REGULAR = @"HelveticaNeue";
+static NSString * const FONT_NAME_DEFAULT = @"ProximaNova-Regular";
+static NSString * const FONT_NAME_MEDIUM = @"ProximaNova-Semibold";
+static NSString * const FONT_NAME_THIN = @"ProximaNova-Light";
+static NSString * const FONT_NAME_REGULAR = @"ProximaNova-Regular";
 static const float FONT_SIZE_DEFAULT =13.0f;

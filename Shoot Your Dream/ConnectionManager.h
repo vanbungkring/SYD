@@ -10,4 +10,6 @@
 #import "AFHTTPSessionManager.h"
 @interface ConnectionManager : AFHTTPSessionManager
 + (instancetype)sharedClient;
++ (void) initApplicationMobileWithServer;
+
 @end

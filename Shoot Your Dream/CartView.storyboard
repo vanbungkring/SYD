@@ -247,7 +247,6 @@
         <!--Add New Addess-->
         <scene sceneID="Ke5-Gj-TeS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G5o-CI-4EX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="tnx-8m-TAE" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aKc-qF-4TC"/>
@@ -260,8 +259,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5B-2H-0Si">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dM-ax-KOb">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="668"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9dM-ax-KOb">
+                                        <rect key="frame" x="0.0" y="8" width="320" height="668"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informasi Kontak &amp; Alamat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-tY-fo5">
                                                 <rect key="frame" x="67" y="275" width="185" height="18"/>
@@ -350,6 +349,7 @@
                                             <constraint firstItem="TWN-Dh-tYM" firstAttribute="top" secondItem="Lvs-EO-iXf" secondAttribute="bottom" constant="13" id="Fma-d0-Rz0"/>
                                             <constraint firstItem="VsC-4j-kLb" firstAttribute="trailing" secondItem="MYa-de-s1S" secondAttribute="trailing" id="IJU-fK-70k"/>
                                             <constraint firstItem="fWb-KV-Rdq" firstAttribute="top" secondItem="1Eb-Gz-Y2v" secondAttribute="bottom" constant="20" id="IMq-sr-07c"/>
+                                            <constraint firstAttribute="bottom" secondItem="TWN-Dh-tYM" secondAttribute="bottom" constant="89" id="KJq-M9-IOU"/>
                                             <constraint firstItem="Lvs-EO-iXf" firstAttribute="top" secondItem="VsC-4j-kLb" secondAttribute="bottom" constant="20" id="OfD-rY-SHf"/>
                                             <constraint firstAttribute="bottom" secondItem="RK6-A1-Cza" secondAttribute="bottom" constant="94" id="PK6-xe-ImC"/>
                                             <constraint firstItem="Lvs-EO-iXf" firstAttribute="width" secondItem="VsC-4j-kLb" secondAttribute="width" id="RWq-IT-Fuw"/>
@@ -401,12 +401,13 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5o-CI-4EX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1486" y="530"/>
         </scene>
     </scenes>
     <resources>
-        <image name="close" width="30" height="30"/>
+        <image name="close" width="10" height="10"/>
         <image name="plus" width="30" height="30"/>
     </resources>
 </document>

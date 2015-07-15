@@ -16,106 +16,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6FI-E1-xOt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTY-3R-GKK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eb1-LH-H5s">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="522"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3A-L3-P2e">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="486"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Zc-4J-fV8">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="184"/>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSb-YE-Pk1" userLabel="imageScroll">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3a-br-zzK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="227" id="V4V-LV-Vn4"/>
+                                                            <constraint firstAttribute="width" constant="320" id="skj-j2-atT"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.13725490200000001" green="0.1764705882" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="184" id="6HZ-b6-d8g"/>
-                                                    <constraint firstAttribute="height" constant="184" id="UT6-bp-5JG"/>
-                                                    <constraint firstAttribute="width" constant="320" id="nLx-9k-ee7"/>
+                                                    <constraint firstAttribute="height" constant="227" id="A6T-ss-Ix4"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Z3a-br-zzK" secondAttribute="bottom" id="JZB-fi-kSi"/>
+                                                    <constraint firstItem="Z3a-br-zzK" firstAttribute="leading" secondItem="zSb-YE-Pk1" secondAttribute="leading" id="lnJ-0l-dYk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Z3a-br-zzK" secondAttribute="trailing" id="riK-oA-aCM"/>
+                                                    <constraint firstItem="Z3a-br-zzK" firstAttribute="top" secondItem="zSb-YE-Pk1" secondAttribute="top" id="tws-W4-kQz"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iu5-nA-Omk">
-                                                    <size key="itemSize" width="50" height="50"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YPV-8Z-wAK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        </view>
-                                                    </collectionViewCell>
-                                                </cells>
-                                            </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sony Experia HandPhone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-WX-sfh">
-                                                <rect key="frame" x="8" y="192" width="304" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opsi Cicilan Yang Tersedia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgy-Z2-L9G">
-                                                <rect key="frame" x="8" y="216" width="160" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
-                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 bulan - IDR 2.820.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rx-Ik-cFv">
-                                                <rect key="frame" x="20" y="235" width="160" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
-                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 bulan - IDR 2.820.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bD-w3-zLt">
-                                                <rect key="frame" x="20" y="256" width="160" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
-                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 bulan - IDR 2.820.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSI-c0-i8l">
-                                                <rect key="frame" x="20" y="277" width="160" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
-                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informasi Produk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmO-Xh-3Gh">
-                                                <rect key="frame" x="8" y="306" width="160" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
-                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yT-pS-Yzv">
-                                                <rect key="frame" x="8" y="322" width="304" height="102"/>
-                                                <string key="text">All logos and images are properties of their respective owners and or East Coast Vintage MX. East Coast Vintage is a division of Weaver Motorsports, Inc. All motorcycles for sale are pre-owned - we are not franchise holders for any of the above mentioned brands.</string>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
-                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </scrollView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcU-QU-JQd">
+                                                <rect key="frame" x="8" y="235" width="303" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="486" id="3Z7-rK-kMQ"/>
+                                            <constraint firstItem="zSb-YE-Pk1" firstAttribute="top" secondItem="z3A-L3-P2e" secondAttribute="top" id="BlX-re-BC3"/>
+                                            <constraint firstItem="kcU-QU-JQd" firstAttribute="leading" secondItem="z3A-L3-P2e" secondAttribute="leading" constant="8" id="SPG-Uv-36w"/>
+                                            <constraint firstAttribute="trailing" secondItem="zSb-YE-Pk1" secondAttribute="trailing" id="lqu-04-73r"/>
+                                            <constraint firstItem="kcU-QU-JQd" firstAttribute="top" secondItem="Z3a-br-zzK" secondAttribute="bottom" constant="8" id="r1o-yt-0Gl"/>
+                                            <constraint firstItem="zSb-YE-Pk1" firstAttribute="leading" secondItem="z3A-L3-P2e" secondAttribute="leading" id="tXN-8J-3Or"/>
+                                            <constraint firstAttribute="trailing" secondItem="kcU-QU-JQd" secondAttribute="trailing" constant="9" id="zF9-rd-IFT"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="z3A-L3-P2e" firstAttribute="centerX" secondItem="PTY-3R-GKK" secondAttribute="centerX" id="4Wq-AN-r1Q"/>
+                                    <constraint firstItem="z3A-L3-P2e" firstAttribute="top" secondItem="PTY-3R-GKK" secondAttribute="top" id="GKR-Pq-Pvw"/>
+                                    <constraint firstAttribute="bottom" secondItem="z3A-L3-P2e" secondAttribute="bottom" constant="82" id="jEj-HL-bka"/>
+                                    <constraint firstItem="z3A-L3-P2e" firstAttribute="leading" secondItem="PTY-3R-GKK" secondAttribute="leading" id="lTd-y0-ueQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="z3A-L3-P2e" secondAttribute="trailing" id="m7z-Yf-nHz"/>
+                                </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-Gv-oZl">
-                                <rect key="frame" x="0.0" y="522" width="320" height="46"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rt-Ld-C5n" customClass="RoundedButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
-                                        <color key="backgroundColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Cicil Sekarang">
-                                            <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="EeD-I3-VZP" kind="push" id="QWs-rm-g9h"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="50o-Nk-pkD" firstAttribute="top" secondItem="PTY-3R-GKK" secondAttribute="bottom" id="NaK-VT-TZh"/>
+                            <constraint firstAttribute="trailing" secondItem="PTY-3R-GKK" secondAttribute="trailing" id="PiA-zY-vFF"/>
+                            <constraint firstItem="PTY-3R-GKK" firstAttribute="top" secondItem="U66-7G-oYl" secondAttribute="top" id="Sge-5O-hNV"/>
+                            <constraint firstItem="PTY-3R-GKK" firstAttribute="leading" secondItem="U66-7G-oYl" secondAttribute="leading" id="x5B-Ac-nhl"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="kcU-QU-JQd" id="61I-JB-Mle"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CjX-1v-dZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

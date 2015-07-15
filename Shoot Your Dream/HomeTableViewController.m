@@ -28,9 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.title = @"Home";
     self.tableView.tableFooterView = [[UIView alloc]init];
-    
     self.productPaginationControl.tintColor = [UIColor orangeColor];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -39,6 +39,7 @@
     
     
     self.listPromo = @[
+                       @"placeholder",
                        @"placeholder",
                        @"placeholder",
                        @"placeholder",
@@ -67,6 +68,35 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    // 1. The view for the header
+    UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 25)];
+    
+    // 2. Set a custom background color and a border
+    headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg-title_home"]];
+    
+    // 3. Add a label
+    UILabel* headerLabel = [[UILabel alloc] init];
+    headerLabel.frame = CGRectMake(5, 2, tableView.frame.size.width - 5, 18);
+    headerLabel.backgroundColor = [UIColor clearColor];
+    headerLabel.textColor = [Common colorWithHexString:@"363636"];
+    if (section==1) {
+        headerLabel.text = @"IDEAS FOR YOU";
+    }
+    else {
+        headerLabel.text = @"ON SALE";
+    }
+    headerLabel.font = [UIFont fontWithName:FONT_NAME_MEDIUM size:13];
+    headerLabel.textAlignment = NSTextAlignmentLeft;
+    
+    // 4. Add the label to the header view
+    [headerView addSubview:headerLabel];
+    
+    // 5. Finally return
+    return headerView;
+}
+
 
 #pragma mark - Table view data source
 
@@ -96,24 +126,13 @@
     
     collectionImageView.image = [UIImage imageNamed:@"placeholder"];
     return cell;
-    //    [cell.mainImageViewSet setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[self.listPromo objectAtIndex:indexPath.row]]]
-    //                                 placeholderImage:nil
-    //                      usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray
-    //                                          success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-    //                                              cell.mainImageViewSet.image = image;
-    //                                          } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-    //                                              nil;
-    //                                          }];
-    
-    // Configure the cell
-    
-    return cell;
     
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section==1) {
-        return self.listPromo.count/2 *150;
+        
+        return self.listPromo.count *80 +40;
     }
     return 300;
 }

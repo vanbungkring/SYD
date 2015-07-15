@@ -48,4 +48,9 @@
 #define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
 #define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
 
+
+#define MAGENTO_BASE_URL @"http://yourserver/index.php/api/"
+#define MAGENTO_USERNAME = @"xxx"
+#define MAGENTO_API_KEY = @"xxx"
+
 #endif
