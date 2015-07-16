@@ -6,6 +6,7 @@
 //
 
 #import "NSObject+Soap.h"
+
 #import "TouchXML.h"
 
 NSString * const XSI_TYPE = @"xsi:type";

@@ -97,10 +97,34 @@
     [[UITabBar appearance] setShadowImage:nil];
     [[UILabel appearance] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
     [[UILabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
-    
+    [self getData];
     return YES;
 }
-
+- (void) getData {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPRequestSerializer * requestSerializer = [AFHTTPRequestSerializer serializer];
+    AFXMLParserResponseSerializer * responseSerializer = [AFXMLParserResponseSerializer serializer];
+    
+//    NSString *ua = @"Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25";
+//    [requestSerializer setValue:ua forHTTPHeaderField:@"User-Agent"];
+    //    [requestSerializer setValue:@"application/xml" forHTTPHeaderField:@"Content-type"];
+    responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/xml", nil];
+    manager.responseSerializer = responseSerializer;
+    manager.requestSerializer = requestSerializer;
+    
+    NSDictionary *parameters = @{@"user": @"acommerce",
+                                 @"pass": @"password123"};
+    
+    [manager POST:@"http://shootyourdream.acomindo.com/api/soap?wsdl"
+       parameters:parameters
+          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              NSData * data = (NSData *)responseObject;
+              NSLog(@"Response string: %@",responseObject);
+          }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              NSLog(@"Error: %@", error);
+          }];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

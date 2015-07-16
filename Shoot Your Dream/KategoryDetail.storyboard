@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Cat Detail Collection View Controller-->
@@ -13,41 +14,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="4iA-pJ-GzB">
-                            <size key="itemSize" width="159.5" height="240"/>
+                            <size key="itemSize" width="159.5" height="182"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ses-tG-AKO">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="ses-tG-AKO">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="160" height="240"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="182"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axx-If-KsY">
-                                            <rect key="frame" x="8" y="8" width="144" height="162"/>
-                                        </imageView>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHQ-tS-VGP">
-                                            <rect key="frame" x="0.0" y="178" width="160" height="62"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbb-fO-KfA">
-                                                    <rect key="frame" x="8" y="0.0" width="144" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBa-08-8K0">
-                                                    <rect key="frame" x="8" y="33" width="144" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                                    <color key="textColor" red="0.16078431372549021" green="0.16078431372549021" blue="0.16078431372549021" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="1098" y="-100"/>
         </scene>
-        <!--Title-->
+        <!--Filter-->
         <scene sceneID="mMX-NE-QOK">
             <objects>
                 <viewController id="zyK-dr-2dK" customClass="FilterViewController" sceneMemberID="viewController">
@@ -83,64 +61,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hkT-dj-o4c">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBA-jk-2gI">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Urutkan Berdasarkan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g5-Fs-ZsY">
-                                                <rect key="frame" x="8" y="31" width="163" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRS-S2-lKC">
-                                                <rect key="frame" x="8" y="60" width="304" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filter Berdasarkan DP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lJ-Co-KTq">
-                                                <rect key="frame" x="8" y="98" width="163" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQB-Ol-3Qi" customClass="TTRangeSlider">
-                                                <rect key="frame" x="9" y="127" width="303" height="58"/>
-                                                <color key="tintColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="maxLabelColour">
-                                                        <color key="value" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="minLabelColour">
-                                                        <color key="value" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="disableRange" value="NO"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHn-eS-D9Z" customClass="RoundedButton">
-                                                <rect key="frame" x="51" y="212" width="218" height="40"/>
-                                                <color key="backgroundColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
-                                                <state key="normal" title="Kirim">
-                                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Urutkan Berdasarkan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNr-Bx-G7h">
+                                <rect key="frame" x="7" y="47" width="304" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vYh-u8-faH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5KA-3C-WZy">
+                                <rect key="frame" x="22" y="82" width="277" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="b9G-SQ-VQv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Berdasarkan DP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S24-zs-osh">
+                                <rect key="frame" x="7" y="126" width="304" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6wu-to-eVQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="um0-03-1tG" customClass="TTRangeSlider">
+                                <rect key="frame" x="45" y="155" width="229" height="58"/>
+                                <color key="tintColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="eS7-fE-gfh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="maxLabelColour">
+                                        <color key="value" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="minLabelColour">
+                                        <color key="value" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="disableRange" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9B-Iu-bIO" customClass="RoundedButton">
+                                <rect key="frame" x="50" y="272" width="218" height="40"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZIF-gd-ho9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Filter">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBO-ZH-4GT">
+                                <rect key="frame" x="45" y="221" width="229" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQd-qo-fsa" customClass="RoundedButton">
+                                <rect key="frame" x="50" y="325" width="218" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MQ5-j2-42N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Hapus Semua">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vBO-ZH-4GT" secondAttribute="trailing" constant="30" id="6Of-xI-Y9I"/>
+                            <constraint firstItem="R9B-Iu-bIO" firstAttribute="leading" secondItem="qrq-Ua-qtq" secondAttribute="leadingMargin" constant="34" id="FrB-YT-Csv"/>
+                            <constraint firstItem="S24-zs-osh" firstAttribute="top" secondItem="5KA-3C-WZy" secondAttribute="bottom" constant="14" id="OEh-99-8rc"/>
+                            <constraint firstItem="cQd-qo-fsa" firstAttribute="top" secondItem="R9B-Iu-bIO" secondAttribute="bottom" constant="13" id="PJn-nv-m3p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5KA-3C-WZy" secondAttribute="trailing" constant="5" id="Puu-wi-6RW"/>
+                            <constraint firstItem="WNr-Bx-G7h" firstAttribute="top" secondItem="mhs-CB-yd7" secondAttribute="bottom" constant="27" id="QQ2-Fd-vEr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WNr-Bx-G7h" secondAttribute="trailing" constant="-7" id="TOc-Cg-9wx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S24-zs-osh" secondAttribute="trailing" constant="-7" id="WQd-yo-avl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R9B-Iu-bIO" secondAttribute="trailing" constant="36" id="axo-ZL-ZHM"/>
+                            <constraint firstItem="um0-03-1tG" firstAttribute="top" secondItem="S24-zs-osh" secondAttribute="bottom" constant="8" id="c4n-9C-WFK"/>
+                            <constraint firstItem="vBO-ZH-4GT" firstAttribute="top" secondItem="um0-03-1tG" secondAttribute="bottom" constant="8" id="cUO-Uf-EWq"/>
+                            <constraint firstItem="S24-zs-osh" firstAttribute="leading" secondItem="qrq-Ua-qtq" secondAttribute="leadingMargin" constant="-9" id="drg-aO-Thr"/>
+                            <constraint firstItem="5KA-3C-WZy" firstAttribute="leading" secondItem="qrq-Ua-qtq" secondAttribute="leadingMargin" constant="6" id="f7y-1D-e7N"/>
+                            <constraint firstItem="um0-03-1tG" firstAttribute="leading" secondItem="qrq-Ua-qtq" secondAttribute="leadingMargin" constant="29" id="kcw-VB-DHf"/>
+                            <constraint firstItem="5KA-3C-WZy" firstAttribute="top" secondItem="WNr-Bx-G7h" secondAttribute="bottom" constant="14" id="mOa-tX-Zi4"/>
+                            <constraint firstItem="vBO-ZH-4GT" firstAttribute="leading" secondItem="qrq-Ua-qtq" secondAttribute="leadingMargin" constant="29" id="mwD-uH-ISo"/>
+                            <constraint firstItem="S24-zs-osh" firstAttribute="top" secondItem="mhs-CB-yd7" secondAttribute="bottom" constant="106" id="oMW-MT-v9H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="um0-03-1tG" secondAttribute="trailing" constant="30" id="pBP-gd-W8x"/>
+                            <constraint firstItem="R9B-Iu-bIO" firstAttribute="leading" secondItem="cQd-qo-fsa" secondAttribute="leading" id="tOf-CK-6Nb"/>
+                            <constraint firstItem="WNr-Bx-G7h" firstAttribute="leading" secondItem="qrq-Ua-qtq" secondAttribute="leadingMargin" constant="-9" id="wdN-1N-wa7"/>
+                            <constraint firstItem="R9B-Iu-bIO" firstAttribute="trailing" secondItem="cQd-qo-fsa" secondAttribute="trailing" id="z5z-a1-Lpl"/>
+                            <constraint firstItem="R9B-Iu-bIO" firstAttribute="top" secondItem="vBO-ZH-4GT" secondAttribute="bottom" constant="30" id="zTp-cb-rmc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oMW-MT-v9H"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="SDO-Hb-4cY">
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="vbP-aX-WmB"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Filter" id="SDO-Hb-4cY"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="rangeSlider" destination="WQB-Ol-3Qi" id="Efa-LU-6LA"/>
-                        <outlet property="sortByForm" destination="nRS-S2-lKC" id="0Ic-hc-Ash"/>
+                        <outlet property="rangeSlider" destination="um0-03-1tG" id="u3d-jb-kf1"/>
+                        <outlet property="sortByForm" destination="5KA-3C-WZy" id="M7Z-OI-Zsr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8O-bF-3KU" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,6 +8,8 @@
 
 #import "CatDetailCollectionViewController.h"
 #import "ItemViewController.h"
+#import "CategoryCell.h"
+#import "BaseCollectionLayout.h"
 @interface CatDetailCollectionViewController ()
 @property (nonatomic,strong)NSArray *items;
 @end
@@ -18,6 +20,13 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
+    layout.itemSize= CGSizeMake((self.view.frame.size.width-1)/2, 205);
+    layout.headerReferenceSize = CGSizeZero;
+    layout.footerReferenceSize = CGSizeZero;
+    layout.minimumInteritemSpacing = 0.5;
+    layout.minimumLineSpacing = 0.5;
+    [self.collectionView setCollectionViewLayout:layout];
     
     self.items = @[@{@"img":@"handphone-off",@"title":@"Handphone",@"price":@"IDR 140.000"},
                    @{@"img":@"electronic-off",@"title":@"Handphone",@"price":@"IDR 140.000"},
@@ -32,7 +41,12 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Do any additional setup after loading the view.
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    [self.collectionView registerNib:[UINib nibWithNibName:@"CategoryCell" bundle:[NSBundle mainBundle]]
+          forCellWithReuseIdentifier:@"CategoryCell"];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -62,16 +76,18 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
-    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
-    UILabel *categoryLabel = (UILabel *)[cell viewWithTag:101];
-    UILabel *priceLabel = (UILabel *)[cell viewWithTag:102];
-    recipeImageView.image = [UIImage imageNamed:[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"img"]];
-    categoryLabel.text =[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"title"];
-    priceLabel.text =[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"price"];
-    
+    CategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCell" forIndexPath:indexPath];
+    //
+    //    // Configure the cell
+    //    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
+    //    UILabel *categoryLabel = (UILabel *)[cell viewWithTag:101];
+    //    UILabel *priceLabel = (UILabel *)[cell viewWithTag:102];
+    //    recipeImageView.image = [UIImage imageNamed:[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"img"]];
+    //    categoryLabel.text =[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"title"];
+    //    priceLabel.text =[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"price"];
+    cell.CollectionImageView.image = [UIImage imageNamed:[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"img"]];
+    cell.collectionItemNameLabel.text = [[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"title"];
+    cell.collectionItemPriceLabel.text = [[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"price"];
     return cell;
 }
 

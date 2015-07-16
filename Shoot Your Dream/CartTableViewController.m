@@ -8,16 +8,15 @@
 
 #import "CartTableViewController.h"
 #import "ListAddressTableViewController.h"
-@interface CartTableViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface CartTableViewController ()
 
-@property (strong, nonatomic) IBOutlet UITableView *cartTableView;
 @end
 
 @implementation CartTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = FALSE;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -51,6 +50,10 @@
     
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 101;
 }
 /*
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

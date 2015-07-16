@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jvk-3h-9dV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jvk-3h-9dV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -299,11 +299,12 @@
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4wG-Un-egU">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="fx7-62-tXQ">
+                                                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fx7-62-tXQ">
                                                         <size key="itemSize" width="145" height="145"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="4" minY="4" maxX="0.0" maxY="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="3pu-00-R1E">
@@ -312,11 +313,6 @@
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
-                                                                <subviews>
-                                                                    <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wDX-MF-Nht">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="149" height="149"/>
-                                                                    </imageView>
-                                                                </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
                                                         </collectionViewCell>
@@ -327,11 +323,12 @@
                                                     </connections>
                                                 </collectionView>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="4wG-Un-egU" firstAttribute="leading" secondItem="VUe-fG-nkX" secondAttribute="leadingMargin" constant="-8" id="8Rr-d6-RQD"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="4wG-Un-egU" secondAttribute="bottom" constant="-8" id="93C-dl-PD7"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="4wG-Un-egU" secondAttribute="trailing" constant="-8" id="pWa-PM-ka9"/>
-                                                <constraint firstItem="4wG-Un-egU" firstAttribute="top" secondItem="VUe-fG-nkX" secondAttribute="topMargin" constant="-8" id="qXg-dB-DKC"/>
+                                                <constraint firstItem="4wG-Un-egU" firstAttribute="top" secondItem="VUe-fG-nkX" secondAttribute="top" id="GEz-4H-mFS"/>
+                                                <constraint firstItem="4wG-Un-egU" firstAttribute="leading" secondItem="VUe-fG-nkX" secondAttribute="leading" id="YIg-qx-3fz"/>
+                                                <constraint firstAttribute="bottom" secondItem="4wG-Un-egU" secondAttribute="bottom" id="rw1-J2-WLu"/>
+                                                <constraint firstAttribute="trailing" secondItem="4wG-Un-egU" secondAttribute="trailing" id="toD-mg-mmt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -339,10 +336,43 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Sale" id="lfD-uc-HQn">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="181" id="Nge-ny-TeW">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="132" id="Nge-ny-TeW">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nge-ny-TeW" id="Jsa-Vi-a22">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="101" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YCj-gE-FVg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+                                                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="zwX-KZ-M9D">
+                                                        <size key="itemSize" width="145" height="145"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="52a-tl-tZv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="fYN-c9-z8d" id="aj3-5y-A4s"/>
+                                                        <outlet property="delegate" destination="fYN-c9-z8d" id="zwz-lQ-B4U"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="YCj-gE-FVg" secondAttribute="bottom" id="EhL-S6-bTD"/>
+                                                <constraint firstItem="YCj-gE-FVg" firstAttribute="top" secondItem="Jsa-Vi-a22" secondAttribute="top" id="PhU-9t-eAI"/>
+                                                <constraint firstAttribute="trailing" secondItem="YCj-gE-FVg" secondAttribute="trailing" id="Xi5-cQ-vFC"/>
+                                                <constraint firstItem="YCj-gE-FVg" firstAttribute="leading" secondItem="Jsa-Vi-a22" secondAttribute="leading" id="ZNK-QL-coO"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -360,6 +390,7 @@
                         <outlet property="ideasCollectionView" destination="4wG-Un-egU" id="KqW-UA-W3s"/>
                         <outlet property="productPaginationControl" destination="v1x-4l-gdj" id="n7T-YW-am1"/>
                         <outlet property="productScrollView" destination="mjN-ai-dLE" id="Mmb-Hs-Ay4"/>
+                        <outlet property="saleCollectionView" destination="YCj-gE-FVg" id="4Tt-P1-LrR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HjT-Dh-alH" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,8 +7,9 @@
 //
 
 #import "HomeTableViewController.h"
-#import "HomeIdeasCollectionViewController.h"
 #import "LoginViewController.h"
+#import "IdeasCell.h"
+#import "CategoryCell.h"
 #import "UIImageView+AFNetworking_UIActivityIndicatorView.h"
 @interface HomeTableViewController ()
 
@@ -18,9 +19,8 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *ideasCollectionView;
 @property (strong, nonatomic) IBOutlet UICollectionView *saleCollectionView;
 
-@property (strong, nonatomic)  NSArray *listPromo;
 
-@property (strong, nonatomic) HomeIdeasCollectionViewController *ideasView;
+@property (strong, nonatomic)  NSArray *listPromo;
 
 @end
 
@@ -28,9 +28,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    ///add fake bottom
+    
+    UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 44)];
+    footer.backgroundColor = [UIColor clearColor];
+    self.tableView.tableFooterView = footer;
     
     self.title = @"Home";
-    self.tableView.tableFooterView = [[UIView alloc]init];
     self.productPaginationControl.tintColor = [UIColor orangeColor];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -51,13 +55,37 @@
                        @"placeholder",
                        ];
     self.ideasCollectionView.backgroundColor =[UIColor clearColor];
+    [self.saleCollectionView registerNib:[UINib nibWithNibName:@"CategoryCell" bundle:[NSBundle mainBundle]]
+              forCellWithReuseIdentifier:@"CategoryCell"];
+    
+    [self.ideasCollectionView registerNib:[UINib nibWithNibName:@"IdeasCell" bundle:[NSBundle mainBundle]]
+               forCellWithReuseIdentifier:@"IdeasCell"];
+    
+    
+    UICollectionViewFlowLayout *layoutForIdeas = (UICollectionViewFlowLayout *) self.ideasCollectionView.collectionViewLayout;
+    layoutForIdeas.itemSize= CGSizeMake((self.view.frame.size.width-1)/2, 205);
+    layoutForIdeas.headerReferenceSize = CGSizeZero;
+    layoutForIdeas.footerReferenceSize = CGSizeZero;
+    layoutForIdeas.minimumInteritemSpacing = 0.5;
+    layoutForIdeas.minimumLineSpacing = 0.5;
+    [self.ideasCollectionView setCollectionViewLayout:layoutForIdeas];
+    
+    UICollectionViewFlowLayout *layoutForSale = (UICollectionViewFlowLayout *) self.ideasCollectionView.collectionViewLayout;
+    layoutForSale.itemSize= CGSizeMake((self.view.frame.size.width-1)/2, 205);
+    layoutForSale.headerReferenceSize = CGSizeZero;
+    layoutForSale.footerReferenceSize = CGSizeZero;
+    layoutForSale.minimumInteritemSpacing = 0.5;
+    layoutForSale.minimumLineSpacing = 0.5;
+    
+    
+    [self.saleCollectionView setCollectionViewLayout:layoutForSale animated:YES];
+    
     [self.tableView reloadData];
     [self openLogin];
 }
 
 -(void)openLogin {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-    
     LoginViewController *loginWindow = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
     
     [self.tabBarController presentViewController:loginWindow animated:YES completion:nil];
@@ -81,6 +109,7 @@
     headerLabel.frame = CGRectMake(5, 2, tableView.frame.size.width - 5, 18);
     headerLabel.backgroundColor = [UIColor clearColor];
     headerLabel.textColor = [Common colorWithHexString:@"363636"];
+    
     if (section==1) {
         headerLabel.text = @"IDEAS FOR YOU";
     }
@@ -114,25 +143,44 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return self.listPromo.count;
+    if (collectionView.tag == 100) {
+        return self.listPromo.count;
+    }
+    else {
+        return 10;
+    }
+    
     
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
-    UIImageView *collectionImageView = (UIImageView *)[cell viewWithTag:100];
-    
-    collectionImageView.image = [UIImage imageNamed:@"placeholder"];
-    return cell;
+    if (collectionView.tag == 101) {
+        CategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCell" forIndexPath:indexPath];
+        cell.collectionItemPriceLabel.text = @"DP Rp.125.000";
+        cell.wrapperView.backgroundColor = [UIColor clearColor];
+        cell.CollectionImageView.image = [UIImage imageNamed:[self.listPromo objectAtIndex:indexPath.row]];
+        
+        return cell;
+    }
+    else {
+        IdeasCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"IdeasCell" forIndexPath:indexPath];
+        cell.IdeasImage.image = [UIImage imageNamed:[self.listPromo objectAtIndex:indexPath.row]];
+        return cell;
+        
+        return nil;
+    }
     
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section==1) {
         
-        return self.listPromo.count *80 +40;
+        return (self.listPromo.count *205)/2;
+    }
+    if (indexPath.section==2) {
+        
+        return (10 *205)/2;
     }
     return 300;
 }

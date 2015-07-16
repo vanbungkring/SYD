@@ -10,7 +10,6 @@
 #import <TTRangeSlider/TTRangeSlider.h>
 @interface FilterViewController ()<TTRangeSliderDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *sortByForm;
-@property (strong, nonatomic) IBOutlet UIView *sliderRangeContainer;
 @property (weak, nonatomic) IBOutlet TTRangeSlider *rangeSlider;
 
 @end
@@ -21,7 +20,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:0.973f green:0.973f blue:0.973f alpha:1.00f];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.automaticallyAdjustsScrollViewInsets = FALSE;
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+
     //standard rsnge slider
     
     self.rangeSlider.delegate = self;
