@@ -28,6 +28,14 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     // Register cell classes
     
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
+    layout.itemSize= CGSizeMake((self.view.frame.size.width-1)/2, 150);
+    layout.headerReferenceSize = CGSizeZero;
+    layout.footerReferenceSize = CGSizeZero;
+    layout.minimumInteritemSpacing = 0.5;
+    layout.minimumLineSpacing = 0.5;
+    [self.collectionView setCollectionViewLayout:layout];
+    
     [self.collectionView reloadData];
     self.collectionView.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.00f];
     // Do any additional setup after loading the view.

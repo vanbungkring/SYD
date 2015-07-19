@@ -96,10 +96,10 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="maxLabelColour">
-                                        <color key="value" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="minLabelColour">
-                                        <color key="value" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="disableRange" value="NO"/>
                                 </userDefinedRuntimeAttributes>
@@ -118,7 +118,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBO-ZH-4GT">
                                 <rect key="frame" x="45" y="221" width="229" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQd-qo-fsa" customClass="RoundedButton">
@@ -167,6 +167,7 @@
                     <navigationItem key="navigationItem" title="Filter" id="SDO-Hb-4cY"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="labelPrice" destination="vBO-ZH-4GT" id="y8f-Um-nkT"/>
                         <outlet property="rangeSlider" destination="um0-03-1tG" id="u3d-jb-kf1"/>
                         <outlet property="sortByForm" destination="5KA-3C-WZy" id="M7Z-OI-Zsr"/>
                     </connections>

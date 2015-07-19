@@ -23,7 +23,8 @@
     self = [super initWithCoder:aDecoder];
     
     if (self) {
-        self.layer.cornerRadius = 2.0;
+        self.titleLabel.font = [UIFont fontWithName:FONT_NAME_DEFAULT size:13];
+        self.layer.cornerRadius = 3;
         self.clipsToBounds = YES;
     }
     

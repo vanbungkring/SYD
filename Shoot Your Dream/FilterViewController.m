@@ -11,6 +11,7 @@
 @interface FilterViewController ()<TTRangeSliderDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *sortByForm;
 @property (weak, nonatomic) IBOutlet TTRangeSlider *rangeSlider;
+@property (strong, nonatomic) IBOutlet UILabel *labelPrice;
 
 @end
 
@@ -31,6 +32,7 @@
     self.rangeSlider.maxValue = 2000000;
     self.rangeSlider.selectedMinimum = 0;
     self.rangeSlider.selectedMaximum = 2000000;
+    self.labelPrice.text = [NSString stringWithFormat:@"Rp %.0f - Rp %.0f", self.rangeSlider.selectedMinimum, self.rangeSlider.selectedMaximum];
     
 }
 
@@ -43,6 +45,7 @@
 -(void)rangeSlider:(TTRangeSlider *)sender didChangeSelectedMinimumValue:(float)selectedMinimum andMaximumValue:(float)selectedMaximum{
     if (sender == self.rangeSlider){
         NSLog(@"Standard slider updated. Min Value: %.0f Max Value: %.0f", selectedMinimum, selectedMaximum);
+        self.labelPrice.text = [NSString stringWithFormat:@"Rp %.0f - Rp %.0f", self.rangeSlider.selectedMinimum, self.rangeSlider.selectedMaximum];
     }
 }
 /*

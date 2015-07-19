@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="144" width="152" height="61"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vff-90-7S4">
-                                <rect key="frame" x="8" y="0.0" width="136" height="21"/>
+                                <rect key="frame" x="8" y="10" width="136" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="136" id="NMB-Zr-b03"/>
                                     <constraint firstAttribute="height" constant="21" id="h57-ha-qM2"/>
@@ -48,11 +48,11 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="152" id="7Nz-aQ-dPx"/>
                             <constraint firstItem="5CQ-kB-8an" firstAttribute="leading" secondItem="ta2-iI-lcZ" secondAttribute="leading" constant="8" id="DCc-jT-VvL"/>
-                            <constraint firstItem="vff-90-7S4" firstAttribute="top" secondItem="ta2-iI-lcZ" secondAttribute="top" id="QaI-pL-gxL"/>
+                            <constraint firstItem="vff-90-7S4" firstAttribute="top" secondItem="ta2-iI-lcZ" secondAttribute="top" constant="10" id="QaI-pL-gxL"/>
                             <constraint firstAttribute="trailing" secondItem="5CQ-kB-8an" secondAttribute="trailing" constant="8" id="YSa-mq-Xug"/>
                             <constraint firstAttribute="height" constant="61" id="byM-1l-cGB"/>
                             <constraint firstAttribute="trailing" secondItem="vff-90-7S4" secondAttribute="trailing" constant="8" id="des-Vm-qxd"/>
-                            <constraint firstItem="5CQ-kB-8an" firstAttribute="top" secondItem="vff-90-7S4" secondAttribute="bottom" constant="8" id="xJX-N4-i3k"/>
+                            <constraint firstItem="5CQ-kB-8an" firstAttribute="top" secondItem="vff-90-7S4" secondAttribute="bottom" constant="-2" id="xJX-N4-i3k"/>
                             <constraint firstItem="vff-90-7S4" firstAttribute="leading" secondItem="ta2-iI-lcZ" secondAttribute="leading" constant="8" id="yPG-Nq-ybT"/>
                         </constraints>
                     </view>

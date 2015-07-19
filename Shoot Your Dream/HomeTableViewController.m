@@ -55,33 +55,32 @@
                        @"placeholder",
                        ];
     self.ideasCollectionView.backgroundColor =[UIColor clearColor];
+    
     [self.saleCollectionView registerNib:[UINib nibWithNibName:@"CategoryCell" bundle:[NSBundle mainBundle]]
               forCellWithReuseIdentifier:@"CategoryCell"];
     
     [self.ideasCollectionView registerNib:[UINib nibWithNibName:@"IdeasCell" bundle:[NSBundle mainBundle]]
                forCellWithReuseIdentifier:@"IdeasCell"];
     
-    
     UICollectionViewFlowLayout *layoutForIdeas = (UICollectionViewFlowLayout *) self.ideasCollectionView.collectionViewLayout;
-    layoutForIdeas.itemSize= CGSizeMake((self.view.frame.size.width-1)/2, 205);
-    layoutForIdeas.headerReferenceSize = CGSizeZero;
-    layoutForIdeas.footerReferenceSize = CGSizeZero;
+    
     layoutForIdeas.minimumInteritemSpacing = 0.5;
     layoutForIdeas.minimumLineSpacing = 0.5;
     [self.ideasCollectionView setCollectionViewLayout:layoutForIdeas];
     
-    UICollectionViewFlowLayout *layoutForSale = (UICollectionViewFlowLayout *) self.ideasCollectionView.collectionViewLayout;
-    layoutForSale.itemSize= CGSizeMake((self.view.frame.size.width-1)/2, 205);
+    UICollectionViewFlowLayout *layoutForSale = (UICollectionViewFlowLayout *) self.saleCollectionView.collectionViewLayout;
     layoutForSale.headerReferenceSize = CGSizeZero;
     layoutForSale.footerReferenceSize = CGSizeZero;
     layoutForSale.minimumInteritemSpacing = 0.5;
     layoutForSale.minimumLineSpacing = 0.5;
     
-    
     [self.saleCollectionView setCollectionViewLayout:layoutForSale animated:YES];
-    
     [self.tableView reloadData];
     [self openLogin];
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+     return CGSizeMake((SCREEN_WIDTH-1)/2, 205);
 }
 
 -(void)openLogin {

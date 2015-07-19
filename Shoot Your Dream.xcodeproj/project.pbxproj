@@ -39,6 +39,8 @@
 		435FA3B81B581DE700DA79F0 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FA3B71B581DE700DA79F0 /* CategoryCell.m */; };
 		435FA3BA1B581DF700DA79F0 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 435FA3B91B581DF700DA79F0 /* CategoryCell.xib */; };
 		435FA3BD1B58238200DA79F0 /* BaseCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FA3BC1B58238200DA79F0 /* BaseCollectionLayout.m */; };
+		435FA3C81B583EA800DA79F0 /* CicilanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FA3C71B583EA700DA79F0 /* CicilanView.m */; };
+		435FA3CA1B583EB900DA79F0 /* CicilanView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 435FA3C91B583EB900DA79F0 /* CicilanView.xib */; };
 		438F0A711B36DE9800FD0864 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A701B36DE9800FD0864 /* HomeTableViewController.m */; };
 		438F0A801B36FE6200FD0864 /* ShootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A7F1B36FE6200FD0864 /* ShootViewController.m */; };
 		438F0A841B3706AF00FD0864 /* MyAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0A831B3706AF00FD0864 /* MyAccountTableViewController.m */; };
@@ -127,6 +129,9 @@
 		435FA3B91B581DF700DA79F0 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		435FA3BB1B58238200DA79F0 /* BaseCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionLayout.h; sourceTree = "<group>"; };
 		435FA3BC1B58238200DA79F0 /* BaseCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionLayout.m; sourceTree = "<group>"; };
+		435FA3C61B583EA700DA79F0 /* CicilanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CicilanView.h; sourceTree = "<group>"; };
+		435FA3C71B583EA700DA79F0 /* CicilanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CicilanView.m; sourceTree = "<group>"; };
+		435FA3C91B583EB900DA79F0 /* CicilanView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CicilanView.xib; sourceTree = "<group>"; };
 		438F0A6F1B36DE9800FD0864 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
 		438F0A701B36DE9800FD0864 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		438F0A7E1B36FE6200FD0864 /* ShootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShootViewController.h; sourceTree = "<group>"; };
@@ -377,6 +382,7 @@
 		43006C021B2B3B17008CEBA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				435FA3C51B583E9400DA79F0 /* Cicilan */,
 				438F0A721B36E07300FD0864 /* HomeCell */,
 				43006C031B2B3B1D008CEBA8 /* Subclass */,
 			);
@@ -400,6 +406,16 @@
 				435FA3B91B581DF700DA79F0 /* CategoryCell.xib */,
 			);
 			name = "Categories Cell";
+			sourceTree = "<group>";
+		};
+		435FA3C51B583E9400DA79F0 /* Cicilan */ = {
+			isa = PBXGroup;
+			children = (
+				435FA3C61B583EA700DA79F0 /* CicilanView.h */,
+				435FA3C71B583EA700DA79F0 /* CicilanView.m */,
+				435FA3C91B583EB900DA79F0 /* CicilanView.xib */,
+			);
+			name = Cicilan;
 			sourceTree = "<group>";
 		};
 		438F0A6E1B36DE2900FD0864 /* Home */ = {
@@ -686,6 +702,7 @@
 				43006BB01B2B12B7008CEBA8 /* LaunchScreen.xib in Resources */,
 				43006BAD1B2B12B7008CEBA8 /* Images.xcassets in Resources */,
 				439A438E1B3AF79F009949C6 /* ReviewOrder.storyboard in Resources */,
+				435FA3CA1B583EB900DA79F0 /* CicilanView.xib in Resources */,
 				43E474A91B387FD7006F44AC /* CartView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -801,6 +818,7 @@
 				43006BD61B2B2C4D008CEBA8 /* ConnectionManager.m in Sources */,
 				438F0A801B36FE6200FD0864 /* ShootViewController.m in Sources */,
 				43006BFB1B2B2E58008CEBA8 /* Common.h in Sources */,
+				435FA3C81B583EA800DA79F0 /* CicilanView.m in Sources */,
 				43006BD21B2B2C42008CEBA8 /* Common.m in Sources */,
 				43006BA21B2B12B7008CEBA8 /* main.m in Sources */,
 			);

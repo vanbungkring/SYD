@@ -97,6 +97,7 @@
     [[UITabBar appearance] setShadowImage:nil];
     [[UILabel appearance] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
     [[UILabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
+    
     [self getData];
     return YES;
 }

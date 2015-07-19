@@ -44,11 +44,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="handphone" translatesAutoresizingMaskIntoConstraints="NO" id="Q55-bL-9ru">
+                                        <imageView tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handphone" translatesAutoresizingMaskIntoConstraints="NO" id="Q55-bL-9ru">
                                             <rect key="frame" x="31" y="13" width="88" height="86"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="86" id="fOS-o9-eaF"/>
+                                                <constraint firstAttribute="width" constant="88" id="gxK-0n-sii"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moW-RW-4Iv">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moW-RW-4Iv">
                                             <rect key="frame" x="8" y="113" width="135" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="U0E-fe-lV1"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -57,6 +64,14 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="moW-RW-4Iv" firstAttribute="leading" secondItem="tb9-0K-j6f" secondAttribute="leadingMargin" id="Doq-Cw-O0X"/>
+                                    <constraint firstItem="Q55-bL-9ru" firstAttribute="leading" secondItem="tb9-0K-j6f" secondAttribute="leadingMargin" constant="23" id="KOH-cJ-uVj"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="moW-RW-4Iv" secondAttribute="trailing" constant="8.5" id="RaZ-t3-ptL"/>
+                                    <constraint firstItem="Q55-bL-9ru" firstAttribute="top" secondItem="tb9-0K-j6f" secondAttribute="topMargin" constant="5" id="S0K-Ff-Tbi"/>
+                                    <constraint firstItem="moW-RW-4Iv" firstAttribute="top" secondItem="Q55-bL-9ru" secondAttribute="bottom" constant="14" id="kB1-Bg-85q"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Q55-bL-9ru" secondAttribute="trailing" constant="32.5" id="wjN-Ph-ziK"/>
+                                </constraints>
                                 <size key="customSize" width="159.5" height="159.5"/>
                             </collectionViewCell>
                         </cells>
@@ -299,7 +314,7 @@
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4wG-Un-egU">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
-                                                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fx7-62-tXQ">
                                                         <size key="itemSize" width="145" height="145"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
