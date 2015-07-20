@@ -71,13 +71,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5KA-3C-WZy">
-                                <rect key="frame" x="22" y="82" width="277" height="30"/>
+                                <rect key="frame" x="22" y="82" width="277" height="36"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="b9G-SQ-VQv"/>
+                                    <constraint firstAttribute="height" constant="36" id="b9G-SQ-VQv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zyK-dr-2dK" id="EJA-bR-0lp"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Berdasarkan DP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S24-zs-osh">
                                 <rect key="frame" x="7" y="126" width="304" height="21"/>
@@ -131,13 +134,16 @@
                                 <state key="normal" title="Hapus Semua">
                                     <color key="titleColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetRangeSlider:" destination="zyK-dr-2dK" eventType="touchUpInside" id="PSs-1L-3nm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="vBO-ZH-4GT" secondAttribute="trailing" constant="30" id="6Of-xI-Y9I"/>
                             <constraint firstItem="R9B-Iu-bIO" firstAttribute="leading" secondItem="qrq-Ua-qtq" secondAttribute="leadingMargin" constant="34" id="FrB-YT-Csv"/>
-                            <constraint firstItem="S24-zs-osh" firstAttribute="top" secondItem="5KA-3C-WZy" secondAttribute="bottom" constant="14" id="OEh-99-8rc"/>
+                            <constraint firstItem="S24-zs-osh" firstAttribute="top" secondItem="5KA-3C-WZy" secondAttribute="bottom" constant="8" id="OEh-99-8rc"/>
                             <constraint firstItem="cQd-qo-fsa" firstAttribute="top" secondItem="R9B-Iu-bIO" secondAttribute="bottom" constant="13" id="PJn-nv-m3p"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5KA-3C-WZy" secondAttribute="trailing" constant="5" id="Puu-wi-6RW"/>
                             <constraint firstItem="WNr-Bx-G7h" firstAttribute="top" secondItem="mhs-CB-yd7" secondAttribute="bottom" constant="27" id="QQ2-Fd-vEr"/>
@@ -167,6 +173,7 @@
                     <navigationItem key="navigationItem" title="Filter" id="SDO-Hb-4cY"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="filterTextField" destination="5KA-3C-WZy" id="NwN-CX-Ikq"/>
                         <outlet property="labelPrice" destination="vBO-ZH-4GT" id="y8f-Um-nkT"/>
                         <outlet property="rangeSlider" destination="um0-03-1tG" id="u3d-jb-kf1"/>
                         <outlet property="sortByForm" destination="5KA-3C-WZy" id="M7Z-OI-Zsr"/>

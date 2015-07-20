@@ -10,7 +10,6 @@
 #import "LoginViewController.h"
 #import "IdeasCell.h"
 #import "CategoryCell.h"
-#import "UIImageView+AFNetworking_UIActivityIndicatorView.h"
 @interface HomeTableViewController ()
 
 
@@ -18,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIPageControl *productPaginationControl;
 @property (strong, nonatomic) IBOutlet UICollectionView *ideasCollectionView;
 @property (strong, nonatomic) IBOutlet UICollectionView *saleCollectionView;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 
 @property (strong, nonatomic)  NSArray *listPromo;
@@ -30,6 +30,12 @@
     [super viewDidLoad];
     ///add fake bottom
     
+    for (int i=0; i<3; i++) {
+        UIImageView *imageviewTop = [[UIImageView alloc]initWithFrame:CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, 250)];
+        [imageviewTop setImage:[UIImage imageNamed:[NSString stringWithFormat:@"banner-header-%d",i]]];
+        [_scrollView addSubview:imageviewTop];
+        [_scrollView setContentSize:CGSizeMake((i+1)*SCREEN_WIDTH, 200)];
+    }
     UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 44)];
     footer.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = footer;
@@ -181,7 +187,7 @@
         
         return (10 *205)/2;
     }
-    return 300;
+    return 250;
 }
 //homeIdeas
 

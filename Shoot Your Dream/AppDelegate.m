@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Magento.h"
+#import "MagentoClient.h"
 #import "LoginViewController.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
@@ -97,34 +98,13 @@
     [[UITabBar appearance] setShadowImage:nil];
     [[UILabel appearance] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
     [[UILabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
-    
-    [self getData];
+    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
+    [NSURLCache setSharedURLCache:URLCache];
+//    
+//    Magento.service.storeID = @1;
+//    [Magento.service renewSession];
+
     return YES;
-}
-- (void) getData {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    AFHTTPRequestSerializer * requestSerializer = [AFHTTPRequestSerializer serializer];
-    AFXMLParserResponseSerializer * responseSerializer = [AFXMLParserResponseSerializer serializer];
-    
-//    NSString *ua = @"Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25";
-//    [requestSerializer setValue:ua forHTTPHeaderField:@"User-Agent"];
-    //    [requestSerializer setValue:@"application/xml" forHTTPHeaderField:@"Content-type"];
-    responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/xml", nil];
-    manager.responseSerializer = responseSerializer;
-    manager.requestSerializer = requestSerializer;
-    
-    NSDictionary *parameters = @{@"user": @"acommerce",
-                                 @"pass": @"password123"};
-    
-    [manager POST:@"http://shootyourdream.acomindo.com/api/soap?wsdl"
-       parameters:parameters
-          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              NSData * data = (NSData *)responseObject;
-              NSLog(@"Response string: %@",responseObject);
-          }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-              NSLog(@"Error: %@", error);
-          }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

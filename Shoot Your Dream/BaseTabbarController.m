@@ -30,7 +30,7 @@
 }
 - (IBAction)openCart:(id)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"CartView" bundle:nil];
-    CartTableViewController *cart = [sb instantiateViewControllerWithIdentifier:@"CartTableViewController"];
+    CartTableViewController *cart = [sb instantiateViewControllerWithIdentifier:@"CartVC"];
      UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:cart];
     [self.navigationController presentViewController:nav animated:YES completion:nil];
 }

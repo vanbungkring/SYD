@@ -41,18 +41,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="159.5" height="159.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handphone" translatesAutoresizingMaskIntoConstraints="NO" id="Q55-bL-9ru">
-                                            <rect key="frame" x="31" y="13" width="88" height="86"/>
+                                        <imageView tag="100" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handphone" translatesAutoresizingMaskIntoConstraints="NO" id="Q55-bL-9ru">
+                                            <rect key="frame" x="31" y="23" width="88" height="86"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="86" id="fOS-o9-eaF"/>
                                                 <constraint firstAttribute="width" constant="88" id="gxK-0n-sii"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moW-RW-4Iv">
-                                            <rect key="frame" x="8" y="113" width="135" height="21"/>
+                                            <rect key="frame" x="8" y="123" width="135" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="U0E-fe-lV1"/>
                                             </constraints>
@@ -68,7 +68,7 @@
                                     <constraint firstItem="moW-RW-4Iv" firstAttribute="leading" secondItem="tb9-0K-j6f" secondAttribute="leadingMargin" id="Doq-Cw-O0X"/>
                                     <constraint firstItem="Q55-bL-9ru" firstAttribute="leading" secondItem="tb9-0K-j6f" secondAttribute="leadingMargin" constant="23" id="KOH-cJ-uVj"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="moW-RW-4Iv" secondAttribute="trailing" constant="8.5" id="RaZ-t3-ptL"/>
-                                    <constraint firstItem="Q55-bL-9ru" firstAttribute="top" secondItem="tb9-0K-j6f" secondAttribute="topMargin" constant="5" id="S0K-Ff-Tbi"/>
+                                    <constraint firstItem="Q55-bL-9ru" firstAttribute="top" secondItem="tb9-0K-j6f" secondAttribute="topMargin" constant="15" id="S0K-Ff-Tbi"/>
                                     <constraint firstItem="moW-RW-4Iv" firstAttribute="top" secondItem="Q55-bL-9ru" secondAttribute="bottom" constant="14" id="kB1-Bg-85q"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Q55-bL-9ru" secondAttribute="trailing" constant="32.5" id="wjN-Ph-ziK"/>
                                 </constraints>
@@ -277,29 +277,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mjN-ai-dLE" id="nfT-cK-hob">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EwW-Ko-Kmt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X8p-7X-wTX">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </view>
-                                                    </subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EwW-Ko-Kmt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
                                                 </scrollView>
-                                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="v1x-4l-gdj">
-                                                    <rect key="frame" x="141" y="196" width="39" height="37"/>
-                                                    <color key="pageIndicatorTintColor" red="0.91764705882352937" green="0.61568627450980395" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="currentPageIndicatorTintColor" red="0.91764705879999997" green="0.61568627450000002" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                </pageControl>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="v1x-4l-gdj" firstAttribute="top" secondItem="EwW-Ko-Kmt" secondAttribute="bottom" constant="-6" id="8P0-ne-TOI"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="v1x-4l-gdj" secondAttribute="trailing" constant="132" id="T3E-hE-NZP"/>
-                                                <constraint firstItem="EwW-Ko-Kmt" firstAttribute="leading" secondItem="nfT-cK-hob" secondAttribute="leadingMargin" constant="-8" id="bXt-if-M4b"/>
-                                                <constraint firstItem="v1x-4l-gdj" firstAttribute="leading" secondItem="nfT-cK-hob" secondAttribute="leadingMargin" constant="133" id="lJj-zJ-Lgc"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="EwW-Ko-Kmt" secondAttribute="trailing" constant="-8" id="n76-Wg-rw7"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="v1x-4l-gdj" secondAttribute="bottom" constant="-13" id="whX-Jl-Wh3"/>
-                                                <constraint firstItem="EwW-Ko-Kmt" firstAttribute="top" secondItem="nfT-cK-hob" secondAttribute="topMargin" constant="-8" id="yd2-xQ-lsx"/>
+                                                <constraint firstAttribute="trailing" secondItem="EwW-Ko-Kmt" secondAttribute="trailing" id="9LV-zE-f0Y"/>
+                                                <constraint firstAttribute="bottom" secondItem="EwW-Ko-Kmt" secondAttribute="bottom" id="TLm-l6-IAw"/>
+                                                <constraint firstItem="EwW-Ko-Kmt" firstAttribute="leading" secondItem="nfT-cK-hob" secondAttribute="leading" id="iFn-qs-P9w"/>
+                                                <constraint firstItem="EwW-Ko-Kmt" firstAttribute="top" secondItem="nfT-cK-hob" secondAttribute="top" id="xq4-2w-jiS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -403,9 +389,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="ideasCollectionView" destination="4wG-Un-egU" id="KqW-UA-W3s"/>
-                        <outlet property="productPaginationControl" destination="v1x-4l-gdj" id="n7T-YW-am1"/>
                         <outlet property="productScrollView" destination="mjN-ai-dLE" id="Mmb-Hs-Ay4"/>
                         <outlet property="saleCollectionView" destination="YCj-gE-FVg" id="4Tt-P1-LrR"/>
+                        <outlet property="scrollView" destination="EwW-Ko-Kmt" id="pVY-7f-9JK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HjT-Dh-alH" userLabel="First Responder" sceneMemberID="firstResponder"/>

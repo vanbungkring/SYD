@@ -2,13 +2,13 @@
 # platform :ios, '6.0'
 
 target 'Shoot Your Dream' do
-    pod 'AFNetworking', '~> 2.5'
-    pod 'AFNetworking+ImageActivityIndicator', '~> 1.0'
-    pod 'Realm', '~> 0.93'
+    pod 'AFNetworking', '~> 1.3'
+    pod 'FMDB'
     pod 'Onboard'
     pod 'DLRadioButton'
     pod 'SDWebImage'
     pod 'SOAPEngine', '~> 1.21'
+    pod 'MZFormSheetPresentationController', '~> 1.1'
     pod 'TouchXML', '~> 0.1'
     source 'https://github.com/CocoaPods/Specs.git'
     use_frameworks!
@@ -17,6 +17,6 @@ target 'Shoot Your Dream' do
 end
 
 target 'Shoot Your DreamTests' do
-
+    
 end
 
