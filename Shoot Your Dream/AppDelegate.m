@@ -100,9 +100,8 @@
     [[UILabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
     NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
     [NSURLCache setSharedURLCache:URLCache];
-//    
-//    Magento.service.storeID = @1;
-//    [Magento.service renewSession];
+    
+    [Magento.service renewSession];
 
     return YES;
 }

@@ -224,21 +224,18 @@ NSString * const FAILED_SESSION = @"NULL";
     if (_sessionID != FAILED_SESSION)
         dispatch_group_enter(session_group);
     
-    NSDictionary *params =@{@"username": @"acommerce", @"apiKey": @"password123"};
+    NSDictionary *params =@{
+                            @"username": @"acommerce",
+                            @"apiKey": @"password123"
+                            };
     
-    [client postPath:@"login" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"response Object->%@",responseObject);
+    [client postPath:@"" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        sessionID = responseObject;
+                dispatch_group_leave(session_group);
+                NSLog(@"got session %@", sessionID);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error,->%@",error);
     }];
-    
-//    [client postPath:@"login" parameters:@{@"username": MAGENTO_USERNAME, @"apiKey": MAGENTO_API_KEY} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        sessionID = responseObject;
-//        dispatch_group_leave(session_group);
-//        NSLog(@"got session %@", sessionID);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        sessionID = FAILED_SESSION;
-//    }];
 }
 
 - (void)inSession:(void (^)(NSString *session))block
