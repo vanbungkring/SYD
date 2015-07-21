@@ -11,6 +11,7 @@
 #import "MagentoClient.h"
 #import "LoginViewController.h"
 #import <Fabric/Fabric.h>
+#import <AFNetworking/AFNetworking.h>
 #import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
