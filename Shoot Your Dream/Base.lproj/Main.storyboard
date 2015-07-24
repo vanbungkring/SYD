@@ -41,7 +41,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="159.5" height="159.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView tag="100" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handphone" translatesAutoresizingMaskIntoConstraints="NO" id="Q55-bL-9ru">

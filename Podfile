@@ -10,10 +10,6 @@ target 'Shoot Your Dream' do
     pod 'SDWebImage'
     pod 'SOAPEngine', '~> 1.21'
     pod 'MZFormSheetPresentationController', '~> 1.1'
-#    pod 'TouchXML', '~> 0.1'
-    source 'https://github.com/CocoaPods/Specs.git'
-    use_frameworks!
-    
     pod 'TTRangeSlider'
 end
 
