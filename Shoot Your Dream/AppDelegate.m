@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "MagentoManager.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 
@@ -101,27 +102,12 @@
     [self initializeAppFirstTime];
     return YES;
 }
+- (NSTimeInterval) timeStamp {
+    return [[NSDate date] timeIntervalSince1970] * 1000;
+}
 - (void)initializeAppFirstTime {
-    //todo get access token shit
-    NSDictionary *headers = @{ @"authorization": @"OAuth oauth_consumer_key=\"cb329bd61c39f6358b85fe0a22c5c65b\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1437752445\",oauth_nonce=\"64dVJM\",oauth_version=\"1.0\",oauth_signature=\"WyNUH1Yq756HC8x9oMgTY9qJQ40%253D\"" };
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://shootyourdream.acomindo.com/oauth/initiate?oauth_callback=http%3A%2F%2Fhttpbin.org%2Fget&oauth_signature_method=HMAC-SHA1&oauth_signature=TcZ%20DRoD%20HKX6dA7BBqqzKdrv1Y%3D"]
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval:10.0];
-    [request setHTTPMethod:@"GET"];
-    [request setAllHTTPHeaderFields:headers];
-    
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
-                                                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                    if (error) {
-                                                        NSLog(@"%@", error);
-                                                    } else {
-                                                        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-                                                        NSLog(@"%@", httpResponse);
-                                                    }
-                                                }];
-    [dataTask resume];
+    [MagentoManager initWithConsumserKey:CONSUMER_KEY secret:CONSUMER_SECRET];
+    [[MagentoManager sharedClient] authorize];
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -144,5 +130,13 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if ([MagentoManager isAuthorizationCallbackURL:url]) {
+        return [[MagentoManager sharedClient] handleAuthorizationCallbackURL:url];
+    }
+    
+    return NO;
+}
+
 
 @end

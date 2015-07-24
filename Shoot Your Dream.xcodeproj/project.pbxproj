@@ -33,6 +33,7 @@
 		43006BFE1B2B3031008CEBA8 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BFD1B2B3031008CEBA8 /* MainNavigationController.m */; };
 		43006C011B2B39F6008CEBA8 /* BaseTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006C001B2B39F6008CEBA8 /* BaseTabbarController.m */; };
 		434102A61B62995500037E30 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 434102A51B62995500037E30 /* APIManager.m */; };
+		434102BA1B62B39800037E30 /* MagentoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 434102B91B62B39800037E30 /* MagentoManager.m */; };
 		435FA3B81B581DE700DA79F0 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FA3B71B581DE700DA79F0 /* CategoryCell.m */; };
 		435FA3BA1B581DF700DA79F0 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 435FA3B91B581DF700DA79F0 /* CategoryCell.xib */; };
 		435FA3BD1B58238200DA79F0 /* BaseCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FA3BC1B58238200DA79F0 /* BaseCollectionLayout.m */; };
@@ -59,8 +60,6 @@
 		43B5C7001B5D666700831D91 /* Cicilan.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43B5C6FF1B5D666700831D91 /* Cicilan.xib */; };
 		43B5C7031B5D667A00831D91 /* Cicilan.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5C7021B5D667A00831D91 /* Cicilan.m */; };
 		43D4C6DA1B38657800A37D70 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4C6D91B38657800A37D70 /* FilterViewController.m */; };
-		43D4C6DD1B38662200A37D70 /* DLRadioButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D4C6DB1B38662200A37D70 /* DLRadioButton.framework */; };
-		43D4C6DE1B38662200A37D70 /* TTRangeSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D4C6DC1B38662200A37D70 /* TTRangeSlider.framework */; };
 		43D4C6E11B38698800A37D70 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4C6E01B38698800A37D70 /* BaseViewController.m */; };
 		43DC276F1B579C68003AEA33 /* IdeasCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43DC276E1B579C68003AEA33 /* IdeasCell.xib */; };
 		43DC27721B579CB8003AEA33 /* IdeasCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DC27711B579CB8003AEA33 /* IdeasCell.m */; };
@@ -85,7 +84,7 @@
 
 /* Begin PBXFileReference section */
 		0105FC6BB2CC8A9574167BED /* libPods-Shoot Your Dream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shoot Your Dream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43006B9C1B2B12B7008CEBA8 /* SYD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43006B9C1B2B12B7008CEBA8 /* Shoot Your Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shoot Your Dream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43006BA01B2B12B7008CEBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43006BA11B2B12B7008CEBA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43006BA31B2B12B7008CEBA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,7 +92,7 @@
 		43006BAA1B2B12B7008CEBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43006BAC1B2B12B7008CEBA8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43006BAF1B2B12B7008CEBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		43006BB51B2B12B7008CEBA8 /* SYDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43006BB51B2B12B7008CEBA8 /* Shoot Your DreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shoot Your DreamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43006BBA1B2B12B7008CEBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43006BBB1B2B12B7008CEBA8 /* Shoot_Your_DreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shoot_Your_DreamTests.m; sourceTree = "<group>"; };
 		43006BCA1B2B1A01008CEBA8 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
@@ -120,6 +119,8 @@
 		43006C001B2B39F6008CEBA8 /* BaseTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabbarController.m; sourceTree = "<group>"; };
 		434102A41B62995500037E30 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		434102A51B62995500037E30 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		434102B81B62B39800037E30 /* MagentoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagentoManager.h; sourceTree = "<group>"; };
+		434102B91B62B39800037E30 /* MagentoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagentoManager.m; sourceTree = "<group>"; };
 		435FA3B61B581DE700DA79F0 /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		435FA3B71B581DE700DA79F0 /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
 		435FA3B91B581DF700DA79F0 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
@@ -191,9 +192,7 @@
 			files = (
 				43EDE6881B3BC0B00033F04D /* libxml2.2.dylib in Frameworks */,
 				43EDE6891B3BC0B00033F04D /* libxml2.dylib in Frameworks */,
-				43D4C6DD1B38662200A37D70 /* DLRadioButton.framework in Frameworks */,
 				43EDE64E1B3BB3370033F04D /* Crashlytics.framework in Frameworks */,
-				43D4C6DE1B38662200A37D70 /* TTRangeSlider.framework in Frameworks */,
 				43006BF11B2B2DBB008CEBA8 /* UIKit.framework in Frameworks */,
 				43EDE64D1B3BB3370033F04D /* Fabric.framework in Frameworks */,
 				43006BED1B2B2D60008CEBA8 /* CoreFoundation.framework in Frameworks */,
@@ -238,8 +237,8 @@
 		43006B9D1B2B12B7008CEBA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				43006B9C1B2B12B7008CEBA8 /* SYD.app */,
-				43006BB51B2B12B7008CEBA8 /* SYDTests.xctest */,
+				43006B9C1B2B12B7008CEBA8 /* Shoot Your Dream.app */,
+				43006BB51B2B12B7008CEBA8 /* Shoot Your DreamTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -368,6 +367,8 @@
 				438A93AD1B5D852A00C81391 /* DatabaseManager.m */,
 				434102A41B62995500037E30 /* APIManager.h */,
 				434102A51B62995500037E30 /* APIManager.m */,
+				434102B81B62B39800037E30 /* MagentoManager.h */,
+				434102B91B62B39800037E30 /* MagentoManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -576,9 +577,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		43006B9B1B2B12B7008CEBA8 /* SYD */ = {
+		43006B9B1B2B12B7008CEBA8 /* Shoot Your Dream */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43006BBF1B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "SYD" */;
+			buildConfigurationList = 43006BBF1B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "Shoot Your Dream" */;
 			buildPhases = (
 				3BD7376DD03ABB91D548145D /* Check Pods Manifest.lock */,
 				43006B981B2B12B7008CEBA8 /* Sources */,
@@ -591,14 +592,14 @@
 			);
 			dependencies = (
 			);
-			name = SYD;
+			name = "Shoot Your Dream";
 			productName = "Shoot Your Dream";
-			productReference = 43006B9C1B2B12B7008CEBA8 /* SYD.app */;
+			productReference = 43006B9C1B2B12B7008CEBA8 /* Shoot Your Dream.app */;
 			productType = "com.apple.product-type.application";
 		};
-		43006BB41B2B12B7008CEBA8 /* SYDTests */ = {
+		43006BB41B2B12B7008CEBA8 /* Shoot Your DreamTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43006BC21B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "SYDTests" */;
+			buildConfigurationList = 43006BC21B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "Shoot Your DreamTests" */;
 			buildPhases = (
 				43006BB11B2B12B7008CEBA8 /* Sources */,
 				43006BB21B2B12B7008CEBA8 /* Frameworks */,
@@ -609,9 +610,9 @@
 			dependencies = (
 				43006BB71B2B12B7008CEBA8 /* PBXTargetDependency */,
 			);
-			name = SYDTests;
+			name = "Shoot Your DreamTests";
 			productName = "Shoot Your DreamTests";
-			productReference = 43006BB51B2B12B7008CEBA8 /* SYDTests.xctest */;
+			productReference = 43006BB51B2B12B7008CEBA8 /* Shoot Your DreamTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -632,7 +633,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 43006B971B2B12B7008CEBA8 /* Build configuration list for PBXProject "SYD" */;
+			buildConfigurationList = 43006B971B2B12B7008CEBA8 /* Build configuration list for PBXProject "Shoot Your Dream" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -645,8 +646,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				43006B9B1B2B12B7008CEBA8 /* SYD */,
-				43006BB41B2B12B7008CEBA8 /* SYDTests */,
+				43006B9B1B2B12B7008CEBA8 /* Shoot Your Dream */,
+				43006BB41B2B12B7008CEBA8 /* Shoot Your DreamTests */,
 			);
 		};
 /* End PBXProject section */
@@ -758,6 +759,7 @@
 				434102A61B62995500037E30 /* APIManager.m in Sources */,
 				43006BE81B2B2CB5008CEBA8 /* VanKeyboardHelper.m in Sources */,
 				438F0A961B3753F500FD0864 /* CatDetailCollectionViewController.m in Sources */,
+				434102BA1B62B39800037E30 /* MagentoManager.m in Sources */,
 				438F0A711B36DE9800FD0864 /* HomeTableViewController.m in Sources */,
 				439A43921B3AFD47009949C6 /* ReviewViewController.m in Sources */,
 				438F0AAA1B37CF0500FD0864 /* ForgotPasswordViewController.m in Sources */,
@@ -787,7 +789,7 @@
 /* Begin PBXTargetDependency section */
 		43006BB71B2B12B7008CEBA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 43006B9B1B2B12B7008CEBA8 /* SYD */;
+			target = 43006B9B1B2B12B7008CEBA8 /* Shoot Your Dream */;
 			targetProxy = 43006BB61B2B12B7008CEBA8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -914,7 +916,7 @@
 				);
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = SYD;
+				PRODUCT_NAME = "Shoot Your Dream";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -942,7 +944,7 @@
 				);
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = SYD;
+				PRODUCT_NAME = "Shoot Your Dream";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -961,7 +963,7 @@
 				);
 				INFOPLIST_FILE = "Shoot Your DreamTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = SYDTests;
+				PRODUCT_NAME = "Shoot Your DreamTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shoot Your Dream.app/Shoot Your Dream";
 			};
 			name = Debug;
@@ -976,7 +978,7 @@
 				);
 				INFOPLIST_FILE = "Shoot Your DreamTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = SYDTests;
+				PRODUCT_NAME = "Shoot Your DreamTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shoot Your Dream.app/Shoot Your Dream";
 			};
 			name = Release;
@@ -984,7 +986,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43006B971B2B12B7008CEBA8 /* Build configuration list for PBXProject "SYD" */ = {
+		43006B971B2B12B7008CEBA8 /* Build configuration list for PBXProject "Shoot Your Dream" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43006BBD1B2B12B7008CEBA8 /* Debug */,
@@ -993,7 +995,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43006BBF1B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "SYD" */ = {
+		43006BBF1B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "Shoot Your Dream" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43006BC01B2B12B7008CEBA8 /* Debug */,
@@ -1002,7 +1004,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43006BC21B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "SYDTests" */ = {
+		43006BC21B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "Shoot Your DreamTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43006BC31B2B12B7008CEBA8 /* Debug */,

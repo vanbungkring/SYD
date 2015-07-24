@@ -7,6 +7,7 @@ target 'Shoot Your Dream' do
     pod 'Onboard'
     pod 'SDWebImage'
     pod 'TTRangeSlider'
+   pod 'BDBOAuth1Manager', '~> 1.5'
 end
 
 target 'Shoot Your DreamTests' do

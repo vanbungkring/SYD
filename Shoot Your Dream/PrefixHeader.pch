@@ -31,6 +31,7 @@
 //#import "MBProgressHud+WasupHud.h"
 #import "VanKeyboardHelper.h"
 #import "APIManager.h"
+#define TimeStamp [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970] * 1000]
 //#import <SIAlertView/SIAlertView.h>
 //#import "UIScrollView+EmptyDataSet.h"
 
