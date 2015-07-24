@@ -8,7 +8,6 @@
 
 #import "ItemViewController.h"
 #import "Cicilan.h"
-#import <DLRadioButton/DLRadioButton.h>
 @interface ItemViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *keteranganLabel;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;

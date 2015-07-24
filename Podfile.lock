@@ -1,46 +1,48 @@
 PODS:
-  - AFNetworking (1.3.4)
-  - DLRadioButton (1.1.1)
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
   - FMDB (2.5):
     - FMDB/standard (= 2.5)
   - FMDB/common (2.5)
   - FMDB/standard (2.5):
     - FMDB/common
-  - JGMethodSwizzler (2.0.1)
-  - MZAppearance (1.1.5)
-  - MZFormSheetPresentationController (1.1.2):
-    - JGMethodSwizzler
-    - MZAppearance
   - Onboard (2.1.5)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
-  - SOAPEngine (1.21.0)
-  - TouchXML (0.1)
   - TTRangeSlider (1.0.2)
 
 DEPENDENCIES:
-  - AFNetworking (~> 1.3)
-  - DLRadioButton
+  - AFNetworking (~> 2.5.4)
   - FMDB
-  - MZFormSheetPresentationController (~> 1.1)
   - Onboard
   - SDWebImage
-  - SOAPEngine (~> 1.21)
-  - TouchXML (~> 0.1)
   - TTRangeSlider
 
 SPEC CHECKSUMS:
-  AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
-  DLRadioButton: 1aad82f913b621432d51f8d5f4139265c39d202d
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
-  JGMethodSwizzler: e0ea5c1c6c55304ec4ef3f54e441400c6735c899
-  MZAppearance: 6e9dc64e42074c0a19812a327f590746c3283bab
-  MZFormSheetPresentationController: 2e848d89c0741aef554d0ae6b138be5dc25a479f
   Onboard: c58adaef5a377b0c45b4754c5cbe17d4627898c7
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
-  SOAPEngine: b8001ba3a2afd05b36fed9e3d961a8eaa54b076a
-  TouchXML: 37089088da5e46f0f4a8797d320fbcfed395ab46
   TTRangeSlider: e41d992cc0047da48884ad507f968db5ab08441b
 
 COCOAPODS: 0.37.2

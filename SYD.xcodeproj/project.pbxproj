@@ -32,6 +32,7 @@
 		43006BFB1B2B2E58008CEBA8 /* Common.h in Sources */ = {isa = PBXBuildFile; fileRef = 43006BD01B2B2C42008CEBA8 /* Common.h */; };
 		43006BFE1B2B3031008CEBA8 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BFD1B2B3031008CEBA8 /* MainNavigationController.m */; };
 		43006C011B2B39F6008CEBA8 /* BaseTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006C001B2B39F6008CEBA8 /* BaseTabbarController.m */; };
+		434102A61B62995500037E30 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 434102A51B62995500037E30 /* APIManager.m */; };
 		435FA3B81B581DE700DA79F0 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FA3B71B581DE700DA79F0 /* CategoryCell.m */; };
 		435FA3BA1B581DF700DA79F0 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 435FA3B91B581DF700DA79F0 /* CategoryCell.xib */; };
 		435FA3BD1B58238200DA79F0 /* BaseCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FA3BC1B58238200DA79F0 /* BaseCollectionLayout.m */; };
@@ -55,10 +56,6 @@
 		439A438E1B3AF79F009949C6 /* ReviewOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439A438D1B3AF79F009949C6 /* ReviewOrder.storyboard */; };
 		439A43921B3AFD47009949C6 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439A43911B3AFD47009949C6 /* ReviewViewController.m */; };
 		439A43951B3B1C57009949C6 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439A43941B3B1C57009949C6 /* Onboarding.storyboard */; };
-		43B5C6DD1B5D461F00831D91 /* Magento.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5C6BA1B5D461F00831D91 /* Magento.m */; };
-		43B5C6DE1B5D461F00831D91 /* MagentoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5C6BC1B5D461F00831D91 /* MagentoClient.m */; };
-		43B5C6DF1B5D461F00831D91 /* NSObject+Soap.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5C6BE1B5D461F00831D91 /* NSObject+Soap.m */; };
-		43B5C6E01B5D461F00831D91 /* SoapRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5C6C01B5D461F00831D91 /* SoapRequestOperation.m */; };
 		43B5C7001B5D666700831D91 /* Cicilan.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43B5C6FF1B5D666700831D91 /* Cicilan.xib */; };
 		43B5C7031B5D667A00831D91 /* Cicilan.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5C7021B5D667A00831D91 /* Cicilan.m */; };
 		43D4C6DA1B38657800A37D70 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4C6D91B38657800A37D70 /* FilterViewController.m */; };
@@ -73,7 +70,7 @@
 		43EDE64E1B3BB3370033F04D /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EDE64C1B3BB3370033F04D /* Crashlytics.framework */; };
 		43EDE6881B3BC0B00033F04D /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EDE6861B3BC0B00033F04D /* libxml2.2.dylib */; };
 		43EDE6891B3BC0B00033F04D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EDE6871B3BC0B00033F04D /* libxml2.dylib */; };
-		B98C15320E6498546AD3AD29 /* Pods_Shoot_Your_Dream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CA95242F04F42377538CD1 /* Pods_Shoot_Your_Dream.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DDF8909081D7C025F621C930 /* libPods-Shoot Your Dream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0105FC6BB2CC8A9574167BED /* libPods-Shoot Your Dream.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +84,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		43006B9C1B2B12B7008CEBA8 /* Shoot Your Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shoot Your Dream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0105FC6BB2CC8A9574167BED /* libPods-Shoot Your Dream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shoot Your Dream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43006B9C1B2B12B7008CEBA8 /* SYD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43006BA01B2B12B7008CEBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43006BA11B2B12B7008CEBA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43006BA31B2B12B7008CEBA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,7 +93,7 @@
 		43006BAA1B2B12B7008CEBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43006BAC1B2B12B7008CEBA8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43006BAF1B2B12B7008CEBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		43006BB51B2B12B7008CEBA8 /* Shoot Your DreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shoot Your DreamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43006BB51B2B12B7008CEBA8 /* SYDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43006BBA1B2B12B7008CEBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43006BBB1B2B12B7008CEBA8 /* Shoot_Your_DreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shoot_Your_DreamTests.m; sourceTree = "<group>"; };
 		43006BCA1B2B1A01008CEBA8 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
@@ -120,6 +118,8 @@
 		43006BFD1B2B3031008CEBA8 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		43006BFF1B2B39F6008CEBA8 /* BaseTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabbarController.h; sourceTree = "<group>"; };
 		43006C001B2B39F6008CEBA8 /* BaseTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabbarController.m; sourceTree = "<group>"; };
+		434102A41B62995500037E30 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		434102A51B62995500037E30 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		435FA3B61B581DE700DA79F0 /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		435FA3B71B581DE700DA79F0 /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
 		435FA3B91B581DF700DA79F0 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
@@ -161,14 +161,6 @@
 		439A43971B3B1CD8009949C6 /* OnboardingContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingContentViewController.m; sourceTree = "<group>"; };
 		439A43981B3B1CD8009949C6 /* OnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingViewController.h; sourceTree = "<group>"; };
 		439A43991B3B1CD8009949C6 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
-		43B5C6B91B5D461F00831D91 /* Magento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Magento.h; sourceTree = "<group>"; };
-		43B5C6BA1B5D461F00831D91 /* Magento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Magento.m; sourceTree = "<group>"; };
-		43B5C6BB1B5D461F00831D91 /* MagentoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagentoClient.h; sourceTree = "<group>"; };
-		43B5C6BC1B5D461F00831D91 /* MagentoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagentoClient.m; sourceTree = "<group>"; };
-		43B5C6BD1B5D461F00831D91 /* NSObject+Soap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Soap.h"; sourceTree = "<group>"; };
-		43B5C6BE1B5D461F00831D91 /* NSObject+Soap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Soap.m"; sourceTree = "<group>"; };
-		43B5C6BF1B5D461F00831D91 /* SoapRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapRequestOperation.h; sourceTree = "<group>"; };
-		43B5C6C01B5D461F00831D91 /* SoapRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapRequestOperation.m; sourceTree = "<group>"; };
 		43B5C6FF1B5D666700831D91 /* Cicilan.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cicilan.xib; sourceTree = "<group>"; };
 		43B5C7011B5D667A00831D91 /* Cicilan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cicilan.h; sourceTree = "<group>"; };
 		43B5C7021B5D667A00831D91 /* Cicilan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cicilan.m; sourceTree = "<group>"; };
@@ -188,7 +180,6 @@
 		43EDE64C1B3BB3370033F04D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		43EDE6861B3BC0B00033F04D /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		43EDE6871B3BC0B00033F04D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		B1CA95242F04F42377538CD1 /* Pods_Shoot_Your_Dream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shoot_Your_Dream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8374D4BB520160303A8AC4 /* Pods-Shoot Your Dream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.release.xcconfig"; sourceTree = "<group>"; };
 		E4CF548E9E05F90C817ADA07 /* Pods-Shoot Your Dream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoot Your Dream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,7 +199,7 @@
 				43006BED1B2B2D60008CEBA8 /* CoreFoundation.framework in Frameworks */,
 				43006BEE1B2B2D60008CEBA8 /* CoreImage.framework in Frameworks */,
 				43006BEF1B2B2D60008CEBA8 /* QuartzCore.framework in Frameworks */,
-				B98C15320E6498546AD3AD29 /* Pods_Shoot_Your_Dream.framework in Frameworks */,
+				DDF8909081D7C025F621C930 /* libPods-Shoot Your Dream.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,8 +238,8 @@
 		43006B9D1B2B12B7008CEBA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				43006B9C1B2B12B7008CEBA8 /* Shoot Your Dream.app */,
-				43006BB51B2B12B7008CEBA8 /* Shoot Your DreamTests.xctest */,
+				43006B9C1B2B12B7008CEBA8 /* SYD.app */,
+				43006BB51B2B12B7008CEBA8 /* SYDTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				439739CE1B41221A00A34CE1 /* Font */,
-				43EDE64F1B3BBF810033F04D /* 3rd Library */,
 				43006C021B2B3B17008CEBA8 /* View */,
 				43006BCC1B2B2B66008CEBA8 /* Manager */,
 				43006BC91B2B19D6008CEBA8 /* Categories */,
@@ -376,6 +366,8 @@
 			children = (
 				438A93AC1B5D852A00C81391 /* DatabaseManager.h */,
 				438A93AD1B5D852A00C81391 /* DatabaseManager.m */,
+				434102A41B62995500037E30 /* APIManager.h */,
+				434102A51B62995500037E30 /* APIManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -535,21 +527,6 @@
 			name = Onboardin;
 			sourceTree = "<group>";
 		};
-		43B5C6B81B5D461F00831D91 /* Magento */ = {
-			isa = PBXGroup;
-			children = (
-				43B5C6B91B5D461F00831D91 /* Magento.h */,
-				43B5C6BA1B5D461F00831D91 /* Magento.m */,
-				43B5C6BB1B5D461F00831D91 /* MagentoClient.h */,
-				43B5C6BC1B5D461F00831D91 /* MagentoClient.m */,
-				43B5C6BD1B5D461F00831D91 /* NSObject+Soap.h */,
-				43B5C6BE1B5D461F00831D91 /* NSObject+Soap.m */,
-				43B5C6BF1B5D461F00831D91 /* SoapRequestOperation.h */,
-				43B5C6C01B5D461F00831D91 /* SoapRequestOperation.m */,
-			);
-			path = Magento;
-			sourceTree = "<group>";
-		};
 		43D4C6D71B38656700A37D70 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
@@ -580,14 +557,6 @@
 			name = Cart;
 			sourceTree = "<group>";
 		};
-		43EDE64F1B3BBF810033F04D /* 3rd Library */ = {
-			isa = PBXGroup;
-			children = (
-				43B5C6B81B5D461F00831D91 /* Magento */,
-			);
-			name = "3rd Library";
-			sourceTree = "<group>";
-		};
 		45763105ED17DDED80785DF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,7 +568,7 @@
 				43006BEA1B2B2D60008CEBA8 /* CoreFoundation.framework */,
 				43006BEB1B2B2D60008CEBA8 /* CoreImage.framework */,
 				43006BEC1B2B2D60008CEBA8 /* QuartzCore.framework */,
-				B1CA95242F04F42377538CD1 /* Pods_Shoot_Your_Dream.framework */,
+				0105FC6BB2CC8A9574167BED /* libPods-Shoot Your Dream.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -607,30 +576,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		43006B9B1B2B12B7008CEBA8 /* Shoot Your Dream */ = {
+		43006B9B1B2B12B7008CEBA8 /* SYD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43006BBF1B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "Shoot Your Dream" */;
+			buildConfigurationList = 43006BBF1B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "SYD" */;
 			buildPhases = (
 				3BD7376DD03ABB91D548145D /* Check Pods Manifest.lock */,
 				43006B981B2B12B7008CEBA8 /* Sources */,
 				43006B991B2B12B7008CEBA8 /* Frameworks */,
 				43006B9A1B2B12B7008CEBA8 /* Resources */,
 				12E4685C3629DE230120B4AC /* Copy Pods Resources */,
-				551969073229B8B7F829C01B /* Embed Pods Frameworks */,
 				43EDE64A1B3BB2E10033F04D /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Shoot Your Dream";
+			name = SYD;
 			productName = "Shoot Your Dream";
-			productReference = 43006B9C1B2B12B7008CEBA8 /* Shoot Your Dream.app */;
+			productReference = 43006B9C1B2B12B7008CEBA8 /* SYD.app */;
 			productType = "com.apple.product-type.application";
 		};
-		43006BB41B2B12B7008CEBA8 /* Shoot Your DreamTests */ = {
+		43006BB41B2B12B7008CEBA8 /* SYDTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43006BC21B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "Shoot Your DreamTests" */;
+			buildConfigurationList = 43006BC21B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "SYDTests" */;
 			buildPhases = (
 				43006BB11B2B12B7008CEBA8 /* Sources */,
 				43006BB21B2B12B7008CEBA8 /* Frameworks */,
@@ -641,9 +609,9 @@
 			dependencies = (
 				43006BB71B2B12B7008CEBA8 /* PBXTargetDependency */,
 			);
-			name = "Shoot Your DreamTests";
+			name = SYDTests;
 			productName = "Shoot Your DreamTests";
-			productReference = 43006BB51B2B12B7008CEBA8 /* Shoot Your DreamTests.xctest */;
+			productReference = 43006BB51B2B12B7008CEBA8 /* SYDTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -664,7 +632,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 43006B971B2B12B7008CEBA8 /* Build configuration list for PBXProject "Shoot Your Dream" */;
+			buildConfigurationList = 43006B971B2B12B7008CEBA8 /* Build configuration list for PBXProject "SYD" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -677,8 +645,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				43006B9B1B2B12B7008CEBA8 /* Shoot Your Dream */,
-				43006BB41B2B12B7008CEBA8 /* Shoot Your DreamTests */,
+				43006B9B1B2B12B7008CEBA8 /* SYD */,
+				43006BB41B2B12B7008CEBA8 /* SYDTests */,
 			);
 		};
 /* End PBXProject section */
@@ -760,21 +728,6 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 4165a61ef093b00352a634db8c625bdbd68ff756 eb6ccec33a3a87d11b8db531559c5d421872993e1fe44eaff47e42ff86e26e3d";
 		};
-		551969073229B8B7F829C01B /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shoot Your Dream/Pods-Shoot Your Dream-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -800,9 +753,9 @@
 				43006BF51B2B2E58008CEBA8 /* RoundedLabel.h in Sources */,
 				43006BE61B2B2CB5008CEBA8 /* RoundedLabel.m in Sources */,
 				43006BF61B2B2E58008CEBA8 /* RoundedView.h in Sources */,
-				43B5C6DF1B5D461F00831D91 /* NSObject+Soap.m in Sources */,
 				43006BE71B2B2CB5008CEBA8 /* RoundedView.m in Sources */,
 				43006BF71B2B2E58008CEBA8 /* VanKeyboardHelper.h in Sources */,
+				434102A61B62995500037E30 /* APIManager.m in Sources */,
 				43006BE81B2B2CB5008CEBA8 /* VanKeyboardHelper.m in Sources */,
 				438F0A961B3753F500FD0864 /* CatDetailCollectionViewController.m in Sources */,
 				438F0A711B36DE9800FD0864 /* HomeTableViewController.m in Sources */,
@@ -813,14 +766,11 @@
 				43D4C6DA1B38657800A37D70 /* FilterViewController.m in Sources */,
 				43006BFE1B2B3031008CEBA8 /* MainNavigationController.m in Sources */,
 				435FA3BD1B58238200DA79F0 /* BaseCollectionLayout.m in Sources */,
-				43B5C6DE1B5D461F00831D91 /* MagentoClient.m in Sources */,
 				43E474A71B387FC6006F44AC /* CartTableViewController.m in Sources */,
 				438F0A801B36FE6200FD0864 /* ShootViewController.m in Sources */,
 				43006BFB1B2B2E58008CEBA8 /* Common.h in Sources */,
 				43006BD21B2B2C42008CEBA8 /* Common.m in Sources */,
 				43006BA21B2B12B7008CEBA8 /* main.m in Sources */,
-				43B5C6E01B5D461F00831D91 /* SoapRequestOperation.m in Sources */,
-				43B5C6DD1B5D461F00831D91 /* Magento.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,7 +787,7 @@
 /* Begin PBXTargetDependency section */
 		43006BB71B2B12B7008CEBA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 43006B9B1B2B12B7008CEBA8 /* Shoot Your Dream */;
+			target = 43006B9B1B2B12B7008CEBA8 /* SYD */;
 			targetProxy = 43006BB61B2B12B7008CEBA8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -964,7 +914,7 @@
 				);
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SYD;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -992,7 +942,7 @@
 				);
 				INFOPLIST_FILE = "Shoot Your Dream/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SYD;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -1011,7 +961,7 @@
 				);
 				INFOPLIST_FILE = "Shoot Your DreamTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SYDTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shoot Your Dream.app/Shoot Your Dream";
 			};
 			name = Debug;
@@ -1026,7 +976,7 @@
 				);
 				INFOPLIST_FILE = "Shoot Your DreamTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SYDTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shoot Your Dream.app/Shoot Your Dream";
 			};
 			name = Release;
@@ -1034,7 +984,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43006B971B2B12B7008CEBA8 /* Build configuration list for PBXProject "Shoot Your Dream" */ = {
+		43006B971B2B12B7008CEBA8 /* Build configuration list for PBXProject "SYD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43006BBD1B2B12B7008CEBA8 /* Debug */,
@@ -1043,7 +993,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43006BBF1B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "Shoot Your Dream" */ = {
+		43006BBF1B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "SYD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43006BC01B2B12B7008CEBA8 /* Debug */,
@@ -1052,7 +1002,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43006BC21B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "Shoot Your DreamTests" */ = {
+		43006BC21B2B12B7008CEBA8 /* Build configuration list for PBXNativeTarget "SYDTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43006BC31B2B12B7008CEBA8 /* Debug */,

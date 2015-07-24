@@ -30,6 +30,7 @@
 //#import <MBProgressHUD.h>
 //#import "MBProgressHud+WasupHud.h"
 #import "VanKeyboardHelper.h"
+#import "APIManager.h"
 //#import <SIAlertView/SIAlertView.h>
 //#import "UIScrollView+EmptyDataSet.h"
 
