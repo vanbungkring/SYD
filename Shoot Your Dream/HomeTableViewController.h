@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeTableViewController : BaseViewController
+@interface HomeTableViewController : UITableViewController
 
 @end

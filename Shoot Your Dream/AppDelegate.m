@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import "MagentoManager.h"
+#import "AuthManager.h"
+#import <AFNetworkActivityLogger.h>
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 
@@ -22,7 +24,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [Fabric with:@[CrashlyticsKit]];
-    
     //  Default font configuration
     UIFont *defaultFontType = [UIFont fontWithName:FONT_NAME_THIN
                                               size:FONT_SIZE_DEFAULT];
@@ -99,15 +100,18 @@
     [[UILabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
     NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
     [NSURLCache setSharedURLCache:URLCache];
-    [self initializeAppFirstTime];
+    [self loginginAppToServer];
     return YES;
 }
 - (NSTimeInterval) timeStamp {
     return [[NSDate date] timeIntervalSince1970] * 1000;
 }
-- (void)initializeAppFirstTime {
-    //[MagentoManager initWithConsumserKey:CONSUMER_KEY secret:CONSUMER_SECRET];
-    //[[MagentoManager sharedClient] authorize];
+- (void)loginginAppToServer {
+    [AuthManager requestToken:[Common commonParams] completionBlock:^(NSArray *json, NSError *error) {
+        if(!error) {
+            
+        }
+    }];
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

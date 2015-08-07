@@ -11,9 +11,10 @@
 @implementation AuthManager
 
 + (NSURLSessionDataTask *)requestToken:(NSDictionary *)parameters completionBlock:(void(^)(NSArray *json,NSError *error))block {
-    return [[APIManager sharedClient]GET:REQUEST_TOKEN_URL parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+    return [[APIManager sharedClient]POST:[NSString stringWithFormat:@"%@%@%@",BASE_URL,API_HOST,REQUEST_TOKEN_URL] parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"response Object->%@",responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+        NSLog(@"error-->%@",parameters);
     }];
 }
 

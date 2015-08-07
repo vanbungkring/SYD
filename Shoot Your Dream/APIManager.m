@@ -15,12 +15,7 @@
     dispatch_once(&onceToken, ^{
         _sharedClient = [[APIManager alloc] initWithBaseURL:[NSURL URLWithString:BASE_URL]];
         _sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
-        _sharedClient.requestSerializer = [AFJSONRequestSerializer serializer];
         _sharedClient.responseSerializer = [AFJSONResponseSerializer serializer];
-        [_sharedClient.responseSerializer setAcceptableContentTypes:[_sharedClient.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"]];
-        [_sharedClient.responseSerializer setAcceptableContentTypes:[_sharedClient.responseSerializer.acceptableContentTypes setByAddingObject:@"application/json"]];
-        [_sharedClient.responseSerializer setAcceptableContentTypes:[_sharedClient.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"]];
-        [_sharedClient.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     });
     
     return _sharedClient;

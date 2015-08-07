@@ -23,22 +23,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.DPBackground.hidden = YES;
-    self.DPTextLabel.text = @"Rp 2.500.000";
-    self.DPTextLabel.textColor = [Common colorWithHexString:@"EE7F26"];
+    self.DPBackground.hidden = NO;
+    self.DPTextLabel.text = @"Tanpa DP";
+    self.DPTextLabel.textColor = [Common colorWithHexString:@"FFFFFF"];
     self.DPTextLabel.font =[UIFont fontWithName:FONT_NAME_MEDIUM size:16];
-    self.cicilanDetailList.text = @"animator adenology antipyresis assassin asexualizing archaeocyathid ascus arresting atony apocopation";
+    self.cicilanDetailList.text = @" • animator adenology \n • antipyresis assassin asexualizing \n • rchaeocyathid ascus arresting atony apocopation";
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.cicilanDetailList.text];
     
     NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
     [paragrahStyle setParagraphSpacing:4];
     [paragrahStyle setParagraphSpacingBefore:3];
-    [paragrahStyle setFirstLineHeadIndent:0.0f];  // First line is the one with bullet point
-    [paragrahStyle setHeadIndent:10.5f];    // Set the indent for given bullet character and size font
+    [paragrahStyle setFirstLineHeadIndent:0.0f];
+    [paragrahStyle setHeadIndent:10.5f];
     
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragrahStyle
                              range:NSMakeRange(0, [self.cicilanDetailList.text length])];
+    
     
     self.cicilanDetailList.attributedText = attributedString;
     

@@ -119,7 +119,6 @@
     [dateFormatter setDateFormat:dateFormat];
     [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
     NSDate *d =[dateFormatter dateFromString:dateString];
-    NSLog(@"d-->%@",d);
     int hoursToAdd = 7;
     NSDate *newDate1 = [d dateByAddingTimeInterval:60*60*hoursToAdd];
     return newDate1;
@@ -152,5 +151,14 @@
     }
     
     return formattedCurrencyString;
+}
++ (NSDictionary *)commonParams {
+    NSDictionary *dict = @{@"grant_type":GRANT_TYPE,
+                           @"client_id":CLIENT_ID,
+                           @"client_secret":CLIENT_SECRET,
+                           @"username":USER_NAME,
+                           @"password":PASSWORD
+                           };
+    return dict;
 }
 @end

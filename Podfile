@@ -9,6 +9,8 @@ target 'Shoot Your Dream' do
     pod 'TTRangeSlider'
     pod 'AFNetworkActivityLogger', '~> 2.0'
     pod 'BDBOAuth1Manager', '~> 1.5'
+    pod 'NYAlertViewController'
+    pod 'SVProgressHUD'
 end
 
 target 'Shoot Your DreamTests' do

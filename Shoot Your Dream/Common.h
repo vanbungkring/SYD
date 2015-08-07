@@ -26,6 +26,6 @@
 + (NSDate *)dateFromString:(NSString *)dateString withFormat:(NSString *)dateFormat;
 + (NSString *)dateStringFromTimestamp:(NSString *)timestamp usingDateFormat:(NSString *)dateFormat;
 + (UIImage *)imageFromColor:(UIColor *)color forSize:(CGSize)size withCornerRadius:(CGFloat)radius;
-
++ (NSDictionary *)commonParams;
 + (NSString *)formattedCurrencyWithCurrencySign:(NSString *)currencySign value:(NSInteger)value;
 @end

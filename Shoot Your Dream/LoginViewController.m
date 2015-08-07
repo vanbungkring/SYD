@@ -139,11 +139,11 @@ static NSString *kUserHasOnboardedKey = @"isEverOpened";
 
 - (IBAction)loginTapped:(id)sender {
     
-    if (self.accountScreenType == LoginScreen) {
-        [self loginWithUsername:self.emailTexttfield.text password:self.passwordTextField.text];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
-    else {
+//    if (self.accountScreenType == LoginScreen) {
+//        [self loginWithUsername:self.emailTexttfield.text password:self.passwordTextField.text];
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    }
+//    else {
         //        [self.dictionaryRegister setObject:self.passwordTextField.text forKey:@"password"];
         //        [self.dictionaryRegister setObject:self.fullName.text forKey:@"full_name"];
         //        [self.dictionaryRegister setObject:self.emailTexttfield.text forKey:@"email"];
@@ -158,7 +158,7 @@ static NSString *kUserHasOnboardedKey = @"isEverOpened";
         //
         //            }
         //        }];
-    }
+   // }
     
 }
 

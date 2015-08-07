@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CatDetailCollectionViewController : BaseViewController
+@interface CatDetailCollectionViewController : UICollectionViewController
 
 @end
