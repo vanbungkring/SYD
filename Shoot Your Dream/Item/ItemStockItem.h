@@ -48,5 +48,6 @@
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 - (NSDictionary *)dictionaryRepresentation;
-
++ (NSURLSessionDataTask *)requestSingleProduct:(NSDictionary *)parameters completionBlock:(void(^)(NSArray *json,NSError *error))block;
++ (NSURLSessionDataTask *)requestProductByCategory:(NSDictionary *)parameters completionBlock:(void(^)(NSArray *json,NSError *error))block;
 @end

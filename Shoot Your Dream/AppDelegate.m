@@ -13,7 +13,7 @@
 #import <AFNetworkActivityLogger.h>
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
-
+#import <SVProgressHUD.h>
 @interface AppDelegate ()
 
 @end
@@ -25,12 +25,14 @@
     // Override point for customization after application launch.
     [Fabric with:@[CrashlyticsKit]];
     //  Default font configuration
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
+    [[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];
     UIFont *defaultFontType = [UIFont fontWithName:FONT_NAME_THIN
                                               size:FONT_SIZE_DEFAULT];
     
     NSDictionary *defaultFontAttributes = [NSDictionary dictionaryWithObject:defaultFontType
                                                                       forKey:NSFontAttributeName];
-    
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
     //  Title font configuration
     UIFont *titleFontType = [UIFont fontWithName:FONT_NAME_MEDIUM
                                             size:18];
@@ -107,9 +109,10 @@
     return [[NSDate date] timeIntervalSince1970] * 1000;
 }
 - (void)loginginAppToServer {
+    [SVProgressHUD show];
     [AuthManager requestToken:[Common commonParams] completionBlock:^(NSArray *json, NSError *error) {
         if(!error) {
-            
+            [SVProgressHUD dismiss];
         }
     }];
 }
