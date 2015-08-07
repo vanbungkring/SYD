@@ -10,6 +10,5 @@
 
 @interface APIManager : AFHTTPSessionManager
 + (instancetype)sharedClient;
-+ (NSURLSessionDataTask *)requestToken:(NSDictionary *)parameters completionBlock:(void(^)(NSArray *json,NSError *error))block;
 @end
 

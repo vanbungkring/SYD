@@ -11,6 +11,7 @@
 #import "IdeasCell.h"
 #import "CategoryCell.h"
 @interface HomeTableViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 
 @property (strong, nonatomic) IBOutlet UITableViewCell *productScrollView;

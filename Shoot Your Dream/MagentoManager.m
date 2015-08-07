@@ -39,7 +39,7 @@ static MagentoManager *_sharedClient = nil;
 - (void)authorize {
     [self.networkManager fetchRequestTokenWithPath:[NSString stringWithFormat:@"%@%@",BASE_URL,REQUEST_TOKEN_URL]
                                             method:@"GET"
-                                       callbackURL:LOCAL_AUTORIZE_CALLBACK
+                                       callbackURL:@"http://httpbin.org/get"
                                              scope:nil
                                            success:^(BDBOAuth1Credential *requestToken) {
                                                // Perform Authorization via MobileSafari

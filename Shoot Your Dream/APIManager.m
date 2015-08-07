@@ -25,11 +25,5 @@
     
     return _sharedClient;
 }
-+ (NSURLSessionDataTask *)requestToken:(NSDictionary *)parameters completionBlock:(void(^)(NSArray *json,NSError *error))block {
-   return [[APIManager sharedClient]GET:REQUEST_TOKEN_URL parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-       NSLog(@"response object->%@",responseObject);
-   } failure:^(NSURLSessionDataTask *task, NSError *error) {
-       
-   }];
-}
+
 @end

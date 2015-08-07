@@ -44,6 +44,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="collectionView" destination="cEz-KL-aAC" id="La3-j4-r8z"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GE6-sQ-NpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

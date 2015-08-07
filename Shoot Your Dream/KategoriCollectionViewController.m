@@ -9,6 +9,7 @@
 #import "KategoriCollectionViewController.h"
 #import "CatDetailCollectionViewController.h"
 @interface KategoriCollectionViewController ()
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong)NSArray *category;
 @end
 

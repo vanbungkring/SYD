@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KategoriCollectionViewController : UICollectionViewController
+@interface KategoriCollectionViewController : BaseViewController
 
 @end

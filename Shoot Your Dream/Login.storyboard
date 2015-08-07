@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnQ-tF-rsx" customClass="RoundedView">
+                            <view hidden="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnQ-tF-rsx" customClass="RoundedView">
                                 <rect key="frame" x="51" y="236" width="218" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVR-K6-lZu">
@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="height" constant="40" id="cgj-WA-hGq"/>
                                 </constraints>
                             </view>
-                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sV5-F8-kLC" customClass="RoundedView">
+                            <view hidden="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sV5-F8-kLC" customClass="RoundedView">
                                 <rect key="frame" x="51" y="284" width="218" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="School ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s1I-SD-Sg6">

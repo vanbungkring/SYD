@@ -12,6 +12,7 @@
 #import "BaseCollectionLayout.h"
 @interface CatDetailCollectionViewController ()
 @property (nonatomic,strong)NSArray *items;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation CatDetailCollectionViewController
@@ -28,12 +29,12 @@ static NSString * const reuseIdentifier = @"Cell";
     layout.minimumLineSpacing = 0.5;
     [self.collectionView setCollectionViewLayout:layout];
     
-    self.items = @[@{@"img":@"handphone-off",@"title":@"Handphone",@"price":@"IDR 140.000"},
-                   @{@"img":@"electronic-off",@"title":@"Handphone",@"price":@"IDR 140.000"},
-                   @{@"img":@"furniture-off",@"title":@"Handphone",@"price":@"IDR 140.000"},
-                   @{@"img":@"fashion-off",@"title":@"Handphone",@"price":@"IDR 140.000"},
-                   @{@"img":@"homeappliance-off",@"title":@"Handphone",@"price":@"IDR 140.000"},
-                   @{@"img":@"hobby-off",@"title":@"Handphone",@"price":@"IDR 140.000"}];
+    self.items = @[@{@"img":@"handphone-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"},
+                   @{@"img":@"electronic-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"},
+                   @{@"img":@"furniture-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"},
+                   @{@"img":@"fashion-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"},
+                   @{@"img":@"homeappliance-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"},
+                   @{@"img":@"hobby-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"}];
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     

@@ -57,6 +57,7 @@
 		439A438E1B3AF79F009949C6 /* ReviewOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439A438D1B3AF79F009949C6 /* ReviewOrder.storyboard */; };
 		439A43921B3AFD47009949C6 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439A43911B3AFD47009949C6 /* ReviewViewController.m */; };
 		439A43951B3B1C57009949C6 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439A43941B3B1C57009949C6 /* Onboarding.storyboard */; };
+		43A629211B74878600DFAB33 /* AuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A629201B74878600DFAB33 /* AuthManager.m */; };
 		43B5C7001B5D666700831D91 /* Cicilan.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43B5C6FF1B5D666700831D91 /* Cicilan.xib */; };
 		43B5C7031B5D667A00831D91 /* Cicilan.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5C7021B5D667A00831D91 /* Cicilan.m */; };
 		43D4C6DA1B38657800A37D70 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4C6D91B38657800A37D70 /* FilterViewController.m */; };
@@ -162,6 +163,8 @@
 		439A43971B3B1CD8009949C6 /* OnboardingContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingContentViewController.m; sourceTree = "<group>"; };
 		439A43981B3B1CD8009949C6 /* OnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingViewController.h; sourceTree = "<group>"; };
 		439A43991B3B1CD8009949C6 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
+		43A6291F1B74878600DFAB33 /* AuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthManager.h; sourceTree = "<group>"; };
+		43A629201B74878600DFAB33 /* AuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthManager.m; sourceTree = "<group>"; };
 		43B5C6FF1B5D666700831D91 /* Cicilan.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cicilan.xib; sourceTree = "<group>"; };
 		43B5C7011B5D667A00831D91 /* Cicilan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cicilan.h; sourceTree = "<group>"; };
 		43B5C7021B5D667A00831D91 /* Cicilan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cicilan.m; sourceTree = "<group>"; };
@@ -363,6 +366,8 @@
 		43006BCC1B2B2B66008CEBA8 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				43A6291F1B74878600DFAB33 /* AuthManager.h */,
+				43A629201B74878600DFAB33 /* AuthManager.m */,
 				438A93AC1B5D852A00C81391 /* DatabaseManager.h */,
 				438A93AD1B5D852A00C81391 /* DatabaseManager.m */,
 				434102A41B62995500037E30 /* APIManager.h */,
@@ -761,6 +766,7 @@
 				438F0A961B3753F500FD0864 /* CatDetailCollectionViewController.m in Sources */,
 				434102BA1B62B39800037E30 /* MagentoManager.m in Sources */,
 				438F0A711B36DE9800FD0864 /* HomeTableViewController.m in Sources */,
+				43A629211B74878600DFAB33 /* AuthManager.m in Sources */,
 				439A43921B3AFD47009949C6 /* ReviewViewController.m in Sources */,
 				438F0AAA1B37CF0500FD0864 /* ForgotPasswordViewController.m in Sources */,
 				43006BF91B2B2E58008CEBA8 /* Config.h in Sources */,
