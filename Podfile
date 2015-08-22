@@ -3,7 +3,7 @@
 
 target 'Shoot Your Dream' do
     pod 'AFNetworking', '~> 2.5.4'
-    pod 'FMDB'
+    pod 'Realm'
     pod 'Onboard'
     pod 'SDWebImage'
     pod 'TTRangeSlider'
@@ -11,6 +11,7 @@ target 'Shoot Your Dream' do
     pod 'BDBOAuth1Manager', '~> 1.5'
     pod 'NYAlertViewController'
     pod 'SVProgressHUD'
+    pod 'RKDropdownAlert'
 end
 
 target 'Shoot Your DreamTests' do

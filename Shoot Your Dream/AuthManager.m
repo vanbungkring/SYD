@@ -12,9 +12,29 @@
 
 + (NSURLSessionDataTask *)requestToken:(NSDictionary *)parameters completionBlock:(void(^)(NSArray *json,NSError *error))block {
     return [[APIManager sharedClient]POST:[NSString stringWithFormat:@"%@%@%@",BASE_URL,API_HOST,REQUEST_TOKEN_URL] parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"response Object->%@",responseObject);
+        NSArray *array = @[responseObject];
+        if (block) {
+            block([NSArray arrayWithArray:array], nil);
+        }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"error-->%@",parameters);
+        if (block) {
+            [Common readErrorResponse:error response:task];
+            block([NSArray array], error);
+        }
+    }];
+}
+
++ (NSURLSessionDataTask *)login:(NSDictionary *)parameters completionBlock:(void(^)(NSArray *json,NSError *error))block {
+    return [[APIManager sharedClient]POST:[NSString stringWithFormat:@"%@%@customer/login",BASE_URL,API_HOST] parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSArray *array = @[responseObject];
+        if (block) {
+            block([NSArray arrayWithArray:array], nil);
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (block) {
+            [Common readErrorResponse:error response:task];
+            block([NSArray array], error);
+        }
     }];
 }
 

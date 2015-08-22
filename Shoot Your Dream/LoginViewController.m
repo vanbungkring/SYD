@@ -60,14 +60,24 @@ static NSString *kUserHasOnboardedKey = @"isEverOpened";
     [super viewWillAppear:YES];
     
     BOOL isEver = [[NSUserDefaults standardUserDefaults]boolForKey:kUserHasOnboardedKey];
-    // determine if the user has onboarded yet or not
-    
-    
     if (!isEver) {
         [self presentViewController:[self generateThirdDemoVC] animated:YES completion:nil];
     }
-    
-    
+    if ([[Common getUserToken] isEqualToString:@""]) {
+        [self requestCredentialToserver];
+    }
+}
+- (void)requestCredentialToserver {
+    [SVProgressHUD show];
+    [AuthManager requestToken:[Common commonParams] completionBlock:^(NSArray *json, NSError *error) {
+        if(!error) {
+            [Common storeUserToken:[json[0] valueForKeyPath:@"access_token"]];
+            [SVProgressHUD dismiss];
+        }
+        else {
+            [SVProgressHUD dismiss];
+        }
+    }];
 }
 - (OnboardingViewController *)generateThirdDemoVC {
     OnboardingContentViewController *firstPage = [[OnboardingContentViewController alloc] initWithTitle:@"Step 1" body:@"Ambil foto produk idaman Anda, melalui menu “SHOOT” pada apps, isi data diri beserta alamat lengkap anda dan ajukan aplikasinya." image:[UIImage imageNamed:@"step1"] buttonText:nil action:nil];
@@ -140,44 +150,39 @@ static NSString *kUserHasOnboardedKey = @"isEverOpened";
 - (IBAction)loginTapped:(id)sender {
     
     if (self.accountScreenType == LoginScreen) {
-        [self loginWithUsername:self.emailTexttfield.text password:self.passwordTextField.text];
-        [self dismissViewControllerAnimated:YES completion:nil];
+        if (self.emailTexttfield.text.length < 1) {
+            [AlertHelper showNotificationWithError:@"Error" message:@"Username / Email Is Mandatory"];
+            return;
+        }
+        else if (self.passwordTextField.text.length < 1) {
+             [AlertHelper showNotificationWithError:@"Error" message:@"Password Is Mandatory"];
+            return;
+        }
+        else {
+            [self loginWithUsername:self.emailTexttfield.text password:self.passwordTextField.text];
+        }
     }
-//    else {
-        //        [self.dictionaryRegister setObject:self.passwordTextField.text forKey:@"password"];
-        //        [self.dictionaryRegister setObject:self.fullName.text forKey:@"full_name"];
-        //        [self.dictionaryRegister setObject:self.emailTexttfield.text forKey:@"email"];
-        //        [self.dictionaryRegister setObject:self.images forKey:@"school_id"];
-        //        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        //        [APIRequestManager registerWithParams:self.dictionaryRegister data:^(NSArray *json, NSError *error) {
-        //            if(!error) {
-        //                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-        //            }
-        //            else {
-        //                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-        //
-        //            }
-        //        }];
-   // }
-    
 }
 
 
 -(void)loginWithUsername:(NSString *)userName password:(NSString *)password {
-    //    [APIRequestManager loginWithParams:@{@"email":userName,
-    //                                         @"password":password} data:^(NSArray *json, NSError *error) {
-    //                                             if(!error){
-    //                                                 NSLog(@"dismiss");
-    //                                                 [APIRequestManager getUserProfile:@{@"token":[UserLocaModel getUserProfile].token} data:^(NSArray *json, NSError *error) {
-    //                                                     if(!error){
-    //                                                         [self dismissViewControllerAnimated:YES completion:^{
-    //
-    //                                                         }];
-    //                                                     }
-    //                                                 }] ;
-    //                                             }
-    //
-    //                                         }];
+    
+    [AuthManager login:@{@"username":userName,
+                         @"password":password,
+                         @"access_token":[Common getUserToken]} completionBlock:^(NSArray *json, NSError *error) {
+                             if (!error) {
+                                 if ([[json[0] valueForKey:@"error"]integerValue] ==1) {
+                                     
+                                 }
+                                 else {
+                                     [Common storeLoginToken:[json[0] valueForKey:@"result.sessId"]];
+                                     [self dismissViewControllerAnimated:YES completion:nil];
+                                 }
+                             }
+                             else {
+                                 
+                             }
+                         }];
 }
 - (IBAction)registerAccount:(id)sender {
     if (self.accountScreenType == LoginScreen) {

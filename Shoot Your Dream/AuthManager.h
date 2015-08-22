@@ -10,5 +10,6 @@
 
 @interface AuthManager : NSObject
 + (NSURLSessionDataTask *)requestToken:(NSDictionary *)parameters completionBlock:(void(^)(NSArray *json,NSError *error))block;
++ (NSURLSessionDataTask *)login:(NSDictionary *)parameters completionBlock:(void(^)(NSArray *json,NSError *error))block;
 
 @end

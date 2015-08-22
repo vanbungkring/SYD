@@ -18,7 +18,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    // Do any additional setup after loading the view.
+    NSLog(@"data--.%@",[Common getLoginToken]);
+    if([[Common getLoginToken] isEqualToString:@""] || [[Common getUserToken] isEqualToString:@""]) {
+        [self openLogin];
+    }
+}
+
+-(void)openLogin {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    LoginViewController *loginWindow = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    
+    [self presentViewController:loginWindow animated:YES completion:nil];
+    
 }
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     self.title = item.title ;

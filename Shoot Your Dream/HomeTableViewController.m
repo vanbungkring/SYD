@@ -83,20 +83,13 @@
     
     [self.saleCollectionView setCollectionViewLayout:layoutForSale animated:YES];
     [self.tableView reloadData];
-    [self openLogin];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
      return CGSizeMake((SCREEN_WIDTH-1)/2, 205);
 }
 
--(void)openLogin {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-    LoginViewController *loginWindow = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-    
-    [self.tabBarController presentViewController:loginWindow animated:YES completion:nil];
-    
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

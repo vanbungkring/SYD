@@ -17,7 +17,6 @@
         _sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
         _sharedClient.responseSerializer = [AFJSONResponseSerializer serializer];
     });
-    
     return _sharedClient;
 }
 

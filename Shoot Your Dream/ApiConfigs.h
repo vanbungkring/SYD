@@ -20,6 +20,14 @@ static NSString * const CLIENT_SECRET = @"demopass";
 static NSString * const USER_NAME = @"demouser";
 static NSString * const PASSWORD = @"testpass";
 
+/*user*/
+static NSString * const CUSTOMER_LOGIN =@"customer/login";
+static NSString * const CUSTOMER_ADDRESS =@"customer/address";//{customer_id};
+static NSString * const CUSTOMER_ADDRESS_CREATE =@"customer/address/create";
+static NSString * const CUSTOMER_ADDRESS_UPDATE =@"customer/address/update";
+
+/*PRODUCT*/
+static NSString * const PRODUCT =@"product";
 /*
  "grant_type=password&client_id=demoapp&client_secret=demopass&username=demouser&password=testpass"
  */

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0053619B1B887A6600A269DB /* AlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0053619A1B887A6600A269DB /* AlertHelper.m */; };
+		005361A41B88A47F00A269DB /* CategoryChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 0053619E1B88A47F00A269DB /* CategoryChild.m */; };
+		005361A51B88A47F00A269DB /* CategoryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 005361A11B88A47F00A269DB /* CategoryResponse.m */; };
+		005361A61B88A47F00A269DB /* CategoryResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 005361A31B88A47F00A269DB /* CategoryResult.m */; };
 		43006BA21B2B12B7008CEBA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BA11B2B12B7008CEBA8 /* main.m */; };
 		43006BA51B2B12B7008CEBA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BA41B2B12B7008CEBA8 /* AppDelegate.m */; };
 		43006BAB1B2B12B7008CEBA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43006BA91B2B12B7008CEBA8 /* Main.storyboard */; };
@@ -32,8 +36,8 @@
 		43006BFB1B2B2E58008CEBA8 /* Common.h in Sources */ = {isa = PBXBuildFile; fileRef = 43006BD01B2B2C42008CEBA8 /* Common.h */; };
 		43006BFE1B2B3031008CEBA8 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006BFD1B2B3031008CEBA8 /* MainNavigationController.m */; };
 		43006C011B2B39F6008CEBA8 /* BaseTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43006C001B2B39F6008CEBA8 /* BaseTabbarController.m */; };
+		4322D9111B7F2A8F003ED7C6 /* Credentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 4322D9101B7F2A8F003ED7C6 /* Credentials.m */; };
 		434102A61B62995500037E30 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 434102A51B62995500037E30 /* APIManager.m */; };
-		434102BA1B62B39800037E30 /* MagentoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 434102B91B62B39800037E30 /* MagentoManager.m */; };
 		435FA3B81B581DE700DA79F0 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FA3B71B581DE700DA79F0 /* CategoryCell.m */; };
 		435FA3BA1B581DF700DA79F0 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 435FA3B91B581DF700DA79F0 /* CategoryCell.xib */; };
 		435FA3BD1B58238200DA79F0 /* BaseCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FA3BC1B58238200DA79F0 /* BaseCollectionLayout.m */; };
@@ -92,6 +96,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		005361991B887A6600A269DB /* AlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertHelper.h; sourceTree = "<group>"; };
+		0053619A1B887A6600A269DB /* AlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertHelper.m; sourceTree = "<group>"; };
+		0053619D1B88A47F00A269DB /* CategoryChild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryChild.h; sourceTree = "<group>"; };
+		0053619E1B88A47F00A269DB /* CategoryChild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryChild.m; sourceTree = "<group>"; };
+		0053619F1B88A47F00A269DB /* CategoryDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDataModels.h; sourceTree = "<group>"; };
+		005361A01B88A47F00A269DB /* CategoryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryResponse.h; sourceTree = "<group>"; };
+		005361A11B88A47F00A269DB /* CategoryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryResponse.m; sourceTree = "<group>"; };
+		005361A21B88A47F00A269DB /* CategoryResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryResult.h; sourceTree = "<group>"; };
+		005361A31B88A47F00A269DB /* CategoryResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryResult.m; sourceTree = "<group>"; };
 		0105FC6BB2CC8A9574167BED /* libPods-Shoot Your Dream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shoot Your Dream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43006B9C1B2B12B7008CEBA8 /* Shoot Your Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shoot Your Dream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43006BA01B2B12B7008CEBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,10 +139,10 @@
 		43006BFD1B2B3031008CEBA8 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		43006BFF1B2B39F6008CEBA8 /* BaseTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabbarController.h; sourceTree = "<group>"; };
 		43006C001B2B39F6008CEBA8 /* BaseTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabbarController.m; sourceTree = "<group>"; };
+		4322D90F1B7F2A8F003ED7C6 /* Credentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credentials.h; sourceTree = "<group>"; };
+		4322D9101B7F2A8F003ED7C6 /* Credentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Credentials.m; sourceTree = "<group>"; };
 		434102A41B62995500037E30 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		434102A51B62995500037E30 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
-		434102B81B62B39800037E30 /* MagentoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagentoManager.h; sourceTree = "<group>"; };
-		434102B91B62B39800037E30 /* MagentoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagentoManager.m; sourceTree = "<group>"; };
 		435FA3B61B581DE700DA79F0 /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		435FA3B71B581DE700DA79F0 /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
 		435FA3B91B581DF700DA79F0 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
@@ -241,6 +254,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0053619C1B88A47F00A269DB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0053619D1B88A47F00A269DB /* CategoryChild.h */,
+				0053619E1B88A47F00A269DB /* CategoryChild.m */,
+				0053619F1B88A47F00A269DB /* CategoryDataModels.h */,
+				005361A01B88A47F00A269DB /* CategoryResponse.h */,
+				005361A11B88A47F00A269DB /* CategoryResponse.m */,
+				005361A21B88A47F00A269DB /* CategoryResult.h */,
+				005361A31B88A47F00A269DB /* CategoryResult.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		31F0323CA514A33553756154 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,10 +382,13 @@
 		43006BC71B2B19C4008CEBA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0053619C1B88A47F00A269DB /* Category */,
 				43A629351B74C71E00DFAB33 /* Item */,
 				43A629221B74A89400DFAB33 /* Customer */,
 				43A629271B74B46A00DFAB33 /* BaseModel.h */,
 				43A629281B74B46A00DFAB33 /* BaseModel.m */,
+				4322D90F1B7F2A8F003ED7C6 /* Credentials.h */,
+				4322D9101B7F2A8F003ED7C6 /* Credentials.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -382,6 +412,8 @@
 				438F0AA51B37BFA600FD0864 /* RoundedButton.m */,
 				435FA3BB1B58238200DA79F0 /* BaseCollectionLayout.h */,
 				435FA3BC1B58238200DA79F0 /* BaseCollectionLayout.m */,
+				005361991B887A6600A269DB /* AlertHelper.h */,
+				0053619A1B887A6600A269DB /* AlertHelper.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -402,8 +434,6 @@
 				438A93AD1B5D852A00C81391 /* DatabaseManager.m */,
 				434102A41B62995500037E30 /* APIManager.h */,
 				434102A51B62995500037E30 /* APIManager.m */,
-				434102B81B62B39800037E30 /* MagentoManager.h */,
-				434102B91B62B39800037E30 /* MagentoManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -805,6 +835,7 @@
 				438F0A9D1B375BD200FD0864 /* ItemViewController.m in Sources */,
 				438F0AA61B37BFA600FD0864 /* RoundedButton.m in Sources */,
 				43006BF31B2B2E58008CEBA8 /* ApiConfigs.h in Sources */,
+				005361A61B88A47F00A269DB /* CategoryResult.m in Sources */,
 				438F0A841B3706AF00FD0864 /* MyAccountTableViewController.m in Sources */,
 				43DC27721B579CB8003AEA33 /* IdeasCell.m in Sources */,
 				43B5C7031B5D667A00831D91 /* Cicilan.m in Sources */,
@@ -813,12 +844,14 @@
 				439A43541B39967C009949C6 /* ListAddressTableViewController.m in Sources */,
 				43A629481B74C71E00DFAB33 /* ItemTierPrice.m in Sources */,
 				43006BF41B2B2E58008CEBA8 /* RoundedImage.h in Sources */,
+				005361A41B88A47F00A269DB /* CategoryChild.m in Sources */,
 				438A93AE1B5D852A00C81391 /* DatabaseManager.m in Sources */,
 				438F0A901B3735C800FD0864 /* KategoriCollectionViewController.m in Sources */,
 				43006BE51B2B2CB5008CEBA8 /* RoundedImage.m in Sources */,
 				43D4C6E11B38698800A37D70 /* BaseViewController.m in Sources */,
 				43006BF51B2B2E58008CEBA8 /* RoundedLabel.h in Sources */,
 				43006BE61B2B2CB5008CEBA8 /* RoundedLabel.m in Sources */,
+				4322D9111B7F2A8F003ED7C6 /* Credentials.m in Sources */,
 				43006BF61B2B2E58008CEBA8 /* RoundedView.h in Sources */,
 				43A629291B74B46A00DFAB33 /* BaseModel.m in Sources */,
 				43006BE71B2B2CB5008CEBA8 /* RoundedView.m in Sources */,
@@ -828,7 +861,6 @@
 				434102A61B62995500037E30 /* APIManager.m in Sources */,
 				43006BE81B2B2CB5008CEBA8 /* VanKeyboardHelper.m in Sources */,
 				438F0A961B3753F500FD0864 /* CatDetailCollectionViewController.m in Sources */,
-				434102BA1B62B39800037E30 /* MagentoManager.m in Sources */,
 				438F0A711B36DE9800FD0864 /* HomeTableViewController.m in Sources */,
 				43A629211B74878600DFAB33 /* AuthManager.m in Sources */,
 				439A43921B3AFD47009949C6 /* ReviewViewController.m in Sources */,
@@ -846,7 +878,9 @@
 				43006BFB1B2B2E58008CEBA8 /* Common.h in Sources */,
 				43A629261B74A89400DFAB33 /* CustomerResponse.m in Sources */,
 				43006BD21B2B2C42008CEBA8 /* Common.m in Sources */,
+				005361A51B88A47F00A269DB /* CategoryResponse.m in Sources */,
 				43006BA21B2B12B7008CEBA8 /* main.m in Sources */,
+				0053619B1B887A6600A269DB /* AlertHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

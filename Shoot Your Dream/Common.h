@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AlertHelper.h"
 @interface Common : NSObject
 
 + (UIColor*)colorWithHexString:(NSString*)hex;
@@ -28,4 +29,11 @@
 + (UIImage *)imageFromColor:(UIColor *)color forSize:(CGSize)size withCornerRadius:(CGFloat)radius;
 + (NSDictionary *)commonParams;
 + (NSString *)formattedCurrencyWithCurrencySign:(NSString *)currencySign value:(NSInteger)value;
++ (void)readErrorResponse:(NSError *)error response:(NSURLSessionDataTask *)taskResponse;
++ (void)storeUserToken:(NSString *)userToken;
++ (void)storeLoginToken:(NSString *)loginToken;
++ (NSString *)getUserToken;
++ (NSString *)getLoginToken;
++ (void)deleteUserToken;
++ (void)deleteLoginToken;
 @end

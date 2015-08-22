@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -20,7 +20,7 @@
                             <view hidden="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnQ-tF-rsx" customClass="RoundedView">
                                 <rect key="frame" x="51" y="236" width="218" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVR-K6-lZu">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVR-K6-lZu">
                                         <rect key="frame" x="10" y="5" width="198" height="30"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
@@ -29,13 +29,17 @@
                                 <color key="backgroundColor" red="0.83137254900000002" green="0.82352941180000006" blue="0.82352941180000006" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="218" id="8Ue-Mn-IOi"/>
+                                    <constraint firstAttribute="trailing" secondItem="xVR-K6-lZu" secondAttribute="trailing" constant="10" id="AJa-JN-LqB"/>
+                                    <constraint firstItem="xVR-K6-lZu" firstAttribute="top" secondItem="tnQ-tF-rsx" secondAttribute="top" constant="5" id="Azp-d2-FHa"/>
+                                    <constraint firstItem="xVR-K6-lZu" firstAttribute="leading" secondItem="tnQ-tF-rsx" secondAttribute="leading" constant="10" id="R6s-13-OuZ"/>
                                     <constraint firstAttribute="height" constant="40" id="cgj-WA-hGq"/>
+                                    <constraint firstAttribute="bottom" secondItem="xVR-K6-lZu" secondAttribute="bottom" constant="5" id="pNn-ex-fjj"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sV5-F8-kLC" customClass="RoundedView">
                                 <rect key="frame" x="51" y="284" width="218" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="School ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s1I-SD-Sg6">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="School ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s1I-SD-Sg6">
                                         <rect key="frame" x="10" y="5" width="198" height="30"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
@@ -47,6 +51,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.83137254900000002" green="0.82352941180000006" blue="0.82352941180000006" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="s1I-SD-Sg6" firstAttribute="leading" secondItem="sV5-F8-kLC" secondAttribute="leading" constant="10" id="NWI-oc-5Gx"/>
+                                    <constraint firstItem="s1I-SD-Sg6" firstAttribute="top" secondItem="sV5-F8-kLC" secondAttribute="top" constant="5" id="bYe-Ji-1iG"/>
+                                    <constraint firstAttribute="bottom" secondItem="s1I-SD-Sg6" secondAttribute="bottom" constant="5" id="bw9-ZD-HZA"/>
+                                    <constraint firstAttribute="trailing" secondItem="s1I-SD-Sg6" secondAttribute="trailing" constant="10" id="dzt-nS-aPe"/>
                                     <constraint firstAttribute="height" constant="40" id="vnz-zq-BSZ"/>
                                 </constraints>
                             </view>
@@ -94,7 +102,7 @@
                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU7-gM-xVU" customClass="RoundedView">
                                 <rect key="frame" x="51" y="236" width="218" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TGp-dT-Ode">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TGp-dT-Ode">
                                         <rect key="frame" x="10" y="5" width="198" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
@@ -102,14 +110,18 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.83137254900000002" green="0.82352941180000006" blue="0.82352941180000006" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="TGp-dT-Ode" secondAttribute="bottom" constant="5" id="Bbw-JB-Dsc"/>
                                     <constraint firstAttribute="width" constant="218" id="F4d-D5-F5v"/>
                                     <constraint firstAttribute="height" constant="40" id="agH-xh-19O"/>
+                                    <constraint firstItem="TGp-dT-Ode" firstAttribute="top" secondItem="SU7-gM-xVU" secondAttribute="top" constant="5" id="hor-ri-J3c"/>
+                                    <constraint firstAttribute="trailing" secondItem="TGp-dT-Ode" secondAttribute="trailing" constant="10" id="qcb-xP-14E"/>
+                                    <constraint firstItem="TGp-dT-Ode" firstAttribute="leading" secondItem="SU7-gM-xVU" secondAttribute="leading" constant="10" id="sHz-dI-ihe"/>
                                 </constraints>
                             </view>
                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2PF-Cg-xxc" customClass="RoundedView">
                                 <rect key="frame" x="51" y="284" width="218" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0i-l2-x7r">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0i-l2-x7r">
                                         <rect key="frame" x="10" y="5" width="198" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
@@ -117,7 +129,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.83137254900000002" green="0.82352941180000006" blue="0.82352941180000006" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="J0i-l2-x7r" secondAttribute="bottom" constant="5" id="9b5-8g-uvD"/>
+                                    <constraint firstItem="J0i-l2-x7r" firstAttribute="leading" secondItem="2PF-Cg-xxc" secondAttribute="leading" constant="10" id="J6M-vL-wSW"/>
+                                    <constraint firstItem="J0i-l2-x7r" firstAttribute="top" secondItem="2PF-Cg-xxc" secondAttribute="top" constant="5" id="K0A-JB-uqi"/>
                                     <constraint firstAttribute="height" constant="40" id="Lzq-Fq-qOa"/>
+                                    <constraint firstAttribute="trailing" secondItem="J0i-l2-x7r" secondAttribute="trailing" constant="10" id="emn-cw-xXX"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="syd-logo" translatesAutoresizingMaskIntoConstraints="NO" id="XYu-cg-I8x">

@@ -161,4 +161,66 @@
                            };
     return dict;
 }
++ (void)readErrorResponse:(NSError *)error response:(NSURLSessionDataTask *)taskResponse {
+    NSHTTPURLResponse* response= (NSHTTPURLResponse*)taskResponse.response;
+    if (response.statusCode == 401) {
+        [Common deleteLoginToken];
+        [Common deleteUserToken];
+        return;
+    }
+    else {
+        NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSString *errorString;
+        
+        NSString *errorCode;
+        if (errorData) {
+            
+            
+            NSDictionary *serializedData = [NSJSONSerialization JSONObjectWithData: errorData options:kNilOptions error:nil];
+            errorString =[serializedData objectForKey:@"result"];
+            errorCode =[serializedData objectForKey:@"status_code"];
+            
+        }
+        else {
+            errorString = @"No Intennet Connection";
+            errorCode = @"Woops";
+        }
+        [AlertHelper showNotificationWithError:@"Error" message:errorString];
+    }
+    
+    
+}
++ (void)storeUserToken:(NSString *)userToken {
+    [[NSUserDefaults standardUserDefaults] setObject:userToken forKey:PREFS_USER_TOKEN];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
++ (void)storeLoginToken:(NSString *)loginToken {
+    [[NSUserDefaults standardUserDefaults] setObject:loginToken forKey:PREFS_LOGIN_TOKEN];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
++ (NSString *)getUserToken {
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:PREFS_USER_TOKEN]) {
+        return  [[NSUserDefaults standardUserDefaults] objectForKey:PREFS_USER_TOKEN];
+    }
+    else {
+        return @"";
+    }
+}
++ (NSString *)getLoginToken {
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:PREFS_LOGIN_TOKEN]) {
+        return  [[NSUserDefaults standardUserDefaults] objectForKey:PREFS_LOGIN_TOKEN];
+    }
+    else {
+        return @"";
+    }
+    
+}
++ (void)deleteUserToken {
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:PREFS_USER_TOKEN];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
++ (void)deleteLoginToken {
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:PREFS_LOGIN_TOKEN];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 @end

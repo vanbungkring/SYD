@@ -13,23 +13,13 @@
 #import <UIKit/UIKit.h>
 #import "Config.h"
 #import "Color.h"
-//#import "UIViewController+Bar.h"
 #import "Common.h"
-//#import "DataModels.h"
-//#import "vanLabel.h"
 #import "ApiConfigs.h"
-//#import "UserLocaModel.h"
-//#import <AFNetworkActivityLogger.h>
 #import "AFNetworking.h"
 #import "AuthManager.h"
 #import "UIImageView+AFNetworking.h"
 #import <Foundation/Foundation.h>
-//#import "APIRequestManager.h"
-////#import <NSDate+TimeAgo.h>
-//#import <FBSDKCoreKit/FBSDKCoreKit.h>
-//#import <FBSDKLoginKit/FBSDKLoginKit.h>
-//#import <MBProgressHUD.h>
-//#import "MBProgressHud+WasupHud.h"
+#import "DatabaseManager.h"
 #import "VanKeyboardHelper.h"
 #import "APIManager.h"
 #import "BaseViewController.h"
@@ -37,8 +27,6 @@
 #import <SVProgressHUD.h>
 #import <AFNetworkActivityLogger.h>
 #define TimeStamp [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970] * 1000]
-//#import <SIAlertView/SIAlertView.h>
-//#import "UIScrollView+EmptyDataSet.h"
 
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
