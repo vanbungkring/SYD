@@ -10,8 +10,9 @@
 #import "ItemViewController.h"
 #import "CategoryCell.h"
 #import "BaseCollectionLayout.h"
+#import "ItemDataModels.h"
 @interface CatDetailCollectionViewController ()
-@property (nonatomic,strong)NSArray *items;
+@property (nonatomic,strong)NSMutableArray *items;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
@@ -21,6 +22,9 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
     layout.itemSize= CGSizeMake((self.view.frame.size.width-1)/2, 205);
     layout.headerReferenceSize = CGSizeZero;
@@ -29,12 +33,18 @@ static NSString * const reuseIdentifier = @"Cell";
     layout.minimumLineSpacing = 0.5;
     [self.collectionView setCollectionViewLayout:layout];
     
-    self.items = @[@{@"img":@"handphone-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"},
-                   @{@"img":@"electronic-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"},
-                   @{@"img":@"furniture-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"},
-                   @{@"img":@"fashion-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"},
-                   @{@"img":@"homeappliance-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"},
-                   @{@"img":@"hobby-off",@"title":@"Handphone",@"price":@"DP : Rp 140.000"}];
+    self.items = [NSMutableArray new];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"CategoryCell" bundle:[NSBundle mainBundle]]
+          forCellWithReuseIdentifier:@"CategoryCell"];
+    [ItemResponse getProductByCategories:self.categoryId parameters:@{@"access_token":[Common getUserToken]} completionBlock:^(NSArray *json, NSError *error) {
+        if (!error) {
+            if (![self.items containsObject:json]) {
+                self.items = [NSMutableArray arrayWithArray:json];
+                [self.collectionView reloadData];
+            };
+        }
+    }];
+    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -44,10 +54,8 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-    
-    [self.collectionView registerNib:[UINib nibWithNibName:@"CategoryCell" bundle:[NSBundle mainBundle]]
-          forCellWithReuseIdentifier:@"CategoryCell"];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -77,25 +85,18 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    ItemResult *result = [self.items objectAtIndex:indexPath.row];
     CategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCell" forIndexPath:indexPath];
-    //
-    //    // Configure the cell
-    //    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
-    //    UILabel *categoryLabel = (UILabel *)[cell viewWithTag:101];
-    //    UILabel *priceLabel = (UILabel *)[cell viewWithTag:102];
-    //    recipeImageView.image = [UIImage imageNamed:[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"img"]];
-    //    categoryLabel.text =[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"title"];
-    //    priceLabel.text =[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"price"];
-    cell.CollectionImageView.image = [UIImage imageNamed:[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"img"]];
-    cell.collectionItemNameLabel.text = [[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"title"];
-    cell.collectionItemPriceLabel.text = [[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"price"];
+    [cell setResult:result];
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    ItemResult *result = [self.items objectAtIndex:indexPath.row];
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:nil];
     ItemViewController *detail = [sb instantiateViewControllerWithIdentifier:@"ItemViewController"];
-    detail.title =[[self.items  objectAtIndex:indexPath.row] valueForKeyPath:@"title"];
+    detail.title = result.name;
+    detail.resultItem = result;
     [self.navigationController pushViewController:detail animated:YES];
 }
 #pragma mark <UICollectionViewDelegate>

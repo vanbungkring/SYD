@@ -169,7 +169,19 @@ NSString *const kCategoryResultMeigeeCatLabeltext = @"meigee_cat_labeltext";
             self.resultDescription = [self objectOrNilForKey:kCategoryResultDescription fromDictionary:dict];
             self.customDesignTo = [self objectOrNilForKey:kCategoryResultCustomDesignTo fromDictionary:dict];
             self.meigeeCatBgOption = [self objectOrNilForKey:kCategoryResultMeigeeCatBgOption fromDictionary:dict];
-            self.child = [CategoryChild modelObjectWithDictionary:[dict objectForKey:kCategoryResultChild]];
+    NSObject *receivedCategoryChild = [dict objectForKey:kCategoryResultChild];
+    NSMutableArray *parsedCategoryChild = [NSMutableArray array];
+    if ([receivedCategoryChild isKindOfClass:[NSArray class]]) {
+        for (NSDictionary *item in (NSArray *)receivedCategoryChild) {
+            if ([item isKindOfClass:[NSDictionary class]]) {
+                [parsedCategoryChild addObject:[CategoryChild modelObjectWithDictionary:item]];
+            }
+       }
+    } else if ([receivedCategoryChild isKindOfClass:[NSDictionary class]]) {
+       [parsedCategoryChild addObject:[CategoryChild modelObjectWithDictionary:(NSDictionary *)receivedCategoryChild]];
+    }
+
+    self.child = [NSArray arrayWithArray:parsedCategoryChild];
             self.isActive = [self objectOrNilForKey:kCategoryResultIsActive fromDictionary:dict];
             self.meigeeCatBlockTop = [self objectOrNilForKey:kCategoryResultMeigeeCatBlockTop fromDictionary:dict];
             self.attributeSetId = [self objectOrNilForKey:kCategoryResultAttributeSetId fromDictionary:dict];
@@ -236,7 +248,17 @@ NSString *const kCategoryResultMeigeeCatLabeltext = @"meigee_cat_labeltext";
     [mutableDict setValue:self.resultDescription forKey:kCategoryResultDescription];
     [mutableDict setValue:self.customDesignTo forKey:kCategoryResultCustomDesignTo];
     [mutableDict setValue:self.meigeeCatBgOption forKey:kCategoryResultMeigeeCatBgOption];
-    [mutableDict setValue:[self.child dictionaryRepresentation] forKey:kCategoryResultChild];
+    NSMutableArray *tempArrayForChild = [NSMutableArray array];
+    for (NSObject *subArrayObject in self.child) {
+        if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
+            // This class is a model object
+            [tempArrayForChild addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
+        } else {
+            // Generic object
+            [tempArrayForChild addObject:subArrayObject];
+        }
+    }
+    [mutableDict setValue:[NSArray arrayWithArray:tempArrayForChild] forKey:kCategoryResultChild];
     [mutableDict setValue:self.isActive forKey:kCategoryResultIsActive];
     [mutableDict setValue:self.meigeeCatBlockTop forKey:kCategoryResultMeigeeCatBlockTop];
     [mutableDict setValue:self.attributeSetId forKey:kCategoryResultAttributeSetId];

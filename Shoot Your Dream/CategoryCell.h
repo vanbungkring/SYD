@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ItemResult;
 @interface CategoryCell : UICollectionViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *CollectionImageView;
 @property (strong, nonatomic) IBOutlet UILabel *collectionItemNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *collectionItemPriceLabel;
 @property (strong, nonatomic) IBOutlet UIView *wrapperView;
-
+@property (strong, nonatomic) ItemResult *result;
 @end

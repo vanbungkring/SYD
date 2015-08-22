@@ -123,10 +123,11 @@
     NSDate *newDate1 = [d dateByAddingTimeInterval:60*60*hoursToAdd];
     return newDate1;
 }
+
 + (NSString *)formattedCurrencyWithCurrencySign:(NSString *)currencySign value:(NSInteger)value {
     
     BOOL isNegative = (value < 0);
-    NSString *valueString = [NSString stringWithFormat:@"%d", (isNegative) ? -1 * value : value];
+    NSString *valueString = [NSString stringWithFormat:@"%ld", (isNegative) ? -1 * value : value];
     NSString *formattedCurrencyString = @"";
     
     int flag = 0;
@@ -166,6 +167,7 @@
     if (response.statusCode == 401) {
         [Common deleteLoginToken];
         [Common deleteUserToken];
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"logout" object:nil];
         return;
     }
     else {
@@ -222,5 +224,12 @@
 + (void)deleteLoginToken {
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:PREFS_LOGIN_TOKEN];
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (NSString *)sanitizeString:(NSString *)string {
+    NSRange range = [string rangeOfString:@"."];
+    
+    NSString *newString = [string substringWithRange:NSMakeRange(0, range.location)];
+    return newString;
 }
 @end

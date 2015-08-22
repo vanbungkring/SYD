@@ -7,7 +7,12 @@
 //
 
 #import "CategoryCell.h"
-
+#import "ItemDataModels.h"
 @implementation CategoryCell
-
+-(void)setResult:(ItemResult *)result {
+    self.collectionItemNameLabel.text = result.name;
+    
+    NSString *price = [Common formattedCurrencyWithCurrencySign:@"Rp" value:[[Common sanitizeString:result.price] integerValue]];
+    self.collectionItemPriceLabel.text = price;
+}
 @end

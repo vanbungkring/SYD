@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CatDetailCollectionViewController : UICollectionViewController
-
+@property (nonatomic,strong)NSString *categoryId;
 @end

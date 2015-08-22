@@ -20,14 +20,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    NSLog(@"data-->%@",[Common getUserToken]);
-    if (![Common getUserToken].length || [[Common getUserToken]isEqual:[NSNull null]] ||[[Common getUserToken]isEqualToString:@""]) {
-        [Common storeUserToken:@""];
-    }
-    if (![Common getLoginToken].length || [[Common getLoginToken]isEqual:[NSNull null]] || [[Common getLoginToken]isEqualToString:@""]) {
-        [Common storeLoginToken:@""];
-    }
     [Fabric with:@[CrashlyticsKit]];
     //  Default font configuration
     [[AFNetworkActivityLogger sharedLogger] startLogging];

@@ -36,4 +36,5 @@
 + (NSString *)getLoginToken;
 + (void)deleteUserToken;
 + (void)deleteLoginToken;
++ (NSString *)sanitizeString:(NSString *)string;
 @end

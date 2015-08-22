@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "ItemDataModels.h"
 @interface ItemViewController : BaseViewController
-
+@property (nonatomic,strong) ItemResult *resultItem;
 @end

@@ -1,25 +1,27 @@
 //
-//  ItemStockItem.m
+//  ItemInstallment.m
 //
 //  Created by Ratna Kumalasari on 8/22/15
 //  Copyright (c) 2015 __MyCompanyName__. All rights reserved.
 //
 
-#import "ItemStockItem.h"
+#import "ItemInstallment.h"
 
 
-NSString *const kItemStockItemIsInStock = @"is_in_stock";
+NSString *const kItemInstallmentTenor = @"tenor";
+NSString *const kItemInstallmentMonthlyInstallment = @"monthly_installment";
 
 
-@interface ItemStockItem ()
+@interface ItemInstallment ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation ItemStockItem
+@implementation ItemInstallment
 
-@synthesize isInStock = _isInStock;
+@synthesize tenor = _tenor;
+@synthesize monthlyInstallment = _monthlyInstallment;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -34,7 +36,8 @@ NSString *const kItemStockItemIsInStock = @"is_in_stock";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.isInStock = [self objectOrNilForKey:kItemStockItemIsInStock fromDictionary:dict];
+            self.tenor = [[self objectOrNilForKey:kItemInstallmentTenor fromDictionary:dict] doubleValue];
+            self.monthlyInstallment = [[self objectOrNilForKey:kItemInstallmentMonthlyInstallment fromDictionary:dict] doubleValue];
 
     }
     
@@ -45,7 +48,8 @@ NSString *const kItemStockItemIsInStock = @"is_in_stock";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:self.isInStock forKey:kItemStockItemIsInStock];
+    [mutableDict setValue:[NSNumber numberWithDouble:self.tenor] forKey:kItemInstallmentTenor];
+    [mutableDict setValue:[NSNumber numberWithDouble:self.monthlyInstallment] forKey:kItemInstallmentMonthlyInstallment];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -69,23 +73,26 @@ NSString *const kItemStockItemIsInStock = @"is_in_stock";
 {
     self = [super init];
 
-    self.isInStock = [aDecoder decodeObjectForKey:kItemStockItemIsInStock];
+    self.tenor = [aDecoder decodeDoubleForKey:kItemInstallmentTenor];
+    self.monthlyInstallment = [aDecoder decodeDoubleForKey:kItemInstallmentMonthlyInstallment];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeObject:_isInStock forKey:kItemStockItemIsInStock];
+    [aCoder encodeDouble:_tenor forKey:kItemInstallmentTenor];
+    [aCoder encodeDouble:_monthlyInstallment forKey:kItemInstallmentMonthlyInstallment];
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    ItemStockItem *copy = [[ItemStockItem alloc] init];
+    ItemInstallment *copy = [[ItemInstallment alloc] init];
     
     if (copy) {
 
-        copy.isInStock = [self.isInStock copyWithZone:zone];
+        copy.tenor = self.tenor;
+        copy.monthlyInstallment = self.monthlyInstallment;
     }
     
     return copy;

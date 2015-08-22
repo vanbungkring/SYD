@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class CategoryChild;
+
 
 @interface CategoryResult : NSObject <NSCoding, NSCopying>
 
@@ -33,7 +33,7 @@
 @property (nonatomic, assign) id resultDescription;
 @property (nonatomic, assign) id customDesignTo;
 @property (nonatomic, strong) NSString *meigeeCatBgOption;
-@property (nonatomic, strong) CategoryChild *child;
+@property (nonatomic, strong) NSArray *child;
 @property (nonatomic, strong) NSString *isActive;
 @property (nonatomic, assign) id meigeeCatBlockTop;
 @property (nonatomic, strong) NSString *attributeSetId;

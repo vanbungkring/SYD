@@ -9,6 +9,7 @@
 #import "BaseTabbarController.h"
 #import "LoginViewController.h"
 #import "CartTableViewController.h"
+#import "CategoryDataModels.h"
 @interface BaseTabbarControlller ()
 
 @end
@@ -18,20 +19,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    NSLog(@"data--.%@",[Common getLoginToken]);
-    if([[Common getLoginToken] isEqualToString:@""] || [[Common getUserToken] isEqualToString:@""]) {
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(openLogin)
+     name:@"logout"
+     object:nil];
+
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    if ([[Common getUserToken] isEqualToString:@""]) {
         [self openLogin];
     }
 }
-
--(void)openLogin {
+- (void)openLogin {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     LoginViewController *loginWindow = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
     
     [self presentViewController:loginWindow animated:YES completion:nil];
     
 }
--(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     self.title = item.title ;
 }
 

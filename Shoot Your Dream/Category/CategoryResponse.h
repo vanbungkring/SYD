@@ -11,10 +11,12 @@
 
 @interface CategoryResponse : NSObject <NSCoding, NSCopying>
 
+@property (nonatomic, assign) BOOL error;
 @property (nonatomic, strong) NSArray *result;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 - (NSDictionary *)dictionaryRepresentation;
-
++ (NSURLSessionDataTask *)getAllCategories:(NSDictionary *)parameters completionBlock:(void(^)(NSArray *json,NSError *error))completionBlock;
++ (NSArray *)getAllChild:(NSArray *)array;
 @end

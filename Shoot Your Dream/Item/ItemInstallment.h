@@ -1,7 +1,7 @@
 //
-//  ItemMediaGallery.h
+//  ItemInstallment.h
 //
-//  Created by Ratna Kumalasari on 8/7/15
+//  Created by Ratna Kumalasari on 8/22/15
 //  Copyright (c) 2015 __MyCompanyName__. All rights reserved.
 //
 
@@ -9,10 +9,10 @@
 
 
 
-@interface ItemMediaGallery : NSObject <NSCoding, NSCopying>
+@interface ItemInstallment : NSObject <NSCoding, NSCopying>
 
-@property (nonatomic, strong) NSArray *images;
-@property (nonatomic, strong) NSArray *values;
+@property (nonatomic, assign) double tenor;
+@property (nonatomic, assign) double monthlyInstallment;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

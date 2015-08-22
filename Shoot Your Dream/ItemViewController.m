@@ -43,20 +43,8 @@
     
     self.cicilanDetailList.attributedText = attributedString;
     
-    self.keteranganLabel.text = @"Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun. Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang";
-    [self.keteranganLabel sizeToFit];
-    //    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:yourLabel.text];
-    //
-    //    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
-    //    [paragrahStyle setParagraphSpacing:4];
-    //    [paragrahStyle setParagraphSpacingBefore:3];
-    //    [paragrahStyle setFirstLineHeadIndent:0.0f];  // First line is the one with bullet point
-    //    [paragrahStyle setHeadIndent:10.5f];    // Set the indent for given bullet character and size font
-    //
-    //    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragrahStyle range:NSMakeRange(0, [self.descriptionLabel.text length])];
-    
-    //    yourLabel.attributedText = attributedString;
-    self.titleLabel.text = @"Iphone 6 Plus - 10 GB - Black";
+    self.keteranganLabel.text = self.resultItem.resultDescription;
+    self.titleLabel.text = self.resultItem.name;
     
     
     // Do any additional setup after loading the view.

@@ -9,6 +9,7 @@
 #import "CategoryResult.h"
 
 
+NSString *const kCategoryResponseError = @"error";
 NSString *const kCategoryResponseResult = @"result";
 
 
@@ -20,6 +21,7 @@ NSString *const kCategoryResponseResult = @"result";
 
 @implementation CategoryResponse
 
+@synthesize error = _error;
 @synthesize result = _result;
 
 
@@ -35,6 +37,7 @@ NSString *const kCategoryResponseResult = @"result";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
+            self.error = [[self objectOrNilForKey:kCategoryResponseError fromDictionary:dict] boolValue];
     NSObject *receivedCategoryResult = [dict objectForKey:kCategoryResponseResult];
     NSMutableArray *parsedCategoryResult = [NSMutableArray array];
     if ([receivedCategoryResult isKindOfClass:[NSArray class]]) {
@@ -58,6 +61,7 @@ NSString *const kCategoryResponseResult = @"result";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
+    [mutableDict setValue:[NSNumber numberWithBool:self.error] forKey:kCategoryResponseError];
     NSMutableArray *tempArrayForResult = [NSMutableArray array];
     for (NSObject *subArrayObject in self.result) {
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
@@ -92,6 +96,7 @@ NSString *const kCategoryResponseResult = @"result";
 {
     self = [super init];
 
+    self.error = [aDecoder decodeBoolForKey:kCategoryResponseError];
     self.result = [aDecoder decodeObjectForKey:kCategoryResponseResult];
     return self;
 }
@@ -99,6 +104,7 @@ NSString *const kCategoryResponseResult = @"result";
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
+    [aCoder encodeBool:_error forKey:kCategoryResponseError];
     [aCoder encodeObject:_result forKey:kCategoryResponseResult];
 }
 
@@ -108,11 +114,34 @@ NSString *const kCategoryResponseResult = @"result";
     
     if (copy) {
 
+        copy.error = self.error;
         copy.result = [self.result copyWithZone:zone];
     }
     
     return copy;
 }
++ (NSURLSessionDataTask *)getAllCategories:(NSDictionary *)parameters completionBlock:(void(^)(NSArray *json,NSError *error))completionBlock {
+    return [[APIManager sharedClient]GET:[NSString stringWithFormat:@"%@%@category",BASE_URL,API_HOST] parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        CategoryResponse *response = [[CategoryResponse alloc]initWithDictionary:responseObject];
+        NSMutableArray *data = [[NSMutableArray alloc]init];
+        if (!response.error) {
+            for (NSDictionary *dict in [responseObject valueForKey:@"result"]) {
+                CategoryResult *result = [[CategoryResult alloc]initWithDictionary:dict];
+                [data addObject:result];
+            }
+            
+            if (completionBlock) {
+                completionBlock([NSArray arrayWithArray:data], nil);
+            }
+        }
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [Common readErrorResponse:error response:task];
+        completionBlock([NSArray array], error);
 
-
+    }];
+}
+- (NSArray *)combineChild:(NSDictionary *)child {
+    return nil;
+}
 @end

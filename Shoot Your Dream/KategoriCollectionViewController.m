@@ -8,9 +8,10 @@
 
 #import "KategoriCollectionViewController.h"
 #import "CatDetailCollectionViewController.h"
+#import "CategoryDataModels.h"
 @interface KategoriCollectionViewController ()
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (nonatomic,strong)NSArray *category;
+@property (nonatomic,strong)NSMutableArray *category;
 @end
 
 @implementation KategoriCollectionViewController
@@ -19,12 +20,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.category = @[@{@"img":@"handphone-off",@"title":@"Handphone"},
-                      @{@"img":@"electronic-off",@"title":@"Elektronik"},
-                      @{@"img":@"furniture-off",@"title":@"Furniture"},
-                      @{@"img":@"fashion-off",@"title":@"Fashion"},
-                      @{@"img":@"homeappliance-off",@"title":@"Appliance"},
-                      @{@"img":@"hobby-off",@"title":@"Hobby"}];
+    self.category = [NSMutableArray new];
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     // Register cell classes
@@ -39,9 +35,23 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self.collectionView reloadData];
     self.collectionView.backgroundColor = [UIColor colorWithRed:0.902f green:0.902f blue:0.902f alpha:1.00f];
-    // Do any additional setup after loading the view.
+    [self getCategory];
+    
 }
-
+- (void)getCategory {
+    [CategoryResponse getAllCategories:@{@"access_token":[Common getUserToken]} completionBlock:^(NSArray *json, NSError *error) {
+        if (!error) {
+            
+            for ( int i=0; i<json.count; i++) {
+                CategoryResult *result = json[i];
+                if (result.child.count) {
+                    [self.category addObjectsFromArray:result.child];
+                }
+            }
+            [self.collectionView reloadData];
+        }
+    }];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -70,19 +80,22 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    CategoryChild *child = [self.category objectAtIndex:indexPath.row];
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
     UILabel *categoryLabel = (UILabel *)[cell viewWithTag:101];
-    recipeImageView.image = [UIImage imageNamed:[[self.category  objectAtIndex:indexPath.row] valueForKeyPath:@"img"]];
-    categoryLabel.text =[[self.category  objectAtIndex:indexPath.row] valueForKeyPath:@"title"];
+    recipeImageView.image = [UIImage imageNamed:[child.name lowercaseString]];
+    categoryLabel.text =child.name;
     // Configure the cell
     
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    CategoryChild *child = [self.category objectAtIndex:indexPath.row];
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"KategoryDetail" bundle:nil];
     CatDetailCollectionViewController *detail = [sb instantiateViewControllerWithIdentifier:@"KategoryDetail"];
-    detail.title =[[self.category  objectAtIndex:indexPath.row] valueForKeyPath:@"title"];
+    detail.title = child.name;
+    detail.categoryId = child.entityId;
     [self.navigationController pushViewController:detail animated:YES];
     
 }
