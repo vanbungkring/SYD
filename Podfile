@@ -12,6 +12,7 @@ target 'Shoot Your Dream' do
     pod 'NYAlertViewController'
     pod 'SVProgressHUD'
     pod 'RKDropdownAlert'
+    pod 'DXPopover'
     pod 'PINRemoteImage', '~> 1.1'
 end
 
