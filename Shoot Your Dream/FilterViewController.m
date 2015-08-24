@@ -37,10 +37,10 @@
     //standard rsnge slider
     
     self.rangeSlider.delegate = self;
-    self.rangeSlider.minValue = 100000;
-    self.rangeSlider.maxValue = 2000000;
-    self.rangeSlider.selectedMinimum = 0;
-    self.rangeSlider.selectedMaximum = 2000000;
+    self.rangeSlider.minValue = [[self.filterArray firstObject]integerValue];
+    self.rangeSlider.maxValue = [[self.filterArray lastObject]integerValue];
+    self.rangeSlider.selectedMinimum = [[self.filterArray firstObject]integerValue];
+    self.rangeSlider.selectedMaximum = [[self.filterArray lastObject]integerValue];
     self.labelPrice.text = [NSString stringWithFormat:@"Rp %.0f - Rp %.0f", self.rangeSlider.selectedMinimum, self.rangeSlider.selectedMaximum];
     
 }
@@ -58,8 +58,8 @@
     }
 }
 - (IBAction)resetRangeSlider:(id)sender {
-    self.rangeSlider.selectedMinimum = 0;
-    self.rangeSlider.selectedMaximum = 2000000;
+    self.rangeSlider.selectedMinimum = [[self.filterArray firstObject]integerValue];
+    self.rangeSlider.selectedMaximum = [[self.filterArray lastObject]integerValue];
     self.labelPrice.text = [NSString stringWithFormat:@"Rp %.0f - Rp %.0f", self.rangeSlider.selectedMinimum, self.rangeSlider.selectedMaximum];
     self.filterTextField.text = @"";
     
@@ -89,6 +89,8 @@
     return title;
 }
 
+- (IBAction)filterThePRice:(id)sender {
+}
 
 
 /*

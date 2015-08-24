@@ -232,4 +232,10 @@
     NSString *newString = [string substringWithRange:NSMakeRange(0, range.location)];
     return newString;
 }
++ (NSArray *)sortArray:(NSArray *)array{
+    return [array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        if ([obj1 intValue] < [obj2 intValue]) return NSOrderedAscending;
+        else return NSOrderedDescending;
+    }];
+}
 @end

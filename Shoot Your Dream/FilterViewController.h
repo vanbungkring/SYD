@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 @interface FilterViewController : BaseViewController
-
+@property (nonatomic,strong) NSArray *filterArray;
 @end

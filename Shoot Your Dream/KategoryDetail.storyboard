@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -39,10 +39,11 @@
                     <navigationItem key="navigationItem" id="F5m-yT-nX7">
                         <barButtonItem key="rightBarButtonItem" image="filter" id="dXr-00-bQm">
                             <connections>
-                                <segue destination="zyK-dr-2dK" kind="push" id="zN1-bV-N7g"/>
+                                <action selector="filterDIdtapped:" destination="jgo-jH-Sve" id="HcQ-4u-4hA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="collectionView" destination="cEz-KL-aAC" id="La3-j4-r8z"/>
@@ -55,17 +56,17 @@
         <!--Filter-->
         <scene sceneID="mMX-NE-QOK">
             <objects>
-                <viewController id="zyK-dr-2dK" customClass="FilterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FilterVC" id="zyK-dr-2dK" customClass="FilterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mhs-CB-yd7"/>
                         <viewControllerLayoutGuide type="bottom" id="9B0-9I-aBm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qrq-Ua-qtq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Urutkan Berdasarkan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNr-Bx-G7h">
-                                <rect key="frame" x="7" y="47" width="304" height="21"/>
+                                <rect key="frame" x="7" y="47" width="584" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="vYh-u8-faH"/>
                                 </constraints>
@@ -74,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5KA-3C-WZy">
-                                <rect key="frame" x="22" y="82" width="277" height="36"/>
+                                <rect key="frame" x="22" y="82" width="557" height="36"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="b9G-SQ-VQv"/>
@@ -86,7 +87,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Berdasarkan DP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S24-zs-osh">
-                                <rect key="frame" x="7" y="126" width="304" height="21"/>
+                                <rect key="frame" x="7" y="126" width="584" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="6wu-to-eVQ"/>
                                 </constraints>
@@ -95,7 +96,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="um0-03-1tG" customClass="TTRangeSlider">
-                                <rect key="frame" x="45" y="155" width="229" height="58"/>
+                                <rect key="frame" x="45" y="155" width="509" height="58"/>
                                 <color key="tintColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="eS7-fE-gfh"/>
@@ -111,7 +112,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9B-Iu-bIO" customClass="RoundedButton">
-                                <rect key="frame" x="50" y="272" width="218" height="40"/>
+                                <rect key="frame" x="50" y="272" width="498" height="40"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ZIF-gd-ho9"/>
@@ -120,15 +121,18 @@
                                 <state key="normal" title="Filter">
                                     <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="filterThePRice:" destination="zyK-dr-2dK" eventType="touchUpInside" id="lS0-Gg-kod"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBO-ZH-4GT">
-                                <rect key="frame" x="45" y="221" width="229" height="21"/>
+                                <rect key="frame" x="45" y="221" width="509" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.93333333330000001" green="0.49803921569999998" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQd-qo-fsa" customClass="RoundedButton">
-                                <rect key="frame" x="50" y="325" width="218" height="40"/>
+                                <rect key="frame" x="50" y="325" width="498" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MQ5-j2-42N"/>

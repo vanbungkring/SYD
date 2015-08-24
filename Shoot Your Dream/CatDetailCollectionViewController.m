@@ -11,8 +11,12 @@
 #import "CategoryCell.h"
 #import "BaseCollectionLayout.h"
 #import "ItemDataModels.h"
+#import "FilterViewController.h"
 @interface CatDetailCollectionViewController ()
 @property (nonatomic,strong)NSMutableArray *items;
+@property (nonatomic,strong)NSMutableArray *price;
+@property (nonatomic,strong)NSMutableArray *downPayment;
+
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
@@ -22,9 +26,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
+    self.price = [[NSMutableArray alloc]init];
+    self.downPayment = [[NSMutableArray alloc]init];
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
     layout.itemSize= CGSizeMake((self.view.frame.size.width-1)/2, 205);
     layout.headerReferenceSize = CGSizeZero;
@@ -40,6 +43,7 @@ static NSString * const reuseIdentifier = @"Cell";
         if (!error) {
             if (![self.items containsObject:json]) {
                 self.items = [NSMutableArray arrayWithArray:json];
+                [self getFilter];
                 [self.collectionView reloadData];
             };
         }
@@ -52,6 +56,16 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Do any additional setup after loading the view.
 }
+- (void)getFilter {
+    for (int i=0; i<self.items.count; i++) {
+        ItemResult *result = self.items[i];
+        NSLog(@"result Pirce-->%@",[Common sanitizeString:result.price]);
+        [self.price addObject:[NSNumber numberWithInt:[[Common sanitizeString:result.price] intValue]]];
+        [self.downPayment addObject:[NSNumber numberWithInt:[result.downPayment intValue]]];
+    }
+    
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
 }
@@ -70,6 +84,11 @@ static NSString * const reuseIdentifier = @"Cell";
  // Pass the selected object to the new view controller.
  }
  */
+- (IBAction)filterDIdtapped:(id)sender {
+    FilterViewController *filter = [self.storyboard instantiateViewControllerWithIdentifier:@"FilterVC"];
+    filter.filterArray = [Common sortArray:self.price];
+    [self.navigationController pushViewController:filter animated:YES];
+}
 
 #pragma mark <UICollectionViewDataSource>
 

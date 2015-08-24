@@ -8,12 +8,15 @@
 
 #import "ItemViewController.h"
 #import "Cicilan.h"
+#import <PINRemoteImage/UIImageView+PINRemoteImage.h>
+#import <PINCache/PINCache.h>
 @interface ItemViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *keteranganLabel;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *DPBackground;
 @property (strong, nonatomic) IBOutlet UILabel *DPTextLabel;
 @property (strong, nonatomic) IBOutlet UILabel *cicilanDetailList;
+@property (weak, nonatomic) IBOutlet UIImageView *imageDetailView;
 
 @property (strong, nonatomic) IBOutlet Cicilan *cicilanView;
 
@@ -23,9 +26,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@/%@",BASE_URL,PRODUCT_IMAGE,self.resultItem.smallImage]];
+    [self.imageDetailView pin_setImageFromURL:url placeholderImage:nil];
     self.DPBackground.hidden = NO;
-    self.DPTextLabel.text = @"Tanpa DP";
     self.DPTextLabel.textColor = [Common colorWithHexString:@"FFFFFF"];
+    NSString *price = [Common sanitizeString:self.resultItem.price];
+    
+    if([price isEqualToString:@"0"]) {
+        self.DPTextLabel.text = @"Tanpa DP";
+    }
+    else {
+        self.DPTextLabel.text = [Common formattedCurrencyWithCurrencySign:@"RP" value:[[Common sanitizeString:self.resultItem.downPayment] integerValue]];
+        self.DPTextLabel.textColor = [Common colorWithHexString:@"000000"];
+    }
+    
     self.DPTextLabel.font =[UIFont fontWithName:FONT_NAME_MEDIUM size:16];
     self.cicilanDetailList.text = @" • animator adenology \n • antipyresis assassin asexualizing \n • rchaeocyathid ascus arresting atony apocopation";
     
@@ -36,7 +50,6 @@
     [paragrahStyle setParagraphSpacingBefore:3];
     [paragrahStyle setFirstLineHeadIndent:0.0f];
     [paragrahStyle setHeadIndent:10.5f];
-    
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragrahStyle
                              range:NSMakeRange(0, [self.cicilanDetailList.text length])];
     
@@ -56,9 +69,25 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)addToCart:(id)sender {
-    self.cicilanView.hidden = NO;
+    
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    // Assuming you've hooked this all up in a Storyboard with a popover presentation style
+    if ([segue.identifier isEqualToString: @"CicilanList"]) {
+        
+        UINavigationController * nvc = segue.destinationViewController;
+        UIPopoverPresentationController * pvc = nvc.popoverPresentationController;
+    }
+    
 }
 
+#pragma mark == UIPopoverPresentationControllerDelegate ==
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
+{
+    return UIModalPresentationNone;
+}
 /*
  #pragma mark - Navigation
  

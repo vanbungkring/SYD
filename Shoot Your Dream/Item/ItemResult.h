@@ -74,8 +74,8 @@
 @property (nonatomic, strong) NSString *urlKey;
 @property (nonatomic, assign) id pageLayout;
 @property (nonatomic, strong) NSString *blacknwhitePrsidebar;
-@property (nonatomic, assign) id newsFromDate;
-@property (nonatomic, assign) id specialToDate;
+@property (nonatomic, assign) NSString *newsFromDate;
+@property (nonatomic, assign) NSString *specialToDate;
 @property (nonatomic, strong) NSString *optionsContainer;
 @property (nonatomic, strong) NSString *blacknwhitePrcolleteral;
 

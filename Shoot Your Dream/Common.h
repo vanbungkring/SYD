@@ -37,4 +37,5 @@
 + (void)deleteUserToken;
 + (void)deleteLoginToken;
 + (NSString *)sanitizeString:(NSString *)string;
++ (NSArray *)sortArray:(NSArray *)array;
 @end

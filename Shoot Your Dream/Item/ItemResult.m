@@ -330,8 +330,8 @@ NSString *const kItemResultBlacknwhitePrcolleteral = @"blacknwhite_prcolleteral"
     [mutableDict setValue:self.urlKey forKey:kItemResultUrlKey];
     [mutableDict setValue:self.pageLayout forKey:kItemResultPageLayout];
     [mutableDict setValue:self.blacknwhitePrsidebar forKey:kItemResultBlacknwhitePrsidebar];
-    [mutableDict setValue:self.newsFromDate forKey:kItemResultNewsFromDate];
-    [mutableDict setValue:self.specialToDate forKey:kItemResultSpecialToDate];
+  //  [mutableDict setValue:self.newsFromDate forKey:kItemResultNewsFromDate];
+    //[mutableDict setValue:self.specialToDate forKey:kItemResultSpecialToDate];
     [mutableDict setValue:self.optionsContainer forKey:kItemResultOptionsContainer];
     [mutableDict setValue:self.blacknwhitePrcolleteral forKey:kItemResultBlacknwhitePrcolleteral];
 

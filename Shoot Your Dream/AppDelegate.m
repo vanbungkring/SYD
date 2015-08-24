@@ -95,8 +95,6 @@
     [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWithRed:0.933f green:0.498f blue:0.149f alpha:1.00f]];
     // remove the shadow
     [[UITabBar appearance] setShadowImage:nil];
-    [[UILabel appearance] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
-    [[UILabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont fontWithName:FONT_NAME_REGULAR size:14]];
     NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
     [NSURLCache setSharedURLCache:URLCache];
     return YES;

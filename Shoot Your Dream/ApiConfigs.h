@@ -9,6 +9,7 @@
 
 // General
 static NSString * const BASE_URL = @"http://shootyourdream.acomindo.com/";
+static NSString * const PRODUCT_IMAGE = @"media/catalog/product";
 static NSString * const API_HOST = @"apiv2/web/index.php/";
 static NSString * const AUTHORIZE_URL = @"oauth/initiate";
 static NSString * const REQUEST_TOKEN_URL = @"token/auth";
